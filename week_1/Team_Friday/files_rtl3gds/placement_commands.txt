@@ -1,0 +1,21 @@
+#placement
+checkplace
+report_timing
+optDesign -preCTS
+timeDesign -preCTS
+
+#CTS
+set_ccopt_property buffer_cells {CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX8 CLKBUFX12 CLKBUFX4}
+set_ccopt_property target_max_trans 0.1
+ccopt_design
+ctd_win
+timeDesign -postCTS
+report_timing > post_cts.txt
+
+# postRoute
+timeDesign -postRoute
+
+#extract parasitics
+setAnalysisMode -analysisType onChipVariation
+extractRC
+rcOut -spef report/new_parasitics.spef

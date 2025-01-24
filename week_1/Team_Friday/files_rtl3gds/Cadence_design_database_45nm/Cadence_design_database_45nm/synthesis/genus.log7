@@ -1,0 +1,180 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 21.10-p002_1, built Thu Aug 19 21:43:13 PDT 2021
+Options: -legacy_ui 
+Date:    Thu Jan 23 16:53:14 2025
+Host:    vlsicadclient07 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB) (36699188KB)
+PID:     19711
+OS:      Red Hat Enterprise Linux Workstation release 7.6 (Maipo)
+
+Checkout succeeded: Genus_Synthesis/AF9962AAA7C3F38A370F
+	License file: 5280@172.16.201.225
+	License Server: 5280@172.16.201.225
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (7 seconds elapsed).
+
+WARNING: This version of the tool is 1252 days old.
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/lib
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'hdl_search_path', object type: 'root'
+        : Attribute 'hdl_search_path' is going to be obsoleted, use the new attribute 'init_hdl_search_path'.
+  Setting attribute of root '/': 'hdl_search_path' = /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/lib
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+
+Threads Configured:3
+
+  Message Summary for Library slow_vdd1v0_basicCells.lib:
+  *******************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  *******************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+legacy_genus:/> set_top_module /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> elaborate
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 368.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[0]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+        : Some tools may not accept this HDL.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[1]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[2]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[3]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[4]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[5]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[6]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[7]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[8]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[9]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[10]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[11]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[12]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[13]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[14]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[15]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[16]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[17]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[18]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[19]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'alu_out' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 444.
+        : The following example shows an unallowed mix of blocking and non-blocking assignments.
+    if (in)
+        out = data1;
+    else
+        out <= data2;
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 't1c_riscv_cpu' contains errors and cannot be elaborated.
+1
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+legacy_genus:/> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 368.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'alu_out' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 444.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 't1c_riscv_cpu' contains errors and cannot be elaborated.
+1
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 616s, ST: 44s, FG: 44s, CPU: 12.3%}, MEM {curr: 0.9G, peak: 1.1G, phys curr: 0.3G, phys peak: 0.3G}, SYS {load: 0.7, cpu: 12, total: 35.0G, free: 27.5G}
+legacy_genus:/> 
+legacy_genus:/> elaborate
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../lib/'
+        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> elaborate
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+legacy_genus:/> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 368.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'alu_out' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 444.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 't1c_riscv_cpu' contains errors and cannot be elaborated.
+1
+legacy_genus:/> gui_show
+Normal exit.

@@ -1,0 +1,432 @@
+
+.temp.file.elf:     file format elf32-littleriscv
+
+SYMBOL TABLE:
+00000000 l    d  .init	00000000 .init
+00000054 l    d  .text	00000000 .text
+02000000 l    d  .data	00000000 .data
+02000000 l    d  .bss	00000000 .bss
+02000000 l    d  .stack	00000000 .stack
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    df *ABS*	00000000 tls.c
+00000000 l    df *ABS*	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+000001b5 l       .debug_info	00000000 
+00000000 g       *ABS*	00000000 __data_size
+02000800 g       .data	00000000 __global_pointer$
+02000000 g       .bss	00000000 __tls_base
+00000400 g       *ABS*	00000000 __flash_size
+00000008 g       *ABS*	00000000 __stack_size
+00000000 g       *ABS*	00000000 __bss_size
+00000360 g     F .text	00000024 memcpy
+02000000 g       .bss	00000000 __bss_end
+00000000 g       *ABS*	00000000 __tbss_size
+00000358 g     F .text	00000008 _set_tls
+00000000 g     F .init	00000000 _start
+02000000 g       *ABS*	00000000 __ram
+02000000 g       .bss	00000000 __data_end
+000001b5  w      .debug_info	00000000 .hidden path_planner.c.0a7d008f
+000003a0 g       .text	00000000 __text_end
+02000000 g       .bss	00000000 __bss_start
+00000384 g     F .text	0000001c memset
+00000054 g     F .text	00000304 main
+00000040 g       *ABS*	00000000 __ram_size
+02000040 g       .init	00000000 __stack
+00000000 g     F *ABS*	00000000 vfscanf
+000003a0 g       *ABS*	00000000 __data_source
+00000000 g       *ABS*	00000000 __flash
+02000000 g       .data	00000000 __data_start
+00000000 g     F *ABS*	00000000 vfprintf
+
+
+
+Disassembly of section .init:
+
+00000000 <_start>:
+   0:	    02000117          	auipc	x2,0x2000
+   4:	    04010113          	addi	x2,x2,64 # 2000040 <__stack>
+   8:	    02000197          	auipc	x3,0x2000
+   c:	    7f818193          	addi	x3,x3,2040 # 2000800 <__global_pointer$>
+  10:	    02000517          	auipc	x10,0x2000
+  14:	    ff050513          	addi	x10,x10,-16 # 2000000 <__bss_end>
+  18:	    3a000593          	addi	x11,x0,928
+  1c:	    00000613          	addi	x12,x0,0
+  20:	    340000ef          	jal	x1,360 <memcpy>
+  24:	    02000517          	auipc	x10,0x2000
+  28:	    fdc50513          	addi	x10,x10,-36 # 2000000 <__bss_end>
+  2c:	    00000593          	addi	x11,x0,0
+  30:	    00000613          	addi	x12,x0,0
+  34:	    350000ef          	jal	x1,384 <memset>
+  38:	    02000517          	auipc	x10,0x2000
+  3c:	    fc850513          	addi	x10,x10,-56 # 2000000 <__bss_end>
+  40:	    318000ef          	jal	x1,358 <_set_tls>
+  44:	    00000513          	addi	x10,x0,0
+  48:	    00000593          	addi	x11,x0,0
+  4c:	    008000ef          	jal	x1,54 <main>
+  50:	/-- 0000006f          	jal	x0,50 <__ram_size+0x10>
+
+Disassembly of section .text:
+
+00000054 <main>:
+     ###     propagate_costs(END_POINT,&parent_cost,ptr,ptr1,&i,&j);
+     ###     find_path(START_POINT,END_POINT,ptr,ptr1,ptr2,&idx,&next_node,&i);
+     ###         
+     ###     #else
+     ###         uint32_t *graph = (uint32_t *) 0x02000010;
+     ###         graph[0] = 0x07060806;
+  54:	                      07061737          	lui	x14,0x7061
+  58:	                      020007b7          	lui	x15,0x2000
+  5c:	                      80670713          	addi	x14,x14,-2042 # 7060806 <__global_pointer$+0x5060006>
+  60:	                      00e7a823          	sw	x14,16(x15) # 2000010 <__bss_end+0x10>
+     ###         graph[1] = 0x00060906;
+  64:	                      00061737          	lui	x14,0x61
+  68:	                      90670713          	addi	x14,x14,-1786 # 60906 <__flash_size+0x60506>
+  6c:	                      00e7aa23          	sw	x14,20(x15)
+     ###         graph[2] = 0x0a000100;
+  70:	                      0a000737          	lui	x14,0xa000
+  74:	                      10070713          	addi	x14,x14,256 # a000100 <__global_pointer$+0x7fff900>
+  78:	                      00e7ac23          	sw	x14,24(x15)
+     ###         graph[3] = 0x02010b01;
+  7c:	                      02011737          	lui	x14,0x2011
+  80:	                      b0170713          	addi	x14,x14,-1279 # 2010b01 <__global_pointer$+0x10301>
+  84:	                      00e7ae23          	sw	x14,28(x15)
+     ###         graph[4] = 0x04020302;
+  88:	                      04020737          	lui	x14,0x4020
+  8c:	                      30270713          	addi	x14,x14,770 # 4020302 <__global_pointer$+0x201fb02>
+  90:	                      02e7a023          	sw	x14,32(x15)
+     ###         graph[5] = 0x1a0a0502;
+  94:	                      1a0a0737          	lui	x14,0x1a0a0
+  98:	                      50270713          	addi	x14,x14,1282 # 1a0a0502 <__global_pointer$+0x1809fd02>
+  9c:	                      02e7a223          	sw	x14,36(x15)
+     ###         graph[6] = 0x0b0a180a;
+  a0:	                      0b0a2737          	lui	x14,0xb0a2
+  a4:	                      80a70713          	addi	x14,x14,-2038 # b0a180a <__global_pointer$+0x90a100a>
+  a8:	                      02e7a423          	sw	x14,40(x15)
+     ###         graph[7] = 0x0c0b130b;
+  ac:	                      0c0b1737          	lui	x14,0xc0b1
+  b0:	                      30b70713          	addi	x14,x14,779 # c0b130b <__global_pointer$+0xa0b0b0b>
+  b4:	                      02e7a623          	sw	x14,44(x15)
+     ###         graph[8] = 0x0e0c0d0c;
+  b8:	                      0e0c1737          	lui	x14,0xe0c1
+  bc:	                      d0c70713          	addi	x14,x14,-756 # e0c0d0c <__global_pointer$+0xc0c050c>
+  c0:	                      02e7a823          	sw	x14,48(x15)
+     ###         graph[9] = 0x100e0f0e;
+  c4:	                      100e1737          	lui	x14,0x100e1
+  c8:	                      f0e70713          	addi	x14,x14,-242 # 100e0f0e <__global_pointer$+0xe0e070e>
+  cc:	                      02e7aa23          	sw	x14,52(x15)
+     ###         graph[10] = 0x12101110;
+  d0:	                      12101737          	lui	x14,0x12101
+  d4:	                      11070713          	addi	x14,x14,272 # 12101110 <__global_pointer$+0x10100910>
+  d8:	                      02e7ac23          	sw	x14,56(x15)
+     ###         graph[11] = 0x14131312;
+  dc:	                      14131737          	lui	x14,0x14131
+  e0:	                      31270713          	addi	x14,x14,786 # 14131312 <__global_pointer$+0x12130b12>
+  e4:	                      02e7ae23          	sw	x14,60(x15)
+     ###         graph[12] = 0x16151512;
+  e8:	                      16151737          	lui	x14,0x16151
+  ec:	                      51270713          	addi	x14,x14,1298 # 16151512 <__global_pointer$+0x14150d12>
+  f0:	                      04e7a023          	sw	x14,64(x15)
+     ###         graph[13] = 0x18171715;
+  f4:	                      18171737          	lui	x14,0x18171
+  f8:	                      71570713          	addi	x14,x14,1813 # 18171715 <__global_pointer$+0x16170f15>
+  fc:	                      04e7a223          	sw	x14,68(x15)
+     ###         graph[14] = 0x1e171918;
+ 100:	                      1e172737          	lui	x14,0x1e172
+ 104:	                      91870713          	addi	x14,x14,-1768 # 1e171918 <__global_pointer$+0x1c171118>
+ 108:	                      04e7a423          	sw	x14,72(x15)
+     ###         graph[15] = 0x1c1e1f1e;
+ 10c:	                      1c1e2737          	lui	x14,0x1c1e2
+ 110:	                      f1e70713          	addi	x14,x14,-226 # 1c1e1f1e <__global_pointer$+0x1a1e171e>
+ 114:	                      04e7a623          	sw	x14,76(x15)
+     ###         graph[16] = 0x1a1c1d1c;
+ 118:	                      1a1c2737          	lui	x14,0x1a1c2
+ 11c:	                      d1c70713          	addi	x14,x14,-740 # 1a1c1d1c <__global_pointer$+0x181c151c>
+ 120:	                      04e7a823          	sw	x14,80(x15)
+     ###         graph[17] = 0xffff1b1a;
+ 124:	                      ffff2737          	lui	x14,0xffff2
+ 128:	                      b1a70713          	addi	x14,x14,-1254 # ffff1b1a <__global_pointer$+0xfdff131a>
+ 12c:	                      04e7aa23          	sw	x14,84(x15)
+     ###         uint32_t *heuristic_cost = (uint32_t *) 0x02000058;  
+     ###         heuristic_cost[0] = 0xffffffff;    
+ 130:	                      fff00713          	addi	x14,x0,-1
+ 134:	                      04e7ac23          	sw	x14,88(x15)
+     ###         heuristic_cost[1] = 0xffffffff;    
+ 138:	                      04e7ae23          	sw	x14,92(x15)
+     ###         heuristic_cost[2] = 0xffffffff;    
+ 13c:	                      06e7a023          	sw	x14,96(x15)
+     ###         heuristic_cost[3] = 0xffffffff;    
+ 140:	                      06e7a223          	sw	x14,100(x15)
+     ###         heuristic_cost[4] = 0xffffffff;    
+ 144:	                      06e7a423          	sw	x14,104(x15)
+     ###         heuristic_cost[5] = 0xffffffff;    
+ 148:	                      06e7a623          	sw	x14,108(x15)
+     ###         heuristic_cost[6] = 0xffffffff;    
+ 14c:	                      06e7a823          	sw	x14,112(x15)
+     ###         heuristic_cost[7] = 0xffffffff;    
+ 150:	                      06e7aa23          	sw	x14,116(x15)
+     ###         uint32_t *path_planned = (uint32_t *) 0x02000078;
+     ###         path_planned[0] = 0x00000000;    
+ 154:	                      0607ac23          	sw	x0,120(x15)
+     ###         path_planned[1] = 0x00000000;    
+ 158:	                      0607ae23          	sw	x0,124(x15)
+     ###         path_planned[2] = 0x00000000;    
+ 15c:	                      0807a023          	sw	x0,128(x15)
+     ###         path_planned[3] = 0x00000000;    
+ 160:	                      0807a223          	sw	x0,132(x15)
+     ###         path_planned[4] = 0x00000000;    
+ 164:	                      0807a423          	sw	x0,136(x15)
+     ###         path_planned[5] = 0x00000000;    
+ 168:	                      0807a623          	sw	x0,140(x15)
+     ###         path_planned[6] = 0x00000000;    
+ 16c:	                      0807a823          	sw	x0,144(x15)
+     ###         // }
+     ###         // for (*i = 0;*i<32;(*i)++) {
+     ###         //     *(ptr2 + *i) = 0;
+     ###         // }
+     ### 
+     ###         propagate_costs(END_POINT,parent_cost,ptr,ptr1,i,j);
+ 170:	                      0047c703          	lbu	x14,4(x15)
+     ###         path_planned[7] = 0x00000000;  
+ 174:	                      0807aa23          	sw	x0,148(x15)
+     ###         *idx = 0;
+ 178:	                      08078c23          	sb	x0,152(x15)
+     ###         propagate_costs(END_POINT,parent_cost,ptr,ptr1,i,j);
+ 17c:	                      0ff77713          	andi	x14,x14,255
+     ###         *i = 0;
+ 180:	                      08078e23          	sb	x0,156(x15)
+     ###         *j = 0;
+ 184:	                      0a078023          	sb	x0,160(x15)
+     ###         *next_node = 0;
+ 188:	                      0a078223          	sb	x0,164(x15)
+     ###         *parent_cost = 0;
+ 18c:	                      0a078423          	sb	x0,168(x15)
+     ###         *(ptr1 + end_node) = *parent_cost;  
+ 190:	                      00e787b3          	add	x15,x15,x14
+ 194:	                      04078c23          	sb	x0,88(x15)
+     ###         while ((*parent_cost) != 50) {
+ 198:	                      020007b7          	lui	x15,0x2000
+ 19c:	                      03200893          	addi	x17,x0,50
+     ###             for(*j =0;*j<32;(*j)++){
+ 1a0:	                      01f00313          	addi	x6,x0,31
+     ###         for (*i = 0;*i<35;(*i)++) {
+ 1a4:	                      02200e13          	addi	x28,x0,34
+     ###             } else if (*(ptr+2*(*i)+1) == *parent_node && *(ptr1 + *(ptr+2*(*i))) == 0xff) {
+ 1a8:	                      05878613          	addi	x12,x15,88 # 2000058 <__stack+0x18>
+ 1ac:	                      0ff00593          	addi	x11,x0,255
+     ###         while ((*parent_cost) != 50) {
+ 1b0:	         /----------> 0a87c703          	lbu	x14,168(x15)
+ 1b4:	         |     /----- 05171e63          	bne	x14,x17,210 <path_planner.c.0a7d008f+0x5b>
+     ###         find_path(START_POINT,END_POINT,ptr,ptr1,ptr2,idx,next_node,i);
+ 1b8:	         |     |      0007c703          	lbu	x14,0(x15)
+     ###         *(ptr2 + *idx) = start_node;
+ 1bc:	         |     |      0987c683          	lbu	x13,152(x15)
+     ###         find_path(START_POINT,END_POINT,ptr,ptr1,ptr2,idx,next_node,i);
+ 1c0:	         |     |      0047c603          	lbu	x12,4(x15)
+ 1c4:	         |     |      0ff77713          	andi	x14,x14,255
+     ###         *(ptr2 + *idx) = start_node;
+ 1c8:	         |     |      00d787b3          	add	x15,x15,x13
+ 1cc:	         |     |      06e78c23          	sb	x14,120(x15)
+     ###         find_path(START_POINT,END_POINT,ptr,ptr1,ptr2,idx,next_node,i);
+ 1d0:	         |     |      0ff67613          	andi	x12,x12,255
+     ###             *next_node = start_node;
+ 1d4:	         |     |      020007b7          	lui	x15,0x2000
+     ###             for(*i=0;*i<35;(*i)++) {
+ 1d8:	         |     |      02200813          	addi	x16,x0,34
+     ###             if(start_node == end_node){
+ 1dc:	/--------|-----|--/-X 12e60e63          	beq	x12,x14,318 <path_planner.c.0a7d008f+0x163>
+     ###             *next_node = start_node;
+ 1e0:	|        |     |  |   0ae78223          	sb	x14,164(x15) # 20000a4 <__stack+0x64>
+     ###             for(*i=0;*i<35;(*i)++) {
+ 1e4:	|        |     |  |   08078e23          	sb	x0,156(x15)
+ 1e8:	|  /-----|-----|--|-> 09c7c683          	lbu	x13,156(x15)
+ 1ec:	|  |  /--|-----|--|-- 0cd87463          	bgeu	x16,x13,2b4 <path_planner.c.0a7d008f+0xff>
+     ###             (*idx)++;
+ 1f0:	|  |  |  |     |  |   0987c683          	lbu	x13,152(x15)
+     ###             start_node = *next_node;
+ 1f4:	|  |  |  |     |  |   0a47c703          	lbu	x14,164(x15)
+     ###             (*idx)++;
+ 1f8:	|  |  |  |     |  |   00168693          	addi	x13,x13,1
+ 1fc:	|  |  |  |     |  |   0ff6f693          	andi	x13,x13,255
+ 200:	|  |  |  |     |  |   08d78c23          	sb	x13,152(x15)
+     ###             *(ptr2 + *idx) = start_node;
+ 204:	|  |  |  |     |  |   00d786b3          	add	x13,x15,x13
+ 208:	|  |  |  |     |  |   06e68c23          	sb	x14,120(x13)
+ 20c:	|  |  |  |     |  \-- fd1ff06f          	jal	x0,1dc <path_planner.c.0a7d008f+0x27>
+     ###             for(*j =0;*j<32;(*j)++){
+ 210:	|  |  |  |     \----> 0a078023          	sb	x0,160(x15)
+ 214:	|  |  |  |  /-------> 0a07c683          	lbu	x13,160(x15)
+     ###                 if(*(ptr1 + *j)==*parent_cost) {
+ 218:	|  |  |  |  |         0a87c703          	lbu	x14,168(x15)
+     ###             for(*j =0;*j<32;(*j)++){
+ 21c:	|  |  |  |  |     /-- 00d37863          	bgeu	x6,x13,22c <path_planner.c.0a7d008f+0x77>
+     ###             (*parent_cost)++;
+ 220:	|  |  |  |  |     |   00170713          	addi	x14,x14,1
+ 224:	|  |  |  |  |     |   0ae78423          	sb	x14,168(x15)
+ 228:	|  |  |  \--|-----|-- f89ff06f          	jal	x0,1b0 <main+0x15c>
+     ###                 if(*(ptr1 + *j)==*parent_cost) {
+ 22c:	|  |  |     |     \-> 00d786b3          	add	x13,x15,x13
+ 230:	|  |  |     |         0586c683          	lbu	x13,88(x13)
+ 234:	|  |  |     |     /-- 00e68a63          	beq	x13,x14,248 <path_planner.c.0a7d008f+0x93>
+     ###             for(*j =0;*j<32;(*j)++){
+ 238:	|  |  |     |  /--|-> 0a07c703          	lbu	x14,160(x15)
+ 23c:	|  |  |     |  |  |   00170713          	addi	x14,x14,1
+ 240:	|  |  |     |  |  |   0ae78023          	sb	x14,160(x15)
+ 244:	|  |  |     \--|--|-- fd1ff06f          	jal	x0,214 <path_planner.c.0a7d008f+0x5f>
+     ###         for (*i = 0;*i<35;(*i)++) {
+ 248:	|  |  |        |  \-> 08078e23          	sb	x0,156(x15)
+ 24c:	|  |  |     /--|----> 09c7c703          	lbu	x14,156(x15)
+     ###             if(*(ptr+2*(*i)) == *parent_node && *(ptr1 + *(ptr+2*(*i)+1)) == 0xff) {
+ 250:	|  |  |     |  |      0a07c503          	lbu	x10,160(x15)
+     ###         for (*i = 0;*i<35;(*i)++) {
+ 254:	|  |  |     |  \----- feee62e3          	bltu	x28,x14,238 <path_planner.c.0a7d008f+0x83>
+     ###             if(*(ptr+2*(*i)) == *parent_node && *(ptr1 + *(ptr+2*(*i)+1)) == 0xff) {
+ 258:	|  |  |     |         00171713          	slli	x14,x14,0x1
+ 25c:	|  |  |     |         00e78733          	add	x14,x15,x14
+ 260:	|  |  |     |         01074683          	lbu	x13,16(x14)
+ 264:	|  |  |     |         01174703          	lbu	x14,17(x14)
+ 268:	|  |  |     |     /-- 02a69663          	bne	x13,x10,294 <path_planner.c.0a7d008f+0xdf>
+ 26c:	|  |  |     |     |   00c70833          	add	x16,x14,x12
+ 270:	|  |  |     |     |   00084e83          	lbu	x29,0(x16)
+ 274:	|  |  |     |     +-- 02be9063          	bne	x29,x11,294 <path_planner.c.0a7d008f+0xdf>
+     ###                 *(ptr1 + *(ptr+2*(*i)+1)) = *parent_cost + 1;
+ 278:	|  |  |     |     |   0a87c703          	lbu	x14,168(x15)
+ 27c:	|  |  |     |     |   00170713          	addi	x14,x14,1
+ 280:	|  |  |     |     |   00e80023          	sb	x14,0(x16)
+     ###         for (*i = 0;*i<35;(*i)++) {
+ 284:	|  |  |     |  /--|-> 09c7c703          	lbu	x14,156(x15)
+ 288:	|  |  |     |  |  |   00170713          	addi	x14,x14,1
+ 28c:	|  |  |     |  |  |   08e78e23          	sb	x14,156(x15)
+ 290:	|  |  |     \--|--|-- fbdff06f          	jal	x0,24c <path_planner.c.0a7d008f+0x97>
+     ###             } else if (*(ptr+2*(*i)+1) == *parent_node && *(ptr1 + *(ptr+2*(*i))) == 0xff) {
+ 294:	|  |  |        +--\-X fee518e3          	bne	x10,x14,284 <path_planner.c.0a7d008f+0xcf>
+ 298:	|  |  |        |      00c68733          	add	x14,x13,x12
+ 29c:	|  |  |        |      00074683          	lbu	x13,0(x14)
+ 2a0:	|  |  |        +----- feb692e3          	bne	x13,x11,284 <path_planner.c.0a7d008f+0xcf>
+     ###                 *(ptr1 + *(ptr+2*(*i))) = *parent_cost + 1;
+ 2a4:	|  |  |        |      0a87c683          	lbu	x13,168(x15)
+ 2a8:	|  |  |        |      00168693          	addi	x13,x13,1
+ 2ac:	|  |  |        |      00d70023          	sb	x13,0(x14)
+ 2b0:	|  |  |        \----- fd5ff06f          	jal	x0,284 <path_planner.c.0a7d008f+0xcf>
+     ###                 if(*(ptr+2*(*i)) == start_node) {
+ 2b4:	|  |  \-------------> 00169693          	slli	x13,x13,0x1
+ 2b8:	|  |                  00d786b3          	add	x13,x15,x13
+ 2bc:	|  |                  0106c583          	lbu	x11,16(x13)
+     ###                     if(*(ptr1 + *(ptr+2*(*i)+1)) < *(ptr1 + *next_node)) {
+ 2c0:	|  |                  0116c683          	lbu	x13,17(x13)
+     ###                 if(*(ptr+2*(*i)) == start_node) {
+ 2c4:	|  |              /-- 02b71863          	bne	x14,x11,2f4 <path_planner.c.0a7d008f+0x13f>
+     ###                     if(*(ptr1 + *(ptr+2*(*i)+1)) < *(ptr1 + *next_node)) {
+ 2c8:	|  |              |   0a47c583          	lbu	x11,164(x15)
+ 2cc:	|  |              |   00d78533          	add	x10,x15,x13
+ 2d0:	|  |              |   05854503          	lbu	x10,88(x10)
+ 2d4:	|  |              |   00b785b3          	add	x11,x15,x11
+ 2d8:	|  |              |   0585c583          	lbu	x11,88(x11)
+ 2dc:	|  |           /--|-- 00b57463          	bgeu	x10,x11,2e4 <path_planner.c.0a7d008f+0x12f>
+     ###                         *next_node = *(ptr+2*(*i)+1);
+ 2e0:	|  |           |  |   0ad78223          	sb	x13,164(x15)
+     ###             for(*i=0;*i<35;(*i)++) {
+ 2e4:	|  |           >--|-> 09c7c683          	lbu	x13,156(x15)
+ 2e8:	|  |           |  |   00168693          	addi	x13,x13,1
+ 2ec:	|  |           |  |   08d78e23          	sb	x13,156(x15)
+ 2f0:	|  \-----------|--|-- ef9ff06f          	jal	x0,1e8 <path_planner.c.0a7d008f+0x33>
+     ###                 } else if(*(ptr+2*(*i)+1) == start_node) {
+ 2f4:	|              +--\-X fed718e3          	bne	x14,x13,2e4 <path_planner.c.0a7d008f+0x12f>
+     ###                     if(*(ptr1 + *(ptr+2*(*i))) < *(ptr1 + *next_node)) {
+ 2f8:	|              |      0a47c683          	lbu	x13,164(x15)
+ 2fc:	|              |      00b78533          	add	x10,x15,x11
+ 300:	|              |      05854503          	lbu	x10,88(x10)
+ 304:	|              |      00d786b3          	add	x13,x15,x13
+ 308:	|              |      0586c683          	lbu	x13,88(x13)
+ 30c:	|              +----- fcd57ce3          	bgeu	x10,x13,2e4 <path_planner.c.0a7d008f+0x12f>
+     ###                         *next_node = *(ptr+2*(*i));
+ 310:	|              |      0ab78223          	sb	x11,164(x15)
+ 314:	|              \----- fd1ff06f          	jal	x0,2e4 <path_planner.c.0a7d008f+0x12f>
+     ###     #endif
+     ### 
+     ###     // ##############################################
+     ### 
+     ###     // the node values are written into data memory sequentially.
+     ###     for (*i = 0; *i <= *idx; (*i)++) {
+ 318:	\-------------------> 020007b7          	lui	x15,0x2000
+ 31c:	                      0987c683          	lbu	x13,152(x15) # 2000098 <__stack+0x58>
+ 320:	                      08078e23          	sb	x0,156(x15)
+ 324:	               /----> 09c7c703          	lbu	x14,156(x15)
+ 328:	               |  /-- 00e6fa63          	bgeu	x13,x14,33c <path_planner.c.0a7d008f+0x187>
+     ###         NODE_POINT = *(ptr2 + *i);
+     ###     }
+     ###     // Path Planning Computation Done Flag
+     ###     CPU_DONE = 1;
+ 32c:	               |  |   00100713          	addi	x14,x0,1
+ 330:	               |  |   00e78623          	sb	x14,12(x15)
+     ###         _put_str("################################\n");
+     ### 
+     ###     #endif
+     ### 
+     ###     return 0;
+     ### }
+ 334:	               |  |   00000513          	addi	x10,x0,0
+ 338:	               |  |   00008067          	jalr	x0,0(x1)
+     ###         NODE_POINT = *(ptr2 + *i);
+ 33c:	               |  \-> 00e78733          	add	x14,x15,x14
+ 340:	               |      07874703          	lbu	x14,120(x14)
+ 344:	               |      00e78423          	sb	x14,8(x15)
+     ###     for (*i = 0; *i <= *idx; (*i)++) {
+ 348:	               |      09c7c703          	lbu	x14,156(x15)
+ 34c:	               |      00170713          	addi	x14,x14,1
+ 350:	               |      08e78e23          	sb	x14,156(x15)
+ 354:	               \----- fd1ff06f          	jal	x0,324 <path_planner.c.0a7d008f+0x16f>
+
+00000358 <_set_tls>:
+ 358:	00050213          	addi	x4,x10,0
+ 35c:	00008067          	jalr	x0,0(x1)
+
+00000360 <memcpy>:
+ 360:	       00050313          	addi	x6,x10,0
+ 364:	/----- 00060e63          	beq	x12,x0,380 <memcpy+0x20>
+ 368:	|  /-> 00058383          	lb	x7,0(x11)
+ 36c:	|  |   00730023          	sb	x7,0(x6)
+ 370:	|  |   fff60613          	addi	x12,x12,-1
+ 374:	|  |   00130313          	addi	x6,x6,1
+ 378:	|  |   00158593          	addi	x11,x11,1
+ 37c:	|  \-- fe0616e3          	bne	x12,x0,368 <memcpy+0x8>
+ 380:	\----> 00008067          	jalr	x0,0(x1)
+
+00000384 <memset>:
+ 384:	       00050313          	addi	x6,x10,0
+ 388:	/----- 00060a63          	beq	x12,x0,39c <memset+0x18>
+ 38c:	|  /-> 00b30023          	sb	x11,0(x6)
+ 390:	|  |   fff60613          	addi	x12,x12,-1
+ 394:	|  |   00130313          	addi	x6,x6,1
+ 398:	|  \-- fe061ae3          	bne	x12,x0,38c <memset+0x8>
+ 39c:	\----> 00008067          	jalr	x0,0(x1)

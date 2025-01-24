@@ -1,0 +1,888 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 21.10-p002_1, built Thu Aug 19 21:43:13 PDT 2021
+Options: -legacy_ui 
+Date:    Thu Jan 23 18:04:49 2025
+Host:    vlsicadclient07 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB) (36699188KB)
+PID:     6442
+OS:      Red Hat Enterprise Linux Workstation release 7.6 (Maipo)
+
+Checkout succeeded: Genus_Synthesis/AF9962AAA7C3F38A370F
+	License file: 5280@172.16.201.225
+	License Server: 5280@172.16.201.225
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (7 seconds elapsed).
+
+WARNING: This version of the tool is 1252 days old.
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'hdl_search_path', object type: 'root'
+        : Attribute 'hdl_search_path' is going to be obsoleted, use the new attribute 'init_hdl_search_path'.
+  Setting attribute of root '/': 'hdl_search_path' = /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+
+Threads Configured:3
+
+  Message Summary for Library slow_vdd1v0_basicCells.lib:
+  *******************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  *******************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+legacy_genus:/> elaborate
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 368.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[0]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+        : Some tools may not accept this HDL.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[1]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[2]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[3]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[4]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[5]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[6]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[7]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[8]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[9]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[10]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[11]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[12]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[13]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[14]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[15]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[16]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[17]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[18]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Signal or variable has multiple drivers, including a constant driver. [CDFG2G-623]
+        : 'reg_file_arr[19]' in module 'reg_file' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 60, column 41.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'alu_out' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 444.
+        : The following example shows an unallowed mix of blocking and non-blocking assignments.
+    if (in)
+        out = data1;
+    else
+        out <= data2;
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 't1c_riscv_cpu' contains errors and cannot be elaborated.
+1
+legacy_genus:/> set_top_module /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> elaborate
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+legacy_genus:/> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 368.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'alu_out' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 444.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 't1c_riscv_cpu' contains errors and cannot be elaborated.
+1
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 298s, ST: 29s, FG: 29s, CPU: 18.9%}, MEM {curr: 0.9G, peak: 1.0G, phys curr: 0.3G, phys peak: 0.3G}, SYS {load: 0.4, cpu: 12, total: 35.0G, free: 32.6G}
+legacy_genus:/> fg
+legacy_genus:/> elaborate
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../lib/'
+        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+  Setting attribute of root '/': 'hdl_search_path' = /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+Freeing libraries in memory (slow_vdd1v0_basicCells.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+legacy_genus:/> set_top_module /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+module riscv_cpu (
+               |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'riscv_cpu' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 6, column 16.
+        : A Verilog description is replaced when a new description of the same name and same library is read again.
+    Verilog descriptions are:
+       module
+       macromodule
+       configuration
+    SystemVerilog adds the following descriptions:
+       interface
+       program
+       package.
+module reset_ff #(parameter WIDTH = 8) (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'reset_ff' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 33, column 15.
+module reg_file #(parameter DATA_WIDTH = 32) (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'reg_file' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 52, column 15.
+module mux4 #(parameter WIDTH = 8) (
+          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'mux4' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 82, column 11.
+module mux3 #(parameter WIDTH = 8) (
+          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'mux3' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 94, column 11.
+module mux2 #(parameter WIDTH = 8) (
+          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'mux2' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 106, column 11.
+module main_decoder (
+                  |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'main_decoder' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 119, column 19.
+module instr_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 512) (
+               |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'instr_mem' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 173, column 16.
+module imm_extend (
+                |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'imm_extend' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 193, column 17.
+module datapath (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'datapath' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 216, column 15.
+module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'data_mem' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 263, column 15.
+module controller (
+                |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'controller' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 326, column 17.
+module alu_decoder (
+                 |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'alu_decoder' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 355, column 18.
+module alu #(parameter WIDTH = 32) (
+         |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'alu' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 436, column 10.
+module adder #(parameter WIDTH = 32) (
+           |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'adder' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 502, column 12.
+module t1c_riscv_cpu (
+                   |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 't1c_riscv_cpu' with Verilog module in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 512, column 20.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'riscv_cpu' in library 'default' with newly read Verilog module 'riscv_cpu' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 6.
+        : A newly read VHDL entity replaces any previously read Verilog module or VHDL entity in the same library if its name matches (case-insensitively) the existing module or entity.
+    For instance:
+        VHDL 'foo'                  replaces  VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        VHDL 'foo' (in any library) replaces  Verilog {'FOO' or 'foo' or 'Foo' or ...} in the same library
+ 
+A newly read Verilog module replaces any previously read Verilog module if its name matches (case-sensitively) that module.  Further, it replaces any previously read VHDL entity in the same library if its name matches (case -insensitively) that entity.
+    For instance:
+        Verilog 'foo' replaces    VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        Verilog 'foo' replaces    Verilog 'foo' only
+    In addition:
+        Verilog 'foo' does not replace Verilog 'FOO' and the two remain as distinct modules.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'reset_ff' in library 'default' with newly read Verilog module 'reset_ff' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 33.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'reg_file' in library 'default' with newly read Verilog module 'reg_file' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 52.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'mux4' in library 'default' with newly read Verilog module 'mux4' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 82.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'mux3' in library 'default' with newly read Verilog module 'mux3' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 94.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'mux2' in library 'default' with newly read Verilog module 'mux2' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 106.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'main_decoder' in library 'default' with newly read Verilog module 'main_decoder' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 119.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'instr_mem' in library 'default' with newly read Verilog module 'instr_mem' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 173.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'imm_extend' in library 'default' with newly read Verilog module 'imm_extend' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 193.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'datapath' in library 'default' with newly read Verilog module 'datapath' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 216.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'data_mem' in library 'default' with newly read Verilog module 'data_mem' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 263.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'controller' in library 'default' with newly read Verilog module 'controller' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 326.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'alu_decoder' in library 'default' with newly read Verilog module 'alu_decoder' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 355.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'alu' in library 'default' with newly read Verilog module 'alu' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 436.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'adder' in library 'default' with newly read Verilog module 'adder' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 502.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 't1c_riscv_cpu' in library 'default' with newly read Verilog module 't1c_riscv_cpu' in the same library in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 512.
+legacy_genus:/> elaborate
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 368.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'alu_out' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 444.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 't1c_riscv_cpu' contains errors and cannot be elaborated.
+1
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+endmodule
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting a statement in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 399, column 9.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+endmodule
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token 'end', found 'endmodule' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 399, column 9.
+        4'b0110:  alu_out <= a << b;      // SLLI
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 463, column 9.
+        4'b0110:  alu_out <= a << b;      // SLLI
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'number' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 463, column 9.
+        4'b0111:  alu_out <= a < b ? 1 : 0; // SLTIU
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 464, column 9.
+        4'b0111:  alu_out <= a < b ? 1 : 0; // SLTIU
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'number' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 464, column 9.
+        4'b0100:  alu_out <= a^b; // XORI
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 465, column 9.
+        4'b0100:  alu_out <= a^b; // XORI
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'number' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 465, column 9.
+        4'b1000:  alu_out <= $signed(a) >>> b; //SRAI, SRA
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 466, column 9.
+        4'b1000:  alu_out <= $signed(a) >>> b; //SRAI, SRA
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'number' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 466, column 9.
+        4'b1001:  alu_out <= a >> b;      // SRLI, SRL
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 467, column 9.
+        4'b1001:  alu_out <= a >> b;      // SRLI, SRL
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'number' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 467, column 9.
+        default: alu_out = 0;
+               |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token 'clocking', found ':' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+        default: alu_out = 0;
+               |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Clocking declaration in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+        : For example, the following constructs will be ignored:
+    - initial block
+    - final block
+    - program block
+    - property block
+    - sequence block
+    - covergroup
+    - checker block
+    - gate drive strength
+    - system task enable
+    - reg declaration with initial value
+    - specify block.
+        default: alu_out = 0;
+               |
+Error   : Unexpected end of file. [VLOGPT-11] [read_hdl]
+        : Expecting token 'endclocking', reached end of file in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+        : Unexpected end of file encountered.
+1
+legacy_genus:/> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'ad' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 345.
+        : Check the kind of module a black box is. If it is a lib_cell or a macro, check why the corresponding .lib was not read in. This could be either due to a missing or faulty file or due to an incomplete init_lib_search_path attribute value making restricting access to the missing file. If it is a module of your design, verify whether the path to this module is a part of the files you read or else check that the init_hdl_search_path attribute is not missing some paths.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'pcadd4' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 240.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'alu' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 248.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'auipcAdder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 249.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][0]' in module 'reg_file'.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][1]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][2]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][3]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][4]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][5]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][6]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][7]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][8]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][9]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][10]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][11]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][12]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][13]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][14]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][15]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][16]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][17]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][18]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][19]' in module 'reg_file'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'riscv_cpu'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'instr_mem' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'instr_mem' with default parameters value.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[0]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+        : The undriven signal handling can be controlled by setting the attribute 'hdl_unconnected_value' before syn_generic command.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[1]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[2]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[3]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[4]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[5]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[6]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[7]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[8]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[9]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[10]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[11]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[12]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[13]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[14]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[15]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[16]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[17]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[18]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[19]' in module 'instr_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 188, column 16, hid = 0.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'instr_mem'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'data_mem' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'data_mem' with default parameters value.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'rd_data_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 297.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'data_mem' contains errors and cannot be elaborated.
+1
+legacy_genus:/> set_top_module /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+endmodule
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting a statement in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 399, column 9.
+endmodule
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token 'end', found 'endmodule' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 399, column 9.
+        4'b0110:  alu_out <= a << b;      // SLLI
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 463, column 9.
+        4'b0110:  alu_out <= a << b;      // SLLI
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'number' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 463, column 9.
+        4'b0111:  alu_out <= a < b ? 1 : 0; // SLTIU
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 464, column 9.
+        4'b0111:  alu_out <= a < b ? 1 : 0; // SLTIU
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found 'number' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 464, column 9.
+        4'b0100:  alu_out <= a^b; // XORI
+        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 465, column 9.
+        default: alu_out = 0;
+               |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Clocking declaration in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+        default: alu_out = 0;
+               |
+Error   : Unexpected end of file. [VLOGPT-11] [read_hdl]
+        : Expecting token 'endclocking', reached end of file in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+1
+legacy_genus:/> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'ad' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 345.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'pcadd4' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 240.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'alu' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 248.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'auipcAdder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 249.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'riscv_cpu'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'instr_mem' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'instr_mem' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'instr_mem'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'data_mem' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'data_mem' with default parameters value.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'rd_data_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 297.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'data_mem' contains errors and cannot be elaborated.
+1
+legacy_genus:/> #set_top_module /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+legacy_genus:/> set_top_module /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> set_top_module t1c_riscv_cpu
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named 't1c_riscv_cpu' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> set_top_module t1c_riscv_cpu
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named 't1c_riscv_cpu' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> elaborate
+legacy_genus:/> set_top_module /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+        default: alu_out = 0;
+               |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Clocking declaration in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+        default: alu_out = 0;
+               |
+Error   : Unexpected end of file. [VLOGPT-11] [read_hdl]
+        : Expecting token 'endclocking', reached end of file in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+1
+legacy_genus:/> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'ad' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 345.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'pcadd4' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 240.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'alu' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 248.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'auipcAdder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 249.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'riscv_cpu'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'instr_mem' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'instr_mem' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'instr_mem'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'data_mem' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'data_mem' with default parameters value.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'rd_data_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 297.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'data_mem' contains errors and cannot be elaborated.
+1
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../lib/'
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path set_attr init_lib_search_path ../lib/
+Error   : A required object parameter could not be found. [TUI-61] [set_attribute]
+        : An object of type 'root' named 'init_lib_search_path' could not be found.
+
+Usage: ::legacy::set_attribute [-quiet] [-lock] <string> <string> [<root>+]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-lock]:
+        attribute becomes read only once locked 
+    <string>:
+        attribute name 
+    <string>:
+        new value. A compound string (containing spaces) should be represented 
+        as a list (using double-quotes or braces). 
+    [<root>+]:
+        object(s) of interest 
+1
+legacy_genus:/> set_attr hdl_search_path /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+  Setting attribute of root '/': 'hdl_search_path' = /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+legacy_genus:/> set_attr /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl
+Error   : A required argument was not specified. [TUI-202] [set_attribute]
+        : An argument of type '<string>' was not specified.
+        : Rerun the command specifying all required arguments.
+
+Usage: ::legacy::set_attribute [-quiet] [-lock] <string> <string> [<object>+]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-lock]:
+        attribute becomes read only once locked 
+    <string>:
+        attribute name 
+    <string>:
+        new value. A compound string (containing spaces) should be represented 
+        as a list (using double-quotes or braces). 
+    [<object>+]:
+        object(s) of interest 
+1
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+Freeing libraries in memory (slow_vdd1v0_basicCells.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu_decoder'.
+        : Run check_design to get all unresolved instance. To resolve the reference, either load a technology library containing the cell by appending to the 'library' attribute, or read in the hdl file containing the module before performing elaboration. As the design is incomplete, synthesis results may not correspond to the entire design.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder_32'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu_decoder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder_32'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu_decoder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder_32'.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> set_attr /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/lib/slow_vdd1v0_basicCells.lib
+Error   : A required argument was not specified. [TUI-202] [set_attribute]
+        : An argument of type '<string>' was not specified.
+
+Usage: ::legacy::set_attribute [-quiet] [-lock] <string> <string> [<object>+]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-lock]:
+        attribute becomes read only once locked 
+    <string>:
+        attribute name 
+    <string>:
+        new value. A compound string (containing spaces) should be represented 
+        as a list (using double-quotes or braces). 
+    [<object>+]:
+        object(s) of interest 
+1
+legacy_genus:/> set_top_module t1c_riscv_cpu
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named 't1c_riscv_cpu' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> read_hdl /home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v
+        default: alu_out = 0;
+               |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Clocking declaration in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+        default: alu_out = 0;
+               |
+Error   : Unexpected end of file. [VLOGPT-11] [read_hdl]
+        : Expecting token 'endclocking', reached end of file in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 468, column 16.
+1
+legacy_genus:/> elaborate
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'riscv_cpu' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'ad' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 345.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'pcadd4' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 240.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 200.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'alu' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 248.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'auipcAdder' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 249.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'riscv_cpu'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'instr_mem' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'instr_mem'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'data_mem' with default parameters value.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'rd_data_mem' in file '/home/vlsiuser21/Desktop/aditya_Friday/files_rtl3gds/Cadence_design_database_45nm/Cadence_design_database_45nm/rtl/t1c_riscv_cpu_rewritten.v' on line 297.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'data_mem' contains errors and cannot be elaborated.
+1
+legacy_genus:/> ls
+./              designs/        hdl_libraries/  messages/       tech/         
+commands/       flows/          libraries/      object_types/   
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../lib/'
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path ../rtl/
+  Setting attribute of root '/': 'hdl_search_path' = ../rtl/
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+Freeing libraries in memory (slow_vdd1v0_basicCells.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu_decoder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'alu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'adder_32'.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../lib/'
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path ../rtl/
+  Setting attribute of root '/': 'hdl_search_path' = ../rtl/
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+Freeing libraries in memory (slow_vdd1v0_basicCells.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> clear
+legacy_genus:/> exit
+Normal exit.

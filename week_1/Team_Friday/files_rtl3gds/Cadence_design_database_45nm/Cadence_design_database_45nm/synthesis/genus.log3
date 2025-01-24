@@ -1,0 +1,440 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 21.10-p002_1, built Thu Aug 19 21:43:13 PDT 2021
+Options: -legacy_ui 
+Date:    Fri Jan 17 13:17:27 2025
+Host:    vlsicadclient07 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB) (36699188KB)
+PID:     3863
+OS:      Red Hat Enterprise Linux Workstation release 7.6 (Maipo)
+
+Checkout succeeded: Genus_Synthesis/AF9962AAA7C3F38A370F
+	License file: 5280@172.16.201.225
+	License Server: 5280@172.16.201.225
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (10 seconds elapsed).
+
+WARNING: This version of the tool is 1246 days old.
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path ../rtl/
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'hdl_search_path', object type: 'root'
+        : Attribute 'hdl_search_path' is going to be obsoleted, use the new attribute 'init_hdl_search_path'.
+  Setting attribute of root '/': 'hdl_search_path' = ../rtl/
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+
+Threads Configured:3
+
+  Message Summary for Library slow_vdd1v0_basicCells.lib:
+  *******************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  *******************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> ls
+./              designs/        hdl_libraries/  messages/       tech/         
+commands/       flows/          libraries/      object_types/   
+legacy_genus:/> read_hdl t1c_riscv_cpu.v
+legacy_genus:/> elaborate
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '../rtl/t1c_riscv_cpu.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'rvcpu' in file '../rtl/t1c_riscv_cpu.v' on line 18.
+        : Check the kind of module a black box is. If it is a lib_cell or a macro, check why the corresponding .lib was not read in. This could be either due to a missing or faulty file or due to an incomplete init_lib_search_path attribute value making restricting access to the missing file. If it is a module of your design, verify whether the path to this module is a part of the files you read or else check that the init_hdl_search_path attribute is not missing some paths.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'instrmem' in file '../rtl/t1c_riscv_cpu.v' on line 21.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'datamem' in file '../rtl/t1c_riscv_cpu.v' on line 22.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 't1c_riscv_cpu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'riscv_cpu'.
+        : Run check_design to get all unresolved instance. To resolve the reference, either load a technology library containing the cell by appending to the 'library' attribute, or read in the hdl file containing the module before performing elaboration. As the design is incomplete, synthesis results may not correspond to the entire design.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'instr_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'data_mem'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+/designs/t1c_riscv_cpu
+legacy_genus:/> read_hdl riscv_cpu.v
+legacy_genus:/> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'riscv_cpu' from file '../rtl/riscv_cpu.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'c' in file '../rtl/riscv_cpu.v' on line 18.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'dp' in file '../rtl/riscv_cpu.v' on line 22.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'riscv_cpu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'riscv_cpu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'instr_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'data_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'controller'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'datapath'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: riscv_cpu, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: riscv_cpu, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+/designs/riscv_cpu
+legacy_genus:/> elaborate
+legacy_genus:/> read_sdc ../constraints/constraints_top.sdc
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_ports]
+        : There is no unique design here.
+        : Specify a design by using the cd command to change to that design's directory or specify the design as an argument for the command.
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'port|pin' named 'find_unique_design' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '1' of the SDC file '../constraints/constraints_top.sdc': create_clock -name clk -period 10 -waveform {0 5} [get_ports 'clk'].
+        : The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_clocks]
+        : There is no unique design here.
+Failed on finding the unique design.
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'clock' named '1' could not be found.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '2' of the SDC file '../constraints/constraints_top.sdc': set_clock_transition -rise 0.1 [get_clocks 'clk'].
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_clocks]
+        : There is no unique design here.
+Failed on finding the unique design.
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'clock' named '1' could not be found.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '3' of the SDC file '../constraints/constraints_top.sdc': set_clock_transition -fall 0.1 [get_clocks 'clk'].
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_ports]
+        : There is no unique design here.
+Error   : A required object parameter could not be found. [TUI-61] [set_clock_uncertainty_fast]
+        : An object of type 'clock|port|pin' named 'find_unique_design' could not be found.
+Error   : Option missing for SDC command. [SDC-203] [set_clock_uncertainty]
+        : The set_clock_uncertainty command requires '-from', '-to', '-rise_from', '-fall_from', '-rise_to', '-fall_to', or list of objects option.
+        : This SDC command requires the indicated options.  Check the SDC command and contact Cadence customer support if you believe this option combination should be supported.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '4' of the SDC file '../constraints/constraints_top.sdc': set_clock_uncertainty 0.01 [get_ports 'clk'].
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_ports]
+        : There is no unique design here.
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_clocks]
+        : There is no unique design here.
+Failed on finding the unique design.
+Error   : A required object parameter could not be found. [TUI-61] [set_input_output_delay_fast]
+        : An object of type 'port|pin_bus|port_bus|pin' named 'find_unique_design' could not be found.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '5' of the SDC file '../constraints/constraints_top.sdc': set_input_delay -max 1.0 [get_ports 'rst'] -clock [get_clocks 'clk'].
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_ports]
+        : There is no unique design here.
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::dc::get_clocks]
+        : There is no unique design here.
+Failed on finding the unique design.
+Error   : A required object parameter could not be found. [TUI-61] [set_input_output_delay_fast]
+        : An object of type 'port|pin_bus|port_bus|pin' named 'find_unique_design' could not be found.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '6' of the SDC file '../constraints/constraints_top.sdc': set_output_delay -max 1.0 [get_ports 'count'] -clock [get_clocks 'clk'].
+Statistics for commands executed by read_sdc:
+ "create_clock"             - successful      0 , failed      1 (runtime  0.00)
+ "get_clocks"               - successful      0 , failed      4 (runtime  0.00)
+ "get_ports"                - successful      0 , failed      4 (runtime  0.00)
+ "set_clock_transition"     - successful      0 , failed      2 (runtime  0.00)
+ "set_clock_uncertainty"    - successful      0 , failed      1 (runtime  0.00)
+ "set_input_delay"          - successful      0 , failed      1 (runtime  0.00)
+ "set_output_delay"         - successful      0 , failed      1 (runtime  0.00)
+Warning : Total failed commands during read_sdc are 14
+Warning : One or more commands failed when these constraints were applied. [SDC-209]
+        : The 'read_sdc' command encountered a problem while processing commands.
+        : You can examine the failed commands or save them to a file by querying the Tcl variable $::dc::sdc_failed_commands.
+read_sdc completed in 00:00:00 (hh:mm:ss)
+legacy_genus:/> gui_show
+legacy_genus:/> set_top_module t1c_riscv_cpu.v
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named 't1c_riscv_cpu.v' could not be found.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+Failed on set_top_module
+legacy_genus:/> set_top_module t1c_riscv_cpu
+/designs/t1c_riscv_cpu
+legacy_genus:/designs/t1c_riscv_cpu> elaborate
+legacy_genus:/designs/t1c_riscv_cpu> gui_show
+legacy_genus:/designs/t1c_riscv_cpu> read_hdl t1c_riscv_cpu.v
+legacy_genus:/designs/t1c_riscv_cpu> set_top_module t1c_riscv_cpu
+/designs/t1c_riscv_cpu
+legacy_genus:/designs/t1c_riscv_cpu> elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '../rtl/t1c_riscv_cpu.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'rvcpu' in file '../rtl/t1c_riscv_cpu.v' on line 18.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'instrmem' in file '../rtl/t1c_riscv_cpu.v' on line 21.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'datamem' in file '../rtl/t1c_riscv_cpu.v' on line 22.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 't1c_riscv_cpu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'riscv_cpu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'instr_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'data_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'controller'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'datapath'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'riscv_cpu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'instr_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'data_mem'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu_2, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: t1c_riscv_cpu_2, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+/designs/t1c_riscv_cpu_2
+legacy_genus:/designs/t1c_riscv_cpu> gui_show
+legacy_genus:/designs/t1c_riscv_cpu> read_hdl t1c_riscv_cpu.v
+initial begin
+      |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '../rtl/t1c_riscv_cpu.v' on line 63, column 7.
+        : For example, the following constructs will be ignored:
+    - initial block
+    - final block
+    - program block
+    - property block
+    - sequence block
+    - covergroup
+    - checker block
+    - gate drive strength
+    - system task enable
+    - reg declaration with initial value
+    - specify block.
+initial begin
+      |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '../rtl/t1c_riscv_cpu.v' on line 181, column 7.
+legacy_genus:/designs/t1c_riscv_cpu> read_hdl t1c_riscv_cpu.v
+Warning : Cannot open file. [VLOGPT-650]
+        : File 't1c_riscv_cpu.v'.
+        : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+legacy_genus:/designs/t1c_riscv_cpu> read_hdl t1c_riscv_cpu.sv
+module riscv_cpu (
+               |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'riscv_cpu' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 6, column 16.
+        : A Verilog description is replaced when a new description of the same name and same library is read again.
+    Verilog descriptions are:
+       module
+       macromodule
+       configuration
+    SystemVerilog adds the following descriptions:
+       interface
+       program
+       package.
+module reset_ff #(parameter WIDTH = 8) (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'reset_ff' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 33, column 15.
+module reg_file #(parameter DATA_WIDTH = 32) (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'reg_file' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 52, column 15.
+initial begin
+      |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '../rtl/t1c_riscv_cpu.sv' on line 63, column 7.
+module mux4 #(parameter WIDTH = 8) (
+          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'mux4' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 82, column 11.
+module mux3 #(parameter WIDTH = 8) (
+          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'mux3' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 94, column 11.
+module mux2 #(parameter WIDTH = 8) (
+          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'mux2' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 106, column 11.
+module main_decoder (
+                  |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'main_decoder' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 119, column 19.
+module instr_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 512) (
+               |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'instr_mem' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 173, column 16.
+initial begin
+      |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '../rtl/t1c_riscv_cpu.sv' on line 181, column 7.
+module imm_extend (
+                |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'imm_extend' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 193, column 17.
+module datapath (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'datapath' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 216, column 15.
+module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'data_mem' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 263, column 15.
+module controller (
+                |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'controller' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 326, column 17.
+module alu_decoder (
+                 |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'alu_decoder' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 355, column 18.
+module alu #(parameter WIDTH = 32) (
+         |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'alu' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 436, column 10.
+module adder #(parameter WIDTH = 32) (
+           |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'adder' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 502, column 12.
+module t1c_riscv_cpu (
+                   |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 't1c_riscv_cpu' with Verilog module in file '../rtl/t1c_riscv_cpu.sv' on line 512, column 20.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'riscv_cpu' in library 'default' with newly read Verilog module 'riscv_cpu' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 6.
+        : A newly read VHDL entity replaces any previously read Verilog module or VHDL entity in the same library if its name matches (case-insensitively) the existing module or entity.
+    For instance:
+        VHDL 'foo'                  replaces  VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        VHDL 'foo' (in any library) replaces  Verilog {'FOO' or 'foo' or 'Foo' or ...} in the same library
+ 
+A newly read Verilog module replaces any previously read Verilog module if its name matches (case-sensitively) that module.  Further, it replaces any previously read VHDL entity in the same library if its name matches (case -insensitively) that entity.
+    For instance:
+        Verilog 'foo' replaces    VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        Verilog 'foo' replaces    Verilog 'foo' only
+    In addition:
+        Verilog 'foo' does not replace Verilog 'FOO' and the two remain as distinct modules.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'reset_ff' in library 'default' with newly read Verilog module 'reset_ff' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 33.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'reg_file' in library 'default' with newly read Verilog module 'reg_file' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 52.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'mux4' in library 'default' with newly read Verilog module 'mux4' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 82.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'mux3' in library 'default' with newly read Verilog module 'mux3' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 94.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'mux2' in library 'default' with newly read Verilog module 'mux2' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 106.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'main_decoder' in library 'default' with newly read Verilog module 'main_decoder' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 119.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'instr_mem' in library 'default' with newly read Verilog module 'instr_mem' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 173.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'imm_extend' in library 'default' with newly read Verilog module 'imm_extend' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 193.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'datapath' in library 'default' with newly read Verilog module 'datapath' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 216.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'data_mem' in library 'default' with newly read Verilog module 'data_mem' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 263.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'controller' in library 'default' with newly read Verilog module 'controller' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 326.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'alu_decoder' in library 'default' with newly read Verilog module 'alu_decoder' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 355.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'alu' in library 'default' with newly read Verilog module 'alu' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 436.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'adder' in library 'default' with newly read Verilog module 'adder' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 502.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 't1c_riscv_cpu' in library 'default' with newly read Verilog module 't1c_riscv_cpu' in the same library in file '../rtl/t1c_riscv_cpu.sv' on line 512.
+legacy_genus:/designs/t1c_riscv_cpu> clear
+legacy_genus:/designs/t1c_riscv_cpu> set_attr init_lib_search_path ../lib/
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../lib/'
+        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/designs/t1c_riscv_cpu> set_attr hdl_search_path ../rtl/
+  Setting attribute of root '/': 'hdl_search_path' = ../rtl/
+legacy_genus:/designs/t1c_riscv_cpu> set_attr library slow_vdd1v0_basicCells.lib
+Error   : The attribute name is ambiguous. [TUI-27] [set_attribute]
+        : attribute name: 'library', object type:'design'
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *' (in legacy UI mode) or 'help * <attr_name> -detail' (in CUI mode).
+          Possible matches are:
+            library_domain
+            library_name
+Freeing libraries in memory (slow_vdd1v0_basicCells.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'riscv_cpu'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'instr_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'data_mem'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'controller'.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/designs/t1c_riscv_cpu> clear
+legacy_genus:/designs/t1c_riscv_cpu> exit
+Normal exit.
