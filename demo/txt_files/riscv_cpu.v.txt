@@ -1,0 +1,57 @@
+// riscv_cpu.v - Synthesizable RISC-V CPU Processor
+
+module riscv_cpu (
+    input         clk, reset,
+    output [31:0] PC,
+    input  [31:0] Instr,
+    output        MemWrite,
+    output [31:0] Mem_WrAddr, Mem_WrData,
+    input  [31:0] ReadData,
+    output [31:0] Result
+);
+
+// Internal wires
+wire        ALUSrc, RegWrite, Jump, Jalr, Zero, ALUR31;
+wire [1:0]  ResultSrc, ImmSrc;
+wire [3:0]  ALUControl;
+
+// Controller instance
+controller  c (
+    .opcode(Instr[6:0]), 
+    .funct3(Instr[14:12]), 
+    .funct7(Instr[30]), 
+    .Zero(Zero), 
+    .ALUR31(ALUR31),
+    .ResultSrc(ResultSrc), 
+    .MemWrite(MemWrite), 
+    .PCSrc(PCSrc), 
+    .ALUSrc(ALUSrc), 
+    .RegWrite(RegWrite), 
+    .Jump(Jump), 
+    .Jalr(Jalr),
+    .ImmSrc(ImmSrc), 
+    .ALUControl(ALUControl)
+);
+
+// Datapath instance
+datapath    dp (
+    .clk(clk), 
+    .reset(reset), 
+    .ResultSrc(ResultSrc), 
+    .PCSrc(PCSrc),
+    .ALUSrc(ALUSrc), 
+    .RegWrite(RegWrite), 
+    .ImmSrc(ImmSrc), 
+    .ALUControl(ALUControl), 
+    .Jalr(Jalr),
+    .Zero(Zero), 
+    .ALUR31(ALUR31), 
+    .PC(PC), 
+    .Instr(Instr), 
+    .Mem_WrAddr(Mem_WrAddr), 
+    .Mem_WrData(Mem_WrData), 
+    .ReadData(ReadData), 
+    .Result(Result)
+);
+
+endmodule
