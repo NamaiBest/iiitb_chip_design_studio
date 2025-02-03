@@ -1,0 +1,28 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+Options:	
+Date:		Wed Jan 29 22:49:15 2025
+Host:		vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB)
+OS:		Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+
+License:
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 21.12 fill procedures
+<CMD> win
+**WARN: (IMPOAX-793):	Problem in processing library definition file /home/vlsiuser/cds.lib - Unable to open library umc110ae at path /home/vlsiuser/umc110ae: Invalid Lib Path..
+
+*** Memory Usage v#1 (Current mem = 822.234M, initial mem = 308.848M) ***
+*** Message Summary: 1 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:02:00, real=0:04:51, mem=822.2M) ---

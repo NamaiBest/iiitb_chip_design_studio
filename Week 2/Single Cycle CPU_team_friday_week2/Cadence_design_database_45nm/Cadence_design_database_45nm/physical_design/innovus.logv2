@@ -1,0 +1,76 @@
+[01/18 14:54:51      0s] 
+[01/18 14:54:51      0s] Cadence Innovus(TM) Implementation System.
+[01/18 14:54:51      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[01/18 14:54:51      0s] 
+[01/18 14:54:51      0s] Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+[01/18 14:54:51      0s] Options:	
+[01/18 14:54:51      0s] Date:		Sat Jan 18 14:54:51 2025
+[01/18 14:54:51      0s] Host:		vlsicadclient07 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB)
+[01/18 14:54:51      0s] OS:		Red Hat Enterprise Linux Workstation release 7.6 (Maipo)
+[01/18 14:54:51      0s] 
+[01/18 14:54:51      0s] License:
+[01/18 14:54:51      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[01/18 14:54:51      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[01/18 14:55:12      9s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+[01/18 14:55:14     11s] @(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+[01/18 14:55:14     11s] @(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+[01/18 14:55:14     11s] @(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+[01/18 14:55:14     11s] @(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+[01/18 14:55:14     11s] @(#)CDS: CPE v21.10-p004
+[01/18 14:55:14     11s] @(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+[01/18 14:55:14     11s] @(#)CDS: OA 22.60-p052 Thu Feb 25 10:35:13 2021
+[01/18 14:55:14     11s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[01/18 14:55:14     11s] @(#)CDS: RCDB 11.15.0
+[01/18 14:55:14     11s] @(#)CDS: STYLUS 21.10-d038_1 (02/12/2021 04:34 PST)
+[01/18 14:55:14     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_17663_vlsicadclient07_vlsiuser21_oj5jP2.
+
+[01/18 14:55:14     11s] Change the soft stacksize limit to 0.2%RAM (71 mbytes). Set global soft_stack_size_limit to change the value.
+[01/18 14:55:16     12s] 
+[01/18 14:55:16     12s] **INFO:  MMMC transition support version v31-84 
+[01/18 14:55:16     12s] 
+[01/18 14:55:16     12s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[01/18 14:55:16     12s] <CMD> suppressMessage ENCEXT-2799
+[01/18 14:55:18     12s] <CMD> getVersion
+[01/18 14:55:25     12s] [INFO] Loading PVS 21.12 fill procedures
+[01/18 14:55:25     12s] <CMD> win
+[01/18 15:06:35     82s] <CMD> encMessage warning 0
+[01/18 15:06:35     82s] Suppress "**WARN ..." messages.
+[01/18 15:06:35     82s] <CMD> encMessage debug 0
+[01/18 15:06:35     82s] <CMD> set defHierChar /
+[01/18 15:06:35     82s] <CMD> set init_oa_search_lib {}
+[01/18 15:06:35     82s] <CMD> set init_verilog counter_netlist.v
+[01/18 15:06:35     82s] <CMD> set init_pwr_net VDD
+[01/18 15:06:35     82s] <CMD> set init_mmmc_file counter.view
+[01/18 15:06:35     82s] <CMD> set delaycal_input_transition_delay 0.1ps
+[01/18 15:06:35     82s] <CMD> set init_lef_file {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+[01/18 15:06:35     82s] <CMD> set fpIsMaxIoHeight 0
+[01/18 15:06:35     82s] <CMD> set init_design_settop 0
+[01/18 15:06:35     82s] <CMD> set init_gnd_net VSS
+[01/18 15:06:35     82s] <CMD> setDrawView fplan
+[01/18 15:06:35     82s] <CMD> encMessage warning 1
+[01/18 15:06:35     82s] Un-suppress "**WARN ..." messages.
+[01/18 15:06:35     82s] <CMD> encMessage debug 0
+[01/18 15:12:37     86s] **WARN: (IMPOAX-793):	Problem in processing library definition file /home/vlsiuser21/cds.lib - Unable to open library umc110ae at path /home/vlsiuser21/umc110ae: Invalid Lib Path..
+[01/20 09:49:39  33091s] <CMD> win off
+[01/20 11:47:32  34612s] **ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**ERROR: (IMPLIC-11):	Unable to validate license feature(s). After a few attempts the application will wait indefinitely until the licenses become available.
+**WARN: (EMS-27):	Message (IMPLIC-11) has exceeded the current message display limit of 20.
+[01/22 10:05:56  70766s] To increase the message display limit, refer to the product command reference manual.
