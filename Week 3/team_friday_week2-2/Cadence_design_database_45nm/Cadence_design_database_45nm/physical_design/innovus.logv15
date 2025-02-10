@@ -1,0 +1,220 @@
+[01/31 16:58:21      0s] 
+[01/31 16:58:21      0s] Cadence Innovus(TM) Implementation System.
+[01/31 16:58:21      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[01/31 16:58:21      0s] 
+[01/31 16:58:21      0s] Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+[01/31 16:58:21      0s] Options:	
+[01/31 16:58:21      0s] Date:		Fri Jan 31 16:58:21 2025
+[01/31 16:58:21      0s] Host:		vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB)
+[01/31 16:58:21      0s] OS:		Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+[01/31 16:58:21      0s] 
+[01/31 16:58:21      0s] License:
+[01/31 16:58:21      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[01/31 16:58:21      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[01/31 16:58:40     10s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+[01/31 16:58:44     12s] @(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+[01/31 16:58:44     12s] @(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+[01/31 16:58:44     12s] @(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+[01/31 16:58:44     12s] @(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+[01/31 16:58:44     12s] @(#)CDS: CPE v21.10-p004
+[01/31 16:58:44     12s] @(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+[01/31 16:58:44     12s] @(#)CDS: OA 22.60-p052 Thu Feb 25 10:35:13 2021
+[01/31 16:58:44     12s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[01/31 16:58:44     12s] @(#)CDS: RCDB 11.15.0
+[01/31 16:58:44     12s] @(#)CDS: STYLUS 21.10-d038_1 (02/12/2021 04:34 PST)
+[01/31 16:58:44     12s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_4914_vlsicadclient05_vlsiuser_UtT4Lo.
+
+[01/31 16:58:44     12s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[01/31 16:58:47     14s] 
+[01/31 16:58:47     14s] **INFO:  MMMC transition support version v31-84 
+[01/31 16:58:47     14s] 
+[01/31 16:58:47     14s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[01/31 16:58:47     14s] <CMD> suppressMessage ENCEXT-2799
+[01/31 16:58:48     14s] <CMD> getVersion
+[01/31 16:58:55     14s] [INFO] Loading PVS 21.12 fill procedures
+[01/31 16:58:55     14s] <CMD> win
+[01/31 16:59:27     23s] <CMD> encMessage warning 0
+[01/31 16:59:27     23s] Suppress "**WARN ..." messages.
+[01/31 16:59:27     23s] <CMD> encMessage debug 0
+[01/31 16:59:27     23s] <CMD> is_common_ui_mode
+[01/31 16:59:27     23s] <CMD> restoreDesign /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat t1c_riscv_cpu
+[01/31 16:59:29     23s] #% Begin load design ... (date=01/31 16:59:29, mem=699.9M)
+[01/31 16:59:29     23s] Set Default Input Pin Transition as 0.1 ps.
+[01/31 16:59:29     23s] Loading design 't1c_riscv_cpu' saved by 'Innovus' '21.10-p004_1' on 'Thu Jan 30 23:38:10 2025'.
+[01/31 16:59:30     23s] **ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_tech.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+**ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_macro.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+
+[01/31 16:59:30     23s] 
+[01/31 16:59:30     23s] ERROR: 
+[01/31 16:59:30     23s] 
+[01/31 16:59:30     23s] 
+[01/31 16:59:30     23s]     while executing
+[01/31 16:59:30     23s] "error $catchMsg"
+[01/31 16:59:30     23s]     (procedure "restoreDesign" line 33)
+[01/31 16:59:30     23s] 
+[01/31 16:59:30     23s] <CMD> encMessage warning 1
+[01/31 16:59:30     23s] Un-suppress "**WARN ..." messages.
+[01/31 16:59:30     23s] <CMD> encMessage debug 0
+[01/31 16:59:31     23s] <CMD> encMessage warning 0
+[01/31 16:59:31     23s] Suppress "**WARN ..." messages.
+[01/31 16:59:31     23s] <CMD> encMessage debug 0
+[01/31 16:59:31     23s] <CMD> is_common_ui_mode
+[01/31 16:59:31     23s] <CMD> restoreDesign /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat t1c_riscv_cpu
+[01/31 16:59:31     23s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/31 16:59:31     23s] % Begin load design ... (date=01/31 16:59:31, mem=701.6M)
+[01/31 16:59:31     23s] Set Default Input Pin Transition as 0.1 ps.
+[01/31 16:59:31     24s] Loading design 't1c_riscv_cpu' saved by 'Innovus' '21.10-p004_1' on 'Thu Jan 30 23:38:10 2025'.
+[01/31 16:59:31     24s] **ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_tech.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+**ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_macro.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+
+[01/31 16:59:31     24s] 
+[01/31 16:59:31     24s] ERROR: 
+[01/31 16:59:31     24s] 
+[01/31 16:59:31     24s] 
+[01/31 16:59:31     24s]     while executing
+[01/31 16:59:31     24s] "error $catchMsg"
+[01/31 16:59:31     24s]     (procedure "restoreDesign" line 33)
+[01/31 16:59:31     24s] 
+[01/31 16:59:31     24s] <CMD> encMessage warning 1
+[01/31 16:59:31     24s] Un-suppress "**WARN ..." messages.
+[01/31 16:59:31     24s] <CMD> encMessage debug 0
+[01/31 16:59:32     24s] <CMD> encMessage warning 0
+[01/31 16:59:32     24s] Suppress "**WARN ..." messages.
+[01/31 16:59:32     24s] <CMD> encMessage debug 0
+[01/31 16:59:32     24s] <CMD> is_common_ui_mode
+[01/31 16:59:32     24s] <CMD> restoreDesign /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat t1c_riscv_cpu
+[01/31 16:59:32     24s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/31 16:59:32     24s] % Begin load design ... (date=01/31 16:59:32, mem=701.7M)
+[01/31 16:59:32     24s] Set Default Input Pin Transition as 0.1 ps.
+[01/31 16:59:32     24s] Loading design 't1c_riscv_cpu' saved by 'Innovus' '21.10-p004_1' on 'Thu Jan 30 23:38:10 2025'.
+[01/31 16:59:32     24s] **ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_tech.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+**ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_macro.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+
+[01/31 16:59:32     24s] 
+[01/31 16:59:32     24s] ERROR: 
+[01/31 16:59:32     24s] 
+[01/31 16:59:32     24s] 
+[01/31 16:59:32     24s]     while executing
+[01/31 16:59:32     24s] "error $catchMsg"
+[01/31 16:59:32     24s]     (procedure "restoreDesign" line 33)
+[01/31 16:59:32     24s] 
+[01/31 16:59:32     24s] <CMD> encMessage warning 1
+[01/31 16:59:32     24s] Un-suppress "**WARN ..." messages.
+[01/31 16:59:32     24s] <CMD> encMessage debug 0
+[01/31 16:59:32     24s] <CMD> encMessage warning 0
+[01/31 16:59:32     24s] Suppress "**WARN ..." messages.
+[01/31 16:59:32     24s] <CMD> encMessage debug 0
+[01/31 16:59:32     24s] <CMD> is_common_ui_mode
+[01/31 16:59:32     24s] <CMD> restoreDesign /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat t1c_riscv_cpu
+[01/31 16:59:32     24s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/31 16:59:32     24s] % Begin load design ... (date=01/31 16:59:32, mem=701.7M)
+[01/31 16:59:32     24s] Set Default Input Pin Transition as 0.1 ps.
+[01/31 16:59:33     24s] Loading design 't1c_riscv_cpu' saved by 'Innovus' '21.10-p004_1' on 'Thu Jan 30 23:38:10 2025'.
+[01/31 16:59:33     24s] **ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_tech.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+**ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_macro.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+
+[01/31 16:59:33     24s] 
+[01/31 16:59:33     24s] ERROR: 
+[01/31 16:59:33     24s] 
+[01/31 16:59:33     24s] 
+[01/31 16:59:33     24s]     while executing
+[01/31 16:59:33     24s] "error $catchMsg"
+[01/31 16:59:33     24s]     (procedure "restoreDesign" line 33)
+[01/31 16:59:33     24s] 
+[01/31 16:59:33     24s] <CMD> encMessage warning 1
+[01/31 16:59:33     24s] Un-suppress "**WARN ..." messages.
+[01/31 16:59:33     24s] <CMD> encMessage debug 0
+[01/31 16:59:54     31s] <CMD> setDrawView fplan
+[01/31 16:59:55     31s] <CMD> setDrawView ameba
+[01/31 16:59:55     31s] <CMD> setDrawView place
+[01/31 17:00:02     33s] **WARN: (IMPOAX-793):	Problem in processing library definition file /home/vlsiuser/cds.lib - Unable to open library umc110ae at path /home/vlsiuser/umc110ae: Invalid Lib Path..
+[01/31 17:11:23    207s] <CMD> encMessage warning 0
+[01/31 17:11:23    207s] Suppress "**WARN ..." messages.
+[01/31 17:11:23    207s] <CMD> encMessage debug 0
+[01/31 17:11:23    207s] <CMD> is_common_ui_mode
+[01/31 17:11:23    207s] <CMD> restoreDesign /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat t1c_riscv_cpu
+[01/31 17:11:23    207s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/31 17:11:23    207s] % Begin load design ... (date=01/31 17:11:23, mem=703.4M)
+[01/31 17:11:23    207s] Set Default Input Pin Transition as 0.1 ps.
+[01/31 17:11:23    207s] Loading design 't1c_riscv_cpu' saved by 'Innovus' '21.10-p004_1' on 'Thu Jan 30 23:38:10 2025'.
+[01/31 17:11:23    207s] **ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_tech.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+**ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_macro.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+
+[01/31 17:11:23    207s] 
+[01/31 17:11:23    207s] ERROR: 
+[01/31 17:11:23    207s] 
+[01/31 17:11:23    207s] 
+[01/31 17:11:23    207s]     while executing
+[01/31 17:11:23    207s] "error $catchMsg"
+[01/31 17:11:23    207s]     (procedure "restoreDesign" line 33)
+[01/31 17:11:23    207s] 
+[01/31 17:11:23    207s] <CMD> encMessage warning 1
+[01/31 17:11:23    207s] Un-suppress "**WARN ..." messages.
+[01/31 17:11:23    207s] <CMD> encMessage debug 0
+[01/31 17:11:23    207s] <CMD> encMessage warning 0
+[01/31 17:11:23    207s] Suppress "**WARN ..." messages.
+[01/31 17:11:23    207s] <CMD> encMessage debug 0
+[01/31 17:11:23    207s] <CMD> is_common_ui_mode
+[01/31 17:11:23    207s] <CMD> restoreDesign /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat t1c_riscv_cpu
+[01/31 17:11:23    207s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/31 17:11:23    207s] % Begin load design ... (date=01/31 17:11:23, mem=704.1M)
+[01/31 17:11:24    207s] Set Default Input Pin Transition as 0.1 ps.
+[01/31 17:11:24    207s] Loading design 't1c_riscv_cpu' saved by 'Innovus' '21.10-p004_1' on 'Thu Jan 30 23:38:10 2025'.
+[01/31 17:11:24    207s] **ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_tech.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+**ERROR: (IMPIMEX-7023):	The file /home/vlsiuser/Desktop/team_friday_week2/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/FINALCHIPsc.enc.dat/libs/lef/gsclib045_macro.lef inside the saved design directory was deleted. This is dangerous and can cause unexpected problems and crashes when reading the design or inside commands later in the flow. If you are just experimenting and/or debugging and accept the risks, you can set the Tcl global restore_db_file_check to 0 and try again.
+
+[01/31 17:11:24    207s] 
+[01/31 17:11:24    207s] ERROR: 
+[01/31 17:11:24    207s] 
+[01/31 17:11:24    207s] 
+[01/31 17:11:24    207s]     while executing
+[01/31 17:11:24    207s] "error $catchMsg"
+[01/31 17:11:24    207s]     (procedure "restoreDesign" line 33)
+[01/31 17:11:24    207s] 
+[01/31 17:11:24    207s] <CMD> encMessage warning 1
+[01/31 17:11:24    207s] Un-suppress "**WARN ..." messages.
+[01/31 17:11:24    207s] <CMD> encMessage debug 0
+[01/31 17:11:35    211s] <CMD> encMessage warning 0
+[01/31 17:11:35    211s] Suppress "**WARN ..." messages.
+[01/31 17:11:35    211s] <CMD> encMessage debug 0
+[01/31 17:11:35    211s] <CMD> read_db invalid command name 0
+[01/31 17:11:35    211s] 
+[01/31 17:11:35    211s] Usage: read_db [-help] [-dynamic_view <string>] [-hold_views <string>] [-leakage_view <string>] [-no_timing] [-setup_views <string>] {[<in_dir> [-mmmc_file <string>] [-lef_files <list_of_files>] ] | [-oa_lib_cell_view {<libname> <cellname> <viewname>} [-mmmc_file <string>]]} [ -no_timing_graph ]
+[01/31 17:11:35    211s] 
+[01/31 17:11:35    211s] **ERROR: (IMPTCM-48):	"command" is not a legal option for command "read_db". Either the current option or an option prior to it is not specified correctly.
+**ERROR: (IMPSYT-6300):	Failed to execute command 'read_db'. For more details, refer to error message:   
+[01/31 17:11:36    211s] <CMD> encMessage warning 1
+[01/31 17:11:36    211s] Un-suppress "**WARN ..." messages.
+[01/31 17:11:36    211s] <CMD> encMessage debug 0
+[01/31 17:11:37    212s] <CMD> encMessage warning 0
+[01/31 17:11:37    212s] Suppress "**WARN ..." messages.
+[01/31 17:11:37    212s] <CMD> encMessage debug 0
+[01/31 17:11:37    212s] <CMD> read_db invalid command name 0
+[01/31 17:11:37    212s] 
+[01/31 17:11:37    212s] Usage: read_db [-help] [-dynamic_view <string>] [-hold_views <string>] [-leakage_view <string>] [-no_timing] [-setup_views <string>] {[<in_dir> [-mmmc_file <string>] [-lef_files <list_of_files>] ] | [-oa_lib_cell_view {<libname> <cellname> <viewname>} [-mmmc_file <string>]]} [ -no_timing_graph ]
+[01/31 17:11:37    212s] 
+[01/31 17:11:37    212s] **ERROR: (IMPTCM-48):	"command" is not a legal option for command "read_db". Either the current option or an option prior to it is not specified correctly.
+**ERROR: (IMPSYT-6300):	Failed to execute command 'read_db'. For more details, refer to error message:   
+[01/31 17:11:39    212s] <CMD> encMessage warning 1
+[01/31 17:11:39    212s] Un-suppress "**WARN ..." messages.
+[01/31 17:11:39    212s] <CMD> encMessage debug 0
+[01/31 17:23:57    405s] <CMD> gui_select -rect {0.03900 0.06800 0.04400 0.08200}
+[01/31 20:03:16   2875s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Fri Jan 31 20:03:16 2025
+  Total CPU time:     0:47:56
+  Total real time:    3:05:00
+  Peak memory (main): 719.47MB
+
+[01/31 20:03:16   2875s] 
+[01/31 20:03:16   2875s] *** Memory Usage v#1 (Current mem = 818.117M, initial mem = 308.848M) ***
+[01/31 20:03:16   2875s] 
+[01/31 20:03:16   2875s] *** Summary of all messages that are not suppressed in this session:
+[01/31 20:03:16   2875s] Severity  ID               Count  Summary                                  
+[01/31 20:03:16   2875s] ERROR     IMPSYT-6300          4  Failed to execute command '%s'. For more...
+[01/31 20:03:16   2875s] WARNING   IMPOAX-793           1  Problem in processing library definition...
+[01/31 20:03:16   2875s] ERROR     IMPTCM-48            2  "%s" is not a legal option for command "...
+[01/31 20:03:16   2875s] ERROR     IMPIMEX-7023        12  The file %s inside the saved design dire...
+[01/31 20:03:16   2875s] *** Message Summary: 1 warning(s), 18 error(s)
+[01/31 20:03:16   2875s] 
+[01/31 20:03:16   2875s] --- Ending "Innovus" (totcpu=0:47:55, real=3:04:55, mem=818.1M) ---

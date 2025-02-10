@@ -1,0 +1,616 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Jan 30 19:50:28 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+#@(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+#@(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+#@(#)CDS: CPE v21.10-p004
+#@(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/vlsiuser/Desktop/team_friday/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/CCchip.enc.dat t1c_riscv_cpu
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/vlsiuser/Desktop/team_friday/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/CCchip.enc.dat t1c_riscv_cpu
+encMessage warning 1
+encMessage debug 0
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/vlsiuser/Desktop/team_friday/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/CCchip.enc.dat t1c_riscv_cpu
+encMessage warning 1
+encMessage debug 0
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox -133.67600 -12.59700 359.65200 225.90900
+zoomBox -155.92500 -16.57550 424.46100 264.02000
+zoomBox -63.54150 -0.05500 155.35100 105.77150
+zoomBox -35.48200 4.47450 78.78200 59.71700
+uiSetTool select
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 1.003 10.1775 -pin clk
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 0.3845 18.972 -pin {{DataAdr[0]} {DataAdr[1]} {DataAdr[2]} {DataAdr[3]} {DataAdr[4]} {DataAdr[5]} {DataAdr[6]} {DataAdr[7]} {DataAdr[8]} {DataAdr[9]} {DataAdr[10]} {DataAdr[11]} {DataAdr[12]} {DataAdr[13]} {DataAdr[14]} {DataAdr[15]} {DataAdr[16]} {DataAdr[17]} {DataAdr[18]} {DataAdr[19]} {DataAdr[20]} {DataAdr[21]} {DataAdr[22]} {DataAdr[23]} {DataAdr[24]} {DataAdr[25]} {DataAdr[26]} {DataAdr[27]} {DataAdr[28]} {DataAdr[29]} {DataAdr[30]} {DataAdr[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.1095 29.966 -pin {{Ext_DataAdr[0]} {Ext_DataAdr[1]} {Ext_DataAdr[2]} {Ext_DataAdr[3]} {Ext_DataAdr[4]} {Ext_DataAdr[5]} {Ext_DataAdr[6]} {Ext_DataAdr[7]} {Ext_DataAdr[8]} {Ext_DataAdr[9]} {Ext_DataAdr[10]} {Ext_DataAdr[11]} {Ext_DataAdr[12]} {Ext_DataAdr[13]} {Ext_DataAdr[14]} {Ext_DataAdr[15]} {Ext_DataAdr[16]} {Ext_DataAdr[17]} {Ext_DataAdr[18]} {Ext_DataAdr[19]} {Ext_DataAdr[20]} {Ext_DataAdr[21]} {Ext_DataAdr[22]} {Ext_DataAdr[23]} {Ext_DataAdr[24]} {Ext_DataAdr[25]} {Ext_DataAdr[26]} {Ext_DataAdr[27]} {Ext_DataAdr[28]} {Ext_DataAdr[29]} {Ext_DataAdr[30]} {Ext_DataAdr[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.041 40.6845 -pin Ext_MemWrite
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.0 0.0 -pin {{Ext_WriteData[0]} {Ext_WriteData[1]} {Ext_WriteData[2]} {Ext_WriteData[3]} {Ext_WriteData[4]} {Ext_WriteData[5]} {Ext_WriteData[6]} {Ext_WriteData[7]} {Ext_WriteData[8]} {Ext_WriteData[9]} {Ext_WriteData[10]} {Ext_WriteData[11]} {Ext_WriteData[12]} {Ext_WriteData[13]} {Ext_WriteData[14]} {Ext_WriteData[15]} {Ext_WriteData[16]} {Ext_WriteData[17]} {Ext_WriteData[18]} {Ext_WriteData[19]} {Ext_WriteData[20]} {Ext_WriteData[21]} {Ext_WriteData[22]} {Ext_WriteData[23]} {Ext_WriteData[24]} {Ext_WriteData[25]} {Ext_WriteData[26]} {Ext_WriteData[27]} {Ext_WriteData[28]} {Ext_WriteData[29]} {Ext_WriteData[30]} {Ext_WriteData[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.1785 52.64 -pin {{Ext_WriteData[0]} {Ext_WriteData[1]} {Ext_WriteData[2]} {Ext_WriteData[3]} {Ext_WriteData[4]} {Ext_WriteData[5]} {Ext_WriteData[6]} {Ext_WriteData[7]} {Ext_WriteData[8]} {Ext_WriteData[9]} {Ext_WriteData[10]} {Ext_WriteData[11]} {Ext_WriteData[12]} {Ext_WriteData[13]} {Ext_WriteData[14]} {Ext_WriteData[15]} {Ext_WriteData[16]} {Ext_WriteData[17]} {Ext_WriteData[18]} {Ext_WriteData[19]} {Ext_WriteData[20]} {Ext_WriteData[21]} {Ext_WriteData[22]} {Ext_WriteData[23]} {Ext_WriteData[24]} {Ext_WriteData[25]} {Ext_WriteData[26]} {Ext_WriteData[27]} {Ext_WriteData[28]} {Ext_WriteData[29]} {Ext_WriteData[30]} {Ext_WriteData[31]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.0 0.0 -pin MemWrite
+setPinAssignMode -pinEditInBatch false
+zoomBox -41.20500 2.47400 93.22300 67.46500
+zoomBox -47.92400 0.12000 110.22700 76.58050
+zoomBox -40.82050 9.67750 93.60850 74.66900
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.06 -pinDepth 0.335 -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.0 0.095 -pin MemWrite
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.06 -pinDepth 0.335 -fixOverlap 1 -global_location -side Left -layer 1 -assign -0.1605 68.0405 -pin MemWrite
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox -47.14000 7.05300 111.01200 83.51350
+zoomBox -54.55800 3.96450 131.50350 93.91850
+zoomBox -38.58300 26.10150 95.84700 91.09350
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.218 80.423 -pin {{PC[0]} {PC[1]} {PC[2]} {PC[3]} {PC[4]} {PC[5]} {PC[6]} {PC[7]} {PC[8]} {PC[9]} {PC[10]} {PC[11]} {PC[12]} {PC[13]} {PC[14]} {PC[15]} {PC[16]} {PC[17]} {PC[18]} {PC[19]} {PC[20]} {PC[21]} {PC[22]} {PC[23]} {PC[24]} {PC[25]} {PC[26]} {PC[27]} {PC[28]} {PC[29]} {PC[30]} {PC[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox -44.33200 22.43550 113.82100 98.89650
+zoomBox -37.04250 33.40500 97.38750 98.39700
+zoomBox -41.33650 30.98000 116.81650 107.44100
+zoomBox -46.40500 28.17700 139.65750 118.13150
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.2505 91.503 -pin {{ReadData[0]} {ReadData[1]} {ReadData[2]} {ReadData[3]} {ReadData[4]} {ReadData[5]} {ReadData[6]} {ReadData[7]} {ReadData[8]} {ReadData[9]} {ReadData[10]} {ReadData[11]} {ReadData[12]} {ReadData[13]} {ReadData[14]} {ReadData[15]} {ReadData[16]} {ReadData[17]} {ReadData[18]} {ReadData[19]} {ReadData[20]} {ReadData[21]} {ReadData[22]} {ReadData[23]} {ReadData[24]} {ReadData[25]} {ReadData[26]} {ReadData[27]} {ReadData[28]} {ReadData[29]} {ReadData[30]} {ReadData[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.4745 106.272 -pin reset
+setPinAssignMode -pinEditInBatch false
+zoomBox -72.55200 19.73450 184.97400 144.23900
+zoomBox -58.49900 34.18250 160.39850 140.01150
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.339 119.741 -pin {{Result[0]} {Result[1]} {Result[2]} {Result[3]} {Result[4]} {Result[5]} {Result[6]} {Result[7]} {Result[8]} {Result[9]} {Result[10]} {Result[11]} {Result[12]} {Result[13]} {Result[14]} {Result[15]} {Result[16]} {Result[17]} {Result[18]} {Result[19]} {Result[20]} {Result[21]} {Result[22]} {Result[23]} {Result[24]} {Result[25]} {Result[26]} {Result[27]} {Result[28]} {Result[29]} {Result[30]} {Result[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox -65.67700 32.51000 191.85000 157.01500
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.7565 122.637 -pin {{Result[0]} {Result[1]} {Result[2]} {Result[3]} {Result[4]} {Result[5]} {Result[6]} {Result[7]} {Result[8]} {Result[9]} {Result[10]} {Result[11]} {Result[12]} {Result[13]} {Result[14]} {Result[15]} {Result[16]} {Result[17]} {Result[18]} {Result[19]} {Result[20]} {Result[21]} {Result[22]} {Result[23]} {Result[24]} {Result[25]} {Result[26]} {Result[27]} {Result[28]} {Result[29]} {Result[30]} {Result[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.137 135.9545 -pin {{WriteData[0]} {WriteData[1]} {WriteData[2]} {WriteData[3]} {WriteData[4]} {WriteData[5]} {WriteData[6]} {WriteData[7]} {WriteData[8]} {WriteData[9]} {WriteData[10]} {WriteData[11]} {WriteData[12]} {WriteData[13]} {WriteData[14]} {WriteData[15]} {WriteData[16]} {WriteData[17]} {WriteData[18]} {WriteData[19]} {WriteData[20]} {WriteData[21]} {WriteData[22]} {WriteData[23]} {WriteData[24]} {WriteData[25]} {WriteData[26]} {WriteData[27]} {WriteData[28]} {WriteData[29]} {WriteData[30]} {WriteData[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox -153.10900 9.82150 340.23300 248.33450
+zoomBox -184.25800 1.91650 396.14450 282.52000
+zoomBox -219.79550 -7.07600 463.03100 323.04600
+zoomBox -242.98300 -21.49550 560.34300 366.88350
+zoomBox -260.54350 -38.63000 684.54600 418.28650
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.0 136.135 -pin {{WriteData[0]} {WriteData[1]} {WriteData[2]} {WriteData[3]} {WriteData[4]} {WriteData[5]} {WriteData[6]} {WriteData[7]} {WriteData[8]} {WriteData[9]} {WriteData[10]} {WriteData[11]} {WriteData[12]} {WriteData[13]} {WriteData[14]} {WriteData[15]} {WriteData[16]} {WriteData[17]} {WriteData[18]} {WriteData[19]} {WriteData[20]} {WriteData[21]} {WriteData[22]} {WriteData[23]} {WriteData[24]} {WriteData[25]} {WriteData[26]} {WriteData[27]} {WriteData[28]} {WriteData[29]} {WriteData[30]} {WriteData[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox -377.68100 -84.36150 734.18900 453.18700
+zoomBox -325.02950 -75.03500 620.06000 381.88150
+zoomBox -280.36100 -67.02200 522.96550 321.35700
+zoomBox -242.39300 -60.21100 440.43500 269.91150
+zoomBox -208.70300 -49.98700 371.70050 230.61700
+saveDesign pin2.enc
+gui_select -rect {153.91850 162.56000 170.67100 130.80000}
+uiSetTool obstruct
+createPlaceBlockage -box 161.94550 147.20350 170.32200 172.68150 -type hard
+createPlaceBlockage -box 94.23750 13.18400 123.90350 20.51300 -type hard
+createPlaceBlockage -box 71.20300 91.01300 78.88100 102.53050 -type hard
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 161.8 146.87 170.4 174.23 -name defScreenName].type Soft
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 161.8 146.87 170.4 174.23 -name defScreenName].density 50
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 161.8 146.87 170.4 174.23 -name defScreenName].isNoFlop 0
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 71.2 90.44 79.0 104.12 -name defScreenName].type Soft
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 71.2 90.44 79.0 104.12 -name defScreenName].density 50
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 71.2 90.44 79.0 104.12 -name defScreenName].isNoFlop 0
+createPlaceBlockage -box 72.25000 48.78300 94.93550 97.64400 -type hard
+deleteFPObject LayerShape (144400,95380,190000,197980)
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 94.2 11.78 124.0 22.04 -name defScreenName].type Soft
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 94.2 11.78 124.0 22.04 -name defScreenName].density 50
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 94.2 11.78 124.0 22.04 -name defScreenName].isNoFlop 0
+setPlaceMode -fp false
+place_design
+setDrawView fplan
+setDrawView place
+zoomBox -427.92700 -101.62100 880.15750 530.79050
+zoomBox -271.61350 -62.77000 531.71400 325.60950
+zoomBox -202.57850 -45.61200 377.82600 234.99250
+zoomBox -102.51100 -19.98350 155.01750 104.52200
+zoomBox -56.30000 -8.05850 78.13150 56.93400
+zoomBox -65.31550 -12.23850 92.83900 64.22350
+zoomBox -75.88900 -16.26650 110.17550 73.68900
+zoomBox -88.32800 -20.68900 130.57150 85.14100
+zoomBox -103.54300 -25.35800 153.98600 99.14800
+zoomBox -142.50150 -37.31350 213.94000 135.01300
+zoomBox -167.27650 -44.91600 252.06650 157.82100
+zoomBox -119.27450 8.19450 183.70200 154.67250
+zoomBox -71.04800 61.55250 115.01750 151.50850
+zoomBox -34.36100 101.82300 62.76750 148.78100
+zoomBox -15.23850 122.48150 35.46400 146.99450
+zoomBox -17.56350 119.96350 42.08750 148.80250
+zoomBox -31.72100 104.69000 82.55250 159.93700
+zoomBox -69.36950 65.10250 188.17500 189.61600
+zoomBox -95.66100 37.97850 260.80250 210.31550
+zoomBox -112.38050 20.72950 306.98850 223.47900
+zoomBox -246.72100 -23.08650 333.72100 257.53600
+zoomBox -261.62700 -52.59050 421.24600 277.55400
+zoomBox -166.59450 -40.74000 326.78200 197.78950
+zoomBox -129.48050 -36.11200 289.89000 166.63850
+saveDesign placed3.enc
+zoomBox -84.91400 -21.44650 172.63300 103.06800
+zoomBox -74.22800 -18.03200 144.68700 87.80550
+zoomBox -57.37150 -12.66200 100.79500 63.80550
+zoomBox -24.85050 -4.72900 72.28400 42.23200
+zoomBox -13.39600 -0.59100 46.25800 28.24950
+zoomBox -14.79500 -1.24950 55.38600 32.68050
+zoomBox -16.45650 -1.97950 66.11000 37.93850
+zoomBox -11.81300 3.97850 47.84200 32.81950
+zoomBox -8.50250 8.28850 34.59800 29.12600
+zoomBox -6.11500 11.40200 25.02550 26.45750
+zoomBox -7.14000 10.82700 29.49650 28.53950
+zoomBox -8.34500 10.15850 34.75650 30.99650
+zoomBox -9.74500 9.35800 40.96300 33.87350
+zoomBox -16.49150 6.61550 53.69250 40.54700
+zoomBox -25.65750 3.29250 71.48300 50.25650
+zoomBox -46.17500 -5.41600 112.00250 71.05700
+zoomBox -27.68500 22.45900 69.45600 69.42300
+zoomBox -19.48300 35.32950 50.70150 69.26100
+zoomBox -16.28000 40.35550 43.37700 69.19750
+zoomBox -19.80000 39.67150 50.38500 73.60350
+zoomBox -23.94900 38.92650 58.62200 78.84650
+zoomBox -41.35800 35.92250 93.09700 100.92650
+zoomBox -28.70400 52.12100 68.44000 99.08650
+zoomBox -15.99150 68.39550 43.66800 97.23850
+zoomBox -6.32100 80.77600 24.82200 95.83250
+zoomBox -15.13550 70.84200 44.52450 99.68550
+zoomBox -31.84550 63.28450 82.44550 118.54000
+zoomBox -64.06600 49.81750 154.87950 155.66950
+zoomBox -125.88850 24.35650 293.54350 227.13650
+zoomBox -65.97200 76.19550 152.97450 182.04800
+zoomBox -40.72350 98.04050 93.73800 163.04750
+zoomBox -24.87450 111.79950 57.70200 151.72200
+zoomBox -12.81800 122.26600 30.28850 143.10650
+zoomBox -7.73800 126.67650 18.73550 139.47550
+zoomBox -17.87750 117.87450 41.78700 146.72000
+zoomBox -34.60800 104.13950 79.69000 159.39850
+zoomBox -93.34100 68.19300 164.26150 192.73450
+zoomBox -144.26350 21.81000 349.22250 260.39250
+zoomBox -503.97600 -80.03500 441.38900 377.01450
+zoomBox -268.81300 -54.89450 311.76050 225.79150
+zoomBox -167.09100 -44.62550 252.37400 158.17050
+zoomBox -199.40650 -64.34400 294.08150 174.23950
+zoomBox -237.42500 -87.54250 343.14900 193.14400
+checkPlace t1c_riscv_cpu.checkPlace
+setDrawView place
+fit
+checkPlace
+report_timing
+optDesign -preCTS
+timeDesign -preCTS
+saveDesign placed4.enc
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+set_ccopt_property buffer_cells {CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX8 CLKBUFX12 CLKBUFX4}
+set_ccopt_property buffer_cells
+set_ccopt_property buffer_cells
+getCTSMode -engine -quiet
+create_ccopt_clock_tree_spec
+ctd_win -side none -id ctd_window
+set_ccopt_property buffer_cells {bufAX* bufBX*}
+set_ccopt_property buffer_cells {bufAX* bufBX*}
+set_ccopt_property buffer_cells {CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX8 CLKBUFX12 CLKBUFX4}
+ctd_win -side none -id ctd_window
+set_ccopt_property buffer_cells {bufAX* bufBX*}
+set_ccopt_property -clock_tree clk buffer_cells {bufAX* bufBX*}
+set_ccopt_property -clock_tree clk buffer_cells {bufAX* bufBX*}
+set_ccopt_property -clock_tree clk buffer_cells {bufAX* bufBX*}
+ccopt_design
+ctd_win
+timeDesign -postCTS
+report_timing > CCpost_cts.txt
+report_timing
+timeDesign -postRoute
+optDesign -postCTS
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+zoomBox -73.02450 34.27750 184.49650 158.77950
+zoomBox -41.27100 67.36400 93.15700 132.35500
+zoomBox -24.69600 84.63500 45.47700 118.56100
+zoomBox -32.73450 77.71450 64.39050 124.67100
+zoomBox -37.76450 73.31350 76.50050 128.55650
+zoomBox -43.65750 68.13550 90.77200 133.12750
+zoomBox -58.53000 54.87800 127.53250 144.83250
+zoomBox -92.20450 24.85950 210.76800 171.33550
+zoomBox -107.50800 11.13100 248.93050 183.45600
+zoomBox -125.51200 -5.02000 293.82750 197.71550
+setDrawView place
+setDrawView fplan
+setDrawView place
+zoomBox -69.19150 2.99650 116.87250 92.95150
+zoomBox -41.39300 9.03750 41.16550 48.95150
+zoomBox -31.22150 11.50850 19.48050 36.02100
+zoomBox -32.92700 -0.02450 49.63350 39.89050
+zoomBox -35.70350 -18.80400 98.73350 46.19150
+zoomBox -37.00150 -27.39200 121.15950 49.07300
+zoomBox -44.65500 -28.70100 141.41700 61.25800
+zoomBox -53.65900 -30.24150 165.24950 75.59300
+zoomBox -64.25250 -32.05350 193.28800 92.45800
+zoomBox -91.37650 -36.99050 265.08200 135.34400
+zoomBox -152.79100 -49.51650 427.64250 231.10200
+zoomBox -120.96000 -19.25600 372.40900 219.27000
+zoomBox -97.06300 -3.94750 322.30100 198.79950
+setNanoRouteMode -quiet -routeWithSiDriven 1
+setNanoRouteMode -quiet -routeTopRoutingLayer 11
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail
+setNanoRouteMode -quiet -routeWithSiDriven 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail
+zoomBox -32.64850 54.16000 64.48400 101.12000
+zoomBox -72.85100 17.83850 146.06100 123.67450
+zoomBox -82.88650 7.05950 174.65700 131.57250
+zoomBox -47.79900 39.70500 86.64050 104.70150
+zoomBox -23.30950 60.95150 36.34250 89.79100
+zoomBox -19.92500 63.63650 30.77900 88.15000
+zoomBox -13.82900 68.03150 22.80450 85.74250
+zoomBox -11.52000 69.90500 19.61900 84.95950
+zoomBox -9.63300 71.51150 16.83550 84.30800
+zoomBox -5.77650 75.04300 10.47900 82.90200
+zoomBox -4.86000 75.88600 8.95700 82.56600
+zoomBox -2.88800 77.73250 5.59750 81.83500
+zoomBox -1.68550 78.86650 3.52600 81.38600
+zoomBox -4.01600 76.81950 7.72950 82.49800
+zoomBox -9.92950 71.07900 21.21350 86.13550
+zoomBox -21.43500 59.64450 48.75450 93.57850
+zoomBox -30.99800 47.78250 83.29500 103.03900
+zoomBox -36.00700 45.01750 98.45550 110.02500
+zoomBox -49.32950 37.68600 136.77750 127.66200
+zoomBox -57.22900 33.04500 161.72050 138.89900
+zoomBox -66.31350 27.58500 191.27400 152.11900
+zoomBox -120.12800 -7.59050 373.32850 230.97800
+zoomBox -193.28050 -45.34500 387.25700 235.32400
+zoomBox -122.19750 -14.68100 297.24150 188.10250
+zoomBox -58.89200 75.39600 127.21600 165.37250
+zoomBox -39.37300 103.12000 74.92050 158.37650
+zoomBox -33.58950 108.13000 63.56000 155.09800
+zoomBox -53.49250 92.76400 104.69900 169.24400
+zoomBox -83.06000 57.39000 219.98750 203.90250
+zoomBox -121.18900 11.47450 372.27400 250.04600
+zoomBox -262.86250 -49.73650 420.13200 280.46650
+zoomBox -209.94400 -40.92700 370.60150 239.74550
+zoomBox -164.96300 -33.43900 328.50050 205.13250
+setAnalysisMode -analysisType onChipVariation
+verifyConnectivity -type all -error 1000 -warning 50
+verifyConnectivity -type all -error 1000 -warning 50
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool obstruct
+zoomBox -81.08200 -6.11850 176.51050 118.41800
+zoomBox -67.67600 -1.54200 151.27800 104.31450
+zoomBox -49.04350 13.36450 109.15150 89.84600
+zoomBox -35.58100 24.13450 78.71500 79.39250
+zoomBox -16.08350 39.73300 34.63250 64.25250
+zoomBox -10.08250 44.53400 21.06400 59.59200
+zoomBox -5.40100 48.21300 10.85900 56.07400
+zoomBox -10.38800 44.37150 20.76150 59.43100
+zoomBox -16.22700 39.42800 34.49650 63.95100
+zoomBox -25.27850 31.43550 57.31700 71.36750
+zoomBox -34.28300 23.48050 80.03700 78.75000
+zoomBox -46.74600 12.47000 111.48300 88.96800
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool obstruct
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign -0.124 80.5 -pin {{PC[0]} {PC[1]} {PC[2]} {PC[3]} {PC[4]} {PC[5]} {PC[6]} {PC[7]} {PC[8]} {PC[9]} {PC[10]} {PC[11]} {PC[12]} {PC[13]} {PC[14]} {PC[15]} {PC[16]} {PC[17]} {PC[18]} {PC[19]} {PC[20]} {PC[21]} {PC[22]} {PC[23]} {PC[24]} {PC[25]} {PC[26]} {PC[27]} {PC[28]} {PC[29]} {PC[30]} {PC[31]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -global_location -side Left -layer 1 -assign 0.0 80.655 -pin {{PC[0]} {PC[1]} {PC[2]} {PC[3]} {PC[4]} {PC[5]} {PC[6]} {PC[7]} {PC[8]} {PC[9]} {PC[10]} {PC[11]} {PC[12]} {PC[13]} {PC[14]} {PC[15]} {PC[16]} {PC[17]} {PC[18]} {PC[19]} {PC[20]} {PC[21]} {PC[22]} {PC[23]} {PC[24]} {PC[25]} {PC[26]} {PC[27]} {PC[28]} {PC[29]} {PC[30]} {PC[31]}}
+setPinAssignMode -pinEditInBatch false
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+zoomBox -54.53750 8.17150 131.61500 98.16950
+zoomBox -64.05900 6.53200 154.94400 112.41200
+zoomBox -75.23750 4.99800 182.41350 129.56300
+zoomBox -45.94300 7.68850 112.28700 84.18700
+zoomBox -38.99300 8.21650 95.50300 73.24050
+zoomBox -23.79500 9.24650 58.80250 49.17950
+zoomBox -17.08300 9.70150 42.59400 38.55300
+zoomBox -23.79600 5.46600 58.80150 45.39900
+zoomBox -33.02950 -0.12400 81.29300 55.14700
+zoomBox -53.72050 -12.78050 132.43550 77.21900
+zoomBox -74.31450 -25.37800 183.34100 99.18900
+zoomBox -44.78050 18.98250 113.45250 95.48250
+zoomBox -31.86950 38.57400 82.45450 93.84550
+zoomBox -26.99250 44.92600 70.18350 91.90700
+zoomBox -49.57450 37.48800 136.58650 127.49000
+zoomBox -79.25750 27.71050 223.87550 174.26450
+zoomBox -48.32600 71.27650 137.83700 161.27950
+zoomBox -25.15700 104.02300 72.02150 151.00550
+zoomBox -39.80800 94.77000 118.43250 171.27350
+zoomBox -51.82600 84.93600 167.19200 190.82300
+zoomBox -69.23350 73.71050 188.43450 198.28350
+zoomBox -113.74750 44.96700 242.88650 217.38650
+zoomBox -148.79150 18.36250 270.77800 221.20900
+zoomBox -189.75250 -12.49200 303.85850 226.15100
+zoomBox -131.35400 10.65350 225.28000 183.07300
+zoomBox -89.84300 27.05100 167.82500 151.62400
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail
+zoomBox -56.18250 46.24300 102.05800 122.74650
+zoomBox -28.84350 62.35000 53.75950 102.28550
+zoomBox -17.28650 69.26850 33.44350 93.79450
+zoomBox -28.33850 62.19550 54.26650 102.13200
+zoomBox -31.45050 59.02250 65.73200 106.00650
+zoomBox -32.76050 55.87700 81.57200 111.15250
+zoomBox -34.25300 52.21300 100.25600 117.24300
+zoomBox -36.29400 47.93100 121.95150 124.43700
+zoomBox -39.26600 42.75900 146.90500 132.76600
+zoomBox -42.78350 36.67400 176.24250 142.56500
+zoomBox -46.92050 29.51550 210.75700 154.09300
+zoomBox -52.03350 21.09350 251.11650 167.65550
+zoomBox -58.04950 11.18550 298.59800 183.61150
+zoomBox -107.47700 -3.95300 312.10900 198.90150
+zoomBox -64.83500 24.96200 192.84450 149.54050
+zoomBox -32.39600 47.25500 102.11550 112.28650
+zoomBox -50.33750 32.65450 168.69350 138.54800
+zoomBox -31.27950 60.55550 103.23400 125.58800
+zoomBox -16.89750 82.24500 53.32100 116.19300
+zoomBox -12.53950 88.81800 38.19450 113.34600
+zoomBox -29.90700 75.81300 84.43650 131.09400
+zoomBox -39.73150 68.20750 118.53000 144.72100
+zoomBox -64.94950 61.58250 192.75350 186.17250
+zoomBox -112.95200 20.39550 306.67450 223.26950
+zoomBox -68.66600 23.59900 189.03700 148.18900
+zoomBox -49.18600 25.92050 137.00450 115.93700
+zoomBox -24.94350 28.81000 72.24950 75.79950
+zoomBox -21.01650 29.33600 61.59800 69.27700
+zoomBox -17.67850 29.78300 52.54400 63.73300
+zoomBox -10.86800 33.80750 32.25750 54.65700
+zoomBox -6.68650 36.27850 19.79950 49.08350
+zoomBox -15.03350 31.34600 44.66000 60.20550
+zoomBox -20.89350 27.91850 61.72750 67.86250
+zoomBox -26.81200 18.00150 87.54300 73.28800
+zoomBox -38.91050 -5.15800 147.29800 84.86700
+zoomBox -44.28550 -9.22850 174.78350 96.68350
+zoomBox -37.64650 5.65000 148.56250 95.67550
+zoomBox -32.00400 18.29700 126.27450 94.81900
+zoomBox -27.20750 29.04700 107.33000 94.09100
+zoomBox -31.41900 26.29150 126.86050 102.81400
+zoomBox -36.32400 23.18400 149.88750 113.21050
+zoomBox -42.01500 19.58750 177.05750 125.50100
+zoomBox -56.58650 10.12600 246.62750 156.71900
+zoomBox -35.12800 59.23500 151.08350 149.26150
+zoomBox -21.94950 89.39350 92.40750 144.68100
+zoomBox -25.08050 80.75350 109.45750 145.79750
+zoomBox -33.09750 58.63000 153.11450 148.65650
+zoomBox -38.19550 44.56050 180.87750 150.47450
+zoomBox -47.65750 27.52000 210.07600 152.12500
+zoomBox -58.81650 15.73250 244.40000 162.32650
+zoomBox -87.38950 -14.80100 332.28850 188.09800
+zoomBox -63.89850 -8.32600 239.32000 138.26900
+zoomBox -39.41450 -2.97900 146.80000 87.04900
+zoomBox -33.65350 -1.51800 124.62900 75.00600
+zoomBox -20.72700 6.37800 76.48000 53.37400
+zoomBox -39.48900 1.17400 179.59250 107.09200
+zoomBox -52.44250 -2.41850 250.78500 144.18100
+zoomBox -43.33550 16.94550 214.40900 141.55550
+zoomBox -27.48800 45.53250 130.80000 122.05900
+zoomBox -23.70450 52.35700 110.84050 117.40450
+zoomBox -20.48850 58.15800 93.87500 113.44850
+createPlaceBlockage -box -12.99250 80.85200 -0.06400 100.86350 -type hard
+zoomBox -22.91550 55.88850 111.62950 120.93600
+zoomBox -29.33400 50.89800 156.88800 140.92950
+zoomBox -43.89850 39.92200 259.33250 186.52300
+zoomBox -27.15300 71.44300 159.06900 161.47450
+zoomBox -16.75700 91.10750 97.60750 146.39850
+zoomBox -8.83550 106.03050 50.86400 134.89300
+zoomBox -10.05200 102.28000 60.18300 136.23600
+zoomBox -13.24750 92.69350 83.96300 139.69100
+zoomBox -16.43500 86.79250 97.93050 142.08400
+zoomBox -29.78800 62.07550 156.43800 152.10900
+createPlaceBlockage -box -25.08500 91.63850 -0.56050 140.91100 -type hard
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+verifyConnectivity -type all -error 1000 -warning 50
+verifyConnectivity -type all -error 1000 -warning 50
+verifyConnectivity -type all -error 1000 -warning 50
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+zoomBox -34.33350 54.76350 184.75650 160.68550
+zoomBox -39.65750 46.16150 218.09550 170.77550
+zoomBox -45.92100 36.04100 257.31800 182.64600
+zoomBox -53.29000 24.13500 303.46200 196.61150
+zoomBox -61.99700 10.12800 357.71100 213.04150
+zoomBox -118.82700 -18.37650 374.94700 220.34550
+zoomBox -91.17000 -7.01950 328.53900 195.89450
+zoomBox -67.66100 2.67200 289.09200 175.14900
+zoomBox -91.17050 -7.02000 328.53900 195.89450

@@ -1,0 +1,261 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Wed Feb  5 19:12:23 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+#@(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+#@(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+#@(#)CDS: CPE v21.10-p004
+#@(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+save_global Default.globals
+set init_gnd_net VSS
+set init_lef_file {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+set init_verilog ../synthesis/reports/hdl_synthesis.v
+set init_mmmc_file SCfinal.view
+set init_pwr_net VDD
+init_design
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 1 0.699986 5 5 5 5
+uiSetTool select
+getIoFlowFlag
+fit
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.989677804296 0.699924 5.0 5.13 5.0 5.13
+uiSetTool select
+getIoFlowFlag
+fit
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 0.45 bottom 0.45 left 0.45 right 0.45} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 0.45 bottom 0.45 left 0.45 right 0.45} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 0.45 bottom 0.45 left 0.45 right 0.45} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 0.45 bottom 0.45 left 0.45 right 0.45} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.96906729634 0.6997 10 10 10 10
+uiSetTool select
+getIoFlowFlag
+fit
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.948890186916 0.699631 10.0 10.07 10.0 10.07
+uiSetTool select
+getIoFlowFlag
+fit
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.75 bottom 0.75 left 0.75 right 0.75} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.75 bottom 0.75 left 0.75 right 0.75} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing 1.8 -number_of_sets 2 -start_from left -start_offset 1 -stop_offset 1 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing 1.8 -number_of_sets 2 -start_from left -start_offset 1 -stop_offset 1 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+saveDesign 7_18.enc
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -droutePostRouteWidenWireRule LEFSpecialRouteSpec
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DLY4X4 DLY4X1 DLY3X4 DLY3X1 DLY2X4 DLY2X1 DLY1X4 DLY1X1 CLKBUFX8 CLKBUFX6 CLKBUFX4 CLKBUFX3 CLKBUFX20 CLKBUFX2 CLKBUFX16 CLKBUFX12 BUFX8 BUFX6 BUFX4 BUFX3 BUFX20 BUFX2 BUFX16 BUFX12 INVXL INVX8 INVX6 INVX4 INVX3 INVX20 INVX2 INVX16 INVX12 INVX1 CLKINVX8 CLKINVX6 CLKINVX4 CLKINVX3 CLKINVX20 CLKINVX2 CLKINVX16 CLKINVX12 CLKINVX1} -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DLY4X4 DLY4X1 DLY3X4 DLY3X1 DLY2X4 DLY2X1 DLY1X4 DLY1X1 CLKBUFX8 CLKBUFX6 CLKBUFX4 CLKBUFX3 CLKBUFX20 CLKBUFX2 CLKBUFX16 CLKBUFX12 BUFX8 BUFX6 BUFX4 BUFX3 BUFX20 BUFX2 BUFX16 BUFX12 INVXL INVX8 INVX6 INVX4 INVX3 INVX20 INVX2 INVX16 INVX12 INVX1 CLKINVX8 CLKINVX6 CLKINVX4 CLKINVX3 CLKINVX20 CLKINVX2 CLKINVX16 CLKINVX12 CLKINVX1} -maxAllowedDelay 1
+setPlaceMode -fp false
+place_design
+setPlaceMode -fp false
+place_design
+checkPlace t1c_riscv_cpu.checkPlace
+setDrawView place
+fit
+checkPlace t1c_riscv_cpu.checkPlace
+setDrawView place
+fit
+report_timing
+optDesign -preCTS
+getCTSMode -engine -quiet
+zoomBox -0.66550 99.82200 183.66700 188.94000
+zoomBox 42.30300 141.04200 138.52550 187.56200
+zoomBox 64.73200 162.55900 114.96150 186.84300
+zoomBox 74.24200 171.49800 105.09000 186.41200
+zoomBox 76.53450 173.55950 102.75550 186.23650
+zoomBox 80.14350 176.78850 99.08900 185.94800
+zoomBox 78.48500 175.30450 100.77400 186.08050
+zoomBox 76.53350 173.55900 102.75600 186.23650
+zoomBox 74.23800 171.50500 105.08800 186.42000
+zoomBox 84.06650 177.18500 100.17100 184.97100
+zoomBox 89.22050 180.09150 97.62950 184.15700
+zoomBox 91.40350 181.27000 96.56850 183.76700
+zoomBox 93.03750 182.00800 95.73450 183.31200
+zoomBox 89.29600 180.31750 97.71350 184.38700
+zoomBox 80.21750 176.17900 102.53700 186.96950
+zoomBox 41.12000 158.62950 123.03300 198.23150
+zoomBox -25.99250 128.47400 158.61900 217.72700
+zoomBox -94.34000 94.81450 206.26900 240.14800
+zoomBox -154.95500 -51.58950 522.54200 275.95550
+getCTSMode -engine -quiet
+create_ccopt_clock_tree_spec
+ctd_win -side none -id ctd_window
+ctd_win -side none -id ctd_window
+timeDesign -preCTS
+set_ccopt_property buffer_cells {buAX* buBX*}
+set_ccopt_property target_max_trans 0.1
+set_ccopt_property buffer_cells {buAX* buBX*}
+set_ccopt_property target_max_trans 0.1
+create_ccopt_clock_tree_spec
+get_ccopt_clock_trees *
+ccopt_design
+create_ccopt_clock_tree_spec
+get_ccopt_clock_trees *
+ccopt_design
+create_ccopt_clock_tree_spec
+get_ccopt_clock_trees *
+ccopt_design
+ctd_win
+zoomBox -90.62900 7.87550 398.86300 244.52700
+zoomBox -65.50700 31.09900 350.56150 232.25300
+zoomBox -44.15350 50.83900 309.50500 221.82000
+saveDesign preroute_7_36.enc
+setNanoRouteMode -quiet -routeWithSiDriven 1
+setNanoRouteMode -quiet -routeTopRoutingLayer 11
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail
+setNanoRouteMode -quiet -routeWithSiDriven 0
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+zoomBox -91.55250 45.62250 324.51650 246.77650
+zoomBox -147.53650 39.48500 341.95650 276.13700
+zoomBox -158.08100 4.57950 417.79300 282.99350
+zoomBox -187.20900 -84.13350 609.84900 301.21500
+zoomBox -94.75400 -57.67650 582.74500 269.86950
+zoomBox -191.52250 -84.20550 605.53500 301.14300
+zoomBox -158.09250 -58.82700 519.40650 268.71900
+zoomBox -129.67650 -37.25550 446.19750 241.15850
+zoomBox -105.52300 -18.91950 383.97000 217.73250
+zoomBox -89.05450 -8.45550 327.01450 192.69850
+timeDesign -postRoute
+setAnalysisMode -analysisType onChipVariation
+extractRC
+rcOut -spef report/new_parasitics.spef
+verifyConnectivity -type all -error 1000 -warning 50
+verifyConnectivity -type all -error 1000 -warning 50
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+saveDesign DONE_7_39.enc
+reset_parasitics
+extractRC
+reset_parasitics
+extractRC
+rcOut -spf t1c_riscv_cpu.spf -rc_corner rccorners
+rcOut -spef t1c_riscv_cpu.spef -rc_corner rccorners
+reset_parasitics
+extractRC
+rcOut -spf t1c_riscv_cpu.spf -rc_corner rccorners
+rcOut -spef t1c_riscv_cpu.spef -rc_corner rccorners
+streamOut ../../../TeamFriday_SingleCycle -libName DesignLib -units 2000 -mode ALL
+streamOut ../../../TeamFriday_SingleCycle -libName DesignLib -units 2000 -mode ALL

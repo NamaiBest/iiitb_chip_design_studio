@@ -1,0 +1,452 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[18:15:42.447913] Configured Lic search path (23.02-s006): 5280@172.16.201.225
+
+Version: 23.13-s073_1, built Thu Nov 07 20:31:49 PST 2024
+Options: -legacy_ui 
+Date:    Wed Feb 05 18:15:42 2025
+Host:    vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB) (32571008KB)
+PID:     15906
+OS:      Red Hat Enterprise Linux
+
+Checking out license: Genus_SynthesisCheckout succeeded: Genus_Synthesis/8F7AA1E8ED420CDB8796
+	License file: 5280@172.16.201.225
+	License Server: 5280@172.16.201.225
+
+[18:15:42.499241] Periodic Lic check successful
+[18:15:42.499275] Feature usage summary:
+[18:15:42.499275] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (1 second elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (13 seconds elapsed).
+
+legacy_genus:/> source ../../../genus_script2.tcl
+Sourcing '../../../genus_script2.tcl' (Wed Feb 05 18:16:11 IST 2025)...
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+  Setting attribute of root '/': 'hdl_search_path' = ../rtl/
+
+  Message Summary for Library slow_vdd1v0_basicCells.lib:
+  *******************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  *******************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '../rtl/mux3.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '../rtl/../rtl/t1c_riscv_cpu.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '../rtl/alu_decoder.v' on line 17.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '../rtl/imm_extend.v' on line 10.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[0]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+        : The undriven signal handling can be controlled by setting the attribute 'hdl_unconnected_value' before syn_generic command.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[1]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[2]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[3]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[4]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[5]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[6]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[7]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[8]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[9]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[10]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[11]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[12]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[13]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[14]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[15]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[16]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[17]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[18]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'instr_ram[19]' in module 'instr_mem' in file '../rtl/instr_mem.v' on line 14, column 17, hid = 0.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'ELABUTL-125'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][0]' in module 'reg_file'.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][1]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][2]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][3]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][4]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][5]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][6]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][7]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][8]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][9]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][10]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][11]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][12]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][13]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][14]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][15]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][16]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][17]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][18]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][19]' in module 'reg_file'.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'CDFG2G-622'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 't1c_riscv_cpu'.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.00 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.00 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: mux3, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: mux3, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: mux3, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: mux3, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       1 |       0 |        0.14 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.04 | 
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.01 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.04 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+Error   : A given option flag matches multiple possibilities. [TUI-63] [define_clock]
+        : The flag '-waveform' could be interpreted as '-waveformf' or '-waveformr'.
+        : A flag option can be abbreviated as long as it does not match multiple possibilities.  Spell out more of the desired flag so that it is unique.
+  define_clock: defines and apply a clock waveform 
+
+Usage: noop9 [-mode <mode>] [-design <design>] [-name <string>] [-domain <string>] [-waveformr <float>] [-waveformf <float>] -period <delay in picoseconds> [-divide_period <integer>] [-rise <integer>]
+           [-divide_rise <integer>] [-fall <integer>] [-divide_fall <integer>] [-remove] [<pin|port>+]
+
+    [-mode <mode>]:
+        a mode the paths should be restricted to 
+    [-design <design>]:
+        target design if the clock is external 
+    [-name <string>]:
+        clock name 
+    [-domain <string>]:
+        name of clock domain (default is 'domain_1') 
+    [-waveformr <float>]:
+        waveform rise 
+    [-waveformf <float>]:
+        waveform all 
+    -period <delay in picoseconds>:
+        period interval in picoseconds 
+    [-divide_period <integer>]:
+        clock periods per interval (default is 1) to create a 100MHz clock use '-period 10000' to create a 300MHz clock use '-period 10000 -divide_period 3' (the period is 10000/3 picoseconds) 
+    [-rise <integer>]:
+        rise period fraction numerator (default is 0) 
+    [-divide_rise <integer>]:
+        rise period fraction denominator (def. 100) 
+    [-fall <integer>]:
+        fall period fraction numerator (default is 50) 
+    [-divide_fall <integer>]:
+        fall period fraction denominator (def. 100) the default is a clock that rises at time 0 and falls after half of the clock period to create a waveform that rises after 20% of the period and falls after 
+        80% of the period use '-rise 20 -fall 80' to create a waveform that falls after 1/3 of the period and rises after 2/3 of the period use -fall 1 -divide_fall 3 -rise 2 -divide_rise 3 
+    [-remove]:
+        remove clocks on source before create 
+    [<pin|port>+]:
+        source objects 
+1
+legacy_genus:/designs/t1c_riscv_cpu> 
+legacy_genus:/designs/t1c_riscv_cpu> set lef_library "tech.lef macro.lef"
+tech.lef macro.lef
+legacy_genus:/designs/t1c_riscv_cpu> cd
+legacy_genus:/> set lef_library "tech.lef macro.lef"
+tech.lef macro.lef
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../lib/'
+        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path ../rtl/
+  Setting attribute of root '/': 'hdl_search_path' = ../rtl/
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+Freeing libraries in memory (slow_vdd1v0_basicCells.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> 
+legacy_genus:/> # Load LEF files (Must load tech LEF first, then macro LEF)
+legacy_genus:/> set lef_library "tech.lef macro.lef"
+tech.lef macro.lef
+legacy_genus:/> 
+legacy_genus:/> # ===============================
+legacy_genus:/> # Step 2: Read HDL Netlist
+legacy_genus:/> # ===============================
+legacy_genus:/> read_hdl ../rtl/t1c_riscv_cpu.v
+legacy_genus:/> 
+legacy_genus:/> # ===============================
+legacy_genus:/> # Step 3: Elaborate Design
+legacy_genus:/> # ===============================
+legacy_genus:/> elaborate
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '../rtl/mux3.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '../rtl/../rtl/t1c_riscv_cpu.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '../rtl/alu_decoder.v' on line 17.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '../rtl/imm_extend.v' on line 10.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 't1c_riscv_cpu'.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.00 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.00 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: mux3_1, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: mux3_1, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: mux3_1, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: mux3_1, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       1 |       0 |        0.15 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.04 | 
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.01 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.04 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu_168, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu_168, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: t1c_riscv_cpu_168, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu_168, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+/designs/t1c_riscv_cpu_168 /designs/mux3_1
+legacy_genus:/> set_top_module t1c_riscv_cpu
+/designs/t1c_riscv_cpu
+legacy_genus:/designs/t1c_riscv_cpu> define_clock -name CLK -period 10 -waveform {0 5} [find / -port clk]
+Error   : A given option flag matches multiple possibilities. [TUI-63] [define_clock]
+        : The flag '-waveform' could be interpreted as '-waveformf' or '-waveformr'.
+  define_clock: defines and apply a clock waveform 
+
+Usage: noop9 [-mode <mode>] [-design <design>] [-name <string>] [-domain <string>] [-waveformr <float>] [-waveformf <float>] -period <delay in picoseconds> [-divide_period <integer>] [-rise <integer>]
+           [-divide_rise <integer>] [-fall <integer>] [-divide_fall <integer>] [-remove] [<pin|port>+]
+
+    [-mode <mode>]:
+        a mode the paths should be restricted to 
+    [-design <design>]:
+        target design if the clock is external 
+    [-name <string>]:
+        clock name 
+    [-domain <string>]:
+        name of clock domain (default is 'domain_1') 
+    [-waveformr <float>]:
+        waveform rise 
+    [-waveformf <float>]:
+        waveform all 
+    -period <delay in picoseconds>:
+        period interval in picoseconds 
+    [-divide_period <integer>]:
+        clock periods per interval (default is 1) to create a 100MHz clock use '-period 10000' to create a 300MHz clock use '-period 10000 -divide_period 3' (the period is 10000/3 picoseconds) 
+    [-rise <integer>]:
+        rise period fraction numerator (default is 0) 
+    [-divide_rise <integer>]:
+        rise period fraction denominator (def. 100) 
+    [-fall <integer>]:
+        fall period fraction numerator (default is 50) 
+    [-divide_fall <integer>]:
+        fall period fraction denominator (def. 100) the default is a clock that rises at time 0 and falls after half of the clock period to create a waveform that rises after 20% of the period and falls after 
+        80% of the period use '-rise 20 -fall 80' to create a waveform that falls after 1/3 of the period and rises after 2/3 of the period use -fall 1 -divide_fall 3 -rise 2 -divide_rise 3 
+    [-remove]:
+        remove clocks on source before create 
+    [<pin|port>+]:
+        source objects 
+1
+legacy_genus:/designs/t1c_riscv_cpu> 
+legacy_genus:/designs/t1c_riscv_cpu> # Define Input Delays (Fix missing input timing constraints)
+legacy_genus:/designs/t1c_riscv_cpu> define_input_delay -clock CLK -max 2.0 [find / -port Ext_DataAdr*]
+invalid command name "define_input_delay"
+legacy_genus:/designs/t1c_riscv_cpu> define_input_delay -clock CLK -min 1.0 [find / -port Ext_DataAdr*]
+invalid command name "define_input_delay"
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 133s, ST: 23s, FG: 23s, CPU: 8.5%}, MEM {curr: 1.3G, peak: 1.4G, phys curr: 0.6G, phys peak: 0.6G}, SYS {load: 0.3, cpu: 12, total: 31.1G, free: 17.2G}
+legacy_genus:/designs/t1c_riscv_cpu> 
+legacy_genus:/designs/t1c_riscv_cpu> cd
+legacy_genus:/> exit
+
+Lic Summary:
+[18:23:14.255664] Cdslmd servers: iiitbcad
+[18:23:14.779968] Feature usage summary:
+[18:23:14.779969] Genus_Synthesis
+
+Normal exit.

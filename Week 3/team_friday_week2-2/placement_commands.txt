@@ -1,0 +1,30 @@
+#placement
+checkplace
+report_timing
+optDesign -preCTS
+timeDesign -preCTS
+
+#CTS
+set_ccopt_property buffer_cells {buAX* buBX*}
+set_ccopt_property target_max_trans 0.1
+cts - 
+create_ccopt_clock_tree_spec
+get_ccopt_clock_trees *
+ccopt_design
+
+timeDesign -postCTS
+optDesign -postCTS
+ccopt_design
+ctd_win
+timeDesign -postCTS
+report_timing > post_cts.txt
+
+# postRoute
+timeDesign -postRoute
+
+#extract parasitics
+setAnalysisMode -analysisType onChipVariation
+extractRC
+rcOut -spef report/new_parasitics.spef
+
+

@@ -1,0 +1,45 @@
+[01/29 22:49:15      0s] 
+[01/29 22:49:15      0s] Cadence Innovus(TM) Implementation System.
+[01/29 22:49:15      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[01/29 22:49:15      0s] 
+[01/29 22:49:15      0s] Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+[01/29 22:49:15      0s] Options:	
+[01/29 22:49:15      0s] Date:		Wed Jan 29 22:49:15 2025
+[01/29 22:49:15      0s] Host:		vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB)
+[01/29 22:49:15      0s] OS:		Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+[01/29 22:49:15      0s] 
+[01/29 22:49:15      0s] License:
+[01/29 22:49:15      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[01/29 22:49:15      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[01/29 22:49:25      8s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+[01/29 22:49:27     11s] @(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+[01/29 22:49:27     11s] @(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+[01/29 22:49:27     11s] @(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+[01/29 22:49:27     11s] @(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+[01/29 22:49:27     11s] @(#)CDS: CPE v21.10-p004
+[01/29 22:49:27     11s] @(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+[01/29 22:49:27     11s] @(#)CDS: OA 22.60-p052 Thu Feb 25 10:35:13 2021
+[01/29 22:49:27     11s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[01/29 22:49:27     11s] @(#)CDS: RCDB 11.15.0
+[01/29 22:49:27     11s] @(#)CDS: STYLUS 21.10-d038_1 (02/12/2021 04:34 PST)
+[01/29 22:49:27     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_18225_vlsicadclient05_vlsiuser_k88sRv.
+
+[01/29 22:49:27     11s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[01/29 22:49:29     12s] 
+[01/29 22:49:29     12s] **INFO:  MMMC transition support version v31-84 
+[01/29 22:49:29     12s] 
+[01/29 22:49:29     12s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[01/29 22:49:29     12s] <CMD> suppressMessage ENCEXT-2799
+[01/29 22:49:30     12s] <CMD> getVersion
+[01/29 22:49:30     12s] [INFO] Loading PVS 21.12 fill procedures
+[01/29 22:49:30     12s] <CMD> win
+[01/29 22:49:35     13s] **WARN: (IMPOAX-793):	Problem in processing library definition file /home/vlsiuser/cds.lib - Unable to open library umc110ae at path /home/vlsiuser/umc110ae: Invalid Lib Path..
+[01/29 22:54:06    119s] 
+[01/29 22:54:06    119s] *** Memory Usage v#1 (Current mem = 822.234M, initial mem = 308.848M) ***
+[01/29 22:54:06    119s] 
+[01/29 22:54:06    119s] *** Summary of all messages that are not suppressed in this session:
+[01/29 22:54:06    119s] Severity  ID               Count  Summary                                  
+[01/29 22:54:06    119s] WARNING   IMPOAX-793           1  Problem in processing library definition...
+[01/29 22:54:06    119s] *** Message Summary: 1 warning(s), 0 error(s)
+[01/29 22:54:06    119s] 
+[01/29 22:54:06    119s] --- Ending "Innovus" (totcpu=0:02:00, real=0:04:51, mem=822.2M) ---

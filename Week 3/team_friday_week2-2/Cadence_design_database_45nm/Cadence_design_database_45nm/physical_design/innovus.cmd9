@@ -1,0 +1,67 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Jan 30 19:43:40 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+#@(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+#@(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+#@(#)CDS: CPE v21.10-p004
+#@(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/vlsiuser/Desktop/team_friday/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/CCchip.enc.dat t1c_riscv_cpu
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/vlsiuser/Desktop/team_friday/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/CCchip.enc.dat t1c_riscv_cpu
+encMessage warning 1
+encMessage debug 0
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -droutePostRouteWidenWireRule LEFSpecialRouteSpec
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DLY4X4 DLY4X1 DLY3X4 DLY3X1 DLY2X4 DLY2X1 DLY1X4 DLY1X1 CLKBUFX8 CLKBUFX6 CLKBUFX4 CLKBUFX3 CLKBUFX20 CLKBUFX2 CLKBUFX16 CLKBUFX12 BUFX8 BUFX6 BUFX4 BUFX3 BUFX20 BUFX2 BUFX16 BUFX12 INVXL INVX8 INVX6 INVX4 INVX3 INVX20 INVX2 INVX16 INVX12 INVX1 CLKINVX8 CLKINVX6 CLKINVX4 CLKINVX3 CLKINVX20 CLKINVX2 CLKINVX16 CLKINVX12 CLKINVX1} -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DLY4X4 DLY4X1 DLY3X4 DLY3X1 DLY2X4 DLY2X1 DLY1X4 DLY1X1 CLKBUFX8 CLKBUFX6 CLKBUFX4 CLKBUFX3 CLKBUFX20 CLKBUFX2 CLKBUFX16 CLKBUFX12 BUFX8 BUFX6 BUFX4 BUFX3 BUFX20 BUFX2 BUFX16 BUFX12 INVXL INVX8 INVX6 INVX4 INVX3 INVX20 INVX2 INVX16 INVX12 INVX1 CLKINVX8 CLKINVX6 CLKINVX4 CLKINVX3 CLKINVX20 CLKINVX2 CLKINVX16 CLKINVX12 CLKINVX1} -maxAllowedDelay 1
+setPlaceMode -fp false
+place_design
+setPlaceMode -fp false
+place_design
+zoomBox 12.29550 45.69450 257.88000 170.19600
+zoomBox 116.58400 96.63800 225.55200 151.88050
+zoomBox 64.86900 70.90550 242.30500 160.85850
+zoomBox -15.56500 30.11950 273.36050 176.59300
+zoomBox -126.34100 -55.75450 524.82600 274.36100
+zoomBox -232.07650 -99.78300 534.00200 288.58800
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/vlsiuser/Desktop/team_friday/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/CCchip.enc.dat t1c_riscv_cpu
+encMessage warning 1
+encMessage debug 0
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/vlsiuser/Desktop/team_friday/Cadence_design_database_45nm/Cadence_design_database_45nm/physical_design/CCchip.enc.dat t1c_riscv_cpu
+encMessage warning 1
+encMessage debug 0

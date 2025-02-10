@@ -1,0 +1,824 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 21.10-p002_1, built Thu Aug 19 21:43:13 PDT 2021
+Options: -legacy_ui 
+Date:    Wed Feb 05 12:45:07 2025
+Host:    vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB) (32571008KB)
+PID:     11345
+OS:      Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+
+Checkout succeeded: Genus_Synthesis/8F7AA1E8ED420CDB8796
+	License file: 5280@172.16.201.225
+	License Server: 5280@172.16.201.225
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (7 seconds elapsed).
+
+WARNING: This version of the tool is 1265 days old.
+legacy_genus:/> set super_threading_mode disable
+disable
+legacy_genus:/> set super_threading_mode disable
+disable
+legacy_genus:/> set super_threading_mode disable
+disable
+legacy_genus:/> set_attr init_lib_search_path ../lib/
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/
+legacy_genus:/> set_attr hdl_search_path ../rtl/
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'hdl_search_path', object type: 'root'
+        : Attribute 'hdl_search_path' is going to be obsoleted, use the new attribute 'init_hdl_search_path'.
+  Setting attribute of root '/': 'hdl_search_path' = ../rtl/
+legacy_genus:/> set_attr library slow_vdd1v0_basicCells.lib
+
+Threads Configured:3
+
+  Message Summary for Library slow_vdd1v0_basicCells.lib:
+  *******************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  *******************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+  Setting attribute of root '/': 'library' = slow_vdd1v0_basicCells.lib
+legacy_genus:/> 
+legacy_genus:/> #Step 2: Read netlist
+legacy_genus:/> read_hdl ../rtl/t1c_riscv_cpu.v
+legacy_genus:/> 
+legacy_genus:/> #Step 3: Elaborate/connect all modules
+legacy_genus:/> elaborate
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mux3' from file '../rtl/mux3.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'mux3' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mux3'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 't1c_riscv_cpu' from file '../rtl/../rtl/t1c_riscv_cpu.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'alu_decoder' in file '../rtl/alu_decoder.v' on line 17.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'imm_extend' in file '../rtl/imm_extend.v' on line 10.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][0]' in module 'reg_file'.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][1]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][2]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][3]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][4]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][5]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][6]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][7]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][8]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][9]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][10]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][11]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][12]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][13]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][14]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][15]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][16]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][17]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][18]' in module 'reg_file'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'reg_file_arr[31][19]' in module 'reg_file'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 't1c_riscv_cpu'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: mux3, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: mux3, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         1.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: t1c_riscv_cpu, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.001s)
+/designs/t1c_riscv_cpu /designs/mux3
+legacy_genus:/> set_top_module t1c_riscv_cpu
+/designs/t1c_riscv_cpu
+legacy_genus:/designs/t1c_riscv_cpu> # elaborate looks for undefined modules in the directories specified through the -libpath option
+legacy_genus:/designs/t1c_riscv_cpu> 
+legacy_genus:/designs/t1c_riscv_cpu> #gui_show
+legacy_genus:/designs/t1c_riscv_cpu> #Check schematic by clicking on + --> Close --> Hide GUI (do not hit exit)
+legacy_genus:/designs/t1c_riscv_cpu> #Step 4: Read constraints
+legacy_genus:/designs/t1c_riscv_cpu> read_sdc ../constraints/constraints_top.sdc
+Error   : A required object parameter could not be found. [TUI-61] [set_input_output_delay_fast]
+        : An object of type 'port|pin_bus|port_bus|pin' named '0.8' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '5' of the SDC file '../constraints/constraints_top.sdc': set_input_delay -max 1.0 -min 0.8 [get_ports { clk reset Ext_MemWrite Ext_DataAdr Ext_WriteData }] -clock [get_clocks 'clk'].
+        : The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.
+Error   : A required object parameter could not be found. [TUI-61] [set_input_output_delay_fast]
+        : An object of type 'port|pin_bus|port_bus|pin' named '0.8' could not be found.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '6' of the SDC file '../constraints/constraints_top.sdc': set_output_delay -max 1.0  -min 0.8 [get_ports { PC MemWrite WriteData ReadData Result DataAdr}] -clock [get_clocks 'clk'].
+Error   : Invalid SDC command option combination. [SDC-204] [set_driving_cell]
+        : The set_driving_cell command cannot find a lib_cell named 'BUF_X4' in library '/libraries/slow_vdd1v0' specified with the '-libcell' or '-cell' option.
+        : This option is not valid for the indicated SDC command. Check the SDC command and contact Cadence customer support if you believe this option combination should be supported.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '8' of the SDC file '../constraints/constraints_top.sdc': set_driving_cell -lib_cell BUF_X4 -library std_lib [get_ports {clk reset Ext_MemWrite Ext_DataAdr Ext_WriteData}].
+Error   : Unknown TCL command in the SDC file. [SDC-234] [read_sdc]
+        : Invalid command 'set_output_transition'
+        : The 'read_sdc' command encountered a problem while trying to evaluate a command in the SDC file.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The TCL interpreter encountered the following error while processing line '10' of the SDC file '../constraints/constraints_top.sdc': invalid command name 'set_output_transition'.
+Statistics for commands executed by read_sdc:
+ "create_clock"             - successful      1 , failed      0 (runtime  0.00)
+ "get_clocks"               - successful      5 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      7 , failed      0 (runtime  0.00)
+ "set_clock_transition"     - successful      2 , failed      0 (runtime  0.00)
+ "set_clock_uncertainty"    - successful      1 , failed      0 (runtime  0.00)
+ "set_driving_cell"         - successful      0 , failed      1 (runtime  0.00)
+ "set_input_delay"          - successful      0 , failed      1 (runtime  0.00)
+ "set_input_transition"     - successful      1 , failed      0 (runtime  0.00)
+ "set_load"                 - successful      1 , failed      0 (runtime  0.00)
+ "set_output_delay"         - successful      0 , failed      1 (runtime  0.00)
+Warning : Total failed commands during read_sdc are 3
+Warning : One or more commands failed when these constraints were applied. [SDC-209]
+        : The 'read_sdc' command encountered a problem while processing commands.
+        : You can examine the failed commands or save them to a file by querying the Tcl variable $::dc::sdc_failed_commands.
+read_sdc completed in 00:00:00 (hh:mm:ss)
+legacy_genus:/designs/t1c_riscv_cpu> set_attr syn_generic_effort high
+  Setting attribute of root '/': 'syn_generic_effort' = high
+legacy_genus:/designs/t1c_riscv_cpu> syn_generic
+##Generic Timing Info for library domain: _default_ typical gate delay: 127.6 ps std_slew: 17.9 ps std_load: 1.0 fF
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: t1c_riscv_cpu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.002s)
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][0]'.
+        : To prevent this optimization, set the 'optimize_constant_0_flops' root attribute to 'false' or 'optimize_constant_0_seq' instance attribute to 'false'. You can also see the complete list of deleted sequential with command "report sequential -deleted" (on Reason "constant0").
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][1]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][2]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][3]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][4]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][5]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][6]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][8]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][9]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][10]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][11]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][12]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][13]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][14]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][15]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][16]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][17]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][18]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'rvcpu/dp/rf/reg_file_arr_reg[31][19]'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 1024 sequential instances.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance attribute to 'true'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 16 hierarchical instances.
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 't1c_riscv_cpu' to generic gates using 'high' effort.
+PBS_Generic-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:15(00:01:21) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:46:32 (Feb05) |  374.5 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+TNS Restructuring config: no_value at stage: generic applied.
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: t1c_riscv_cpu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.011s)
+Starting mux data reorder optimization [v1.0] (stage: post_to_gen_setup, startdef: t1c_riscv_cpu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------
+| Trick | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------
+--------------------------------------------
+Starting datapath recasting [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed datapath recasting (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting infer macro optimization [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed infer macro optimization (accepts: 0, rejects: 11, runtime: 0.027s)
+Starting decode mux sandwich optimization [v2.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting decode mux optimization [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed decode mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting chop wide muxes [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Rejected mux_reg_file_arr[rd_addr1]_27_39 : has multidriven pins.
+
+Rejected mux_reg_file_arr[rd_addr2]_28_39 : has multidriven pins.
+
+Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.002s)
+Starting priority mux optimization [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed priority mux optimization (accepts: 0, rejects: 0, runtime: 0.513s)
+Starting constant-data mux optimization [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed constant-data mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting chain-to-tree inequality transform [v2.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.033s)
+Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.003s)
+Starting common select mux optimization [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed common select mux optimization (accepts: 0, rejects: 1, runtime: 0.003s)
+Starting identity transform [v3.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed identity transform (accepts: 0, rejects: 0, runtime: 0.005s)
+Starting reduce operator chain [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.002s)
+Starting optimize datapath elements [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip the non-user hierarchies [v2.0] (stage: pre_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------
+| Trick       | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------
+| ume_runtime |       0 |       0 |         1.00 | 
+--------------------------------------------------
+Number of big hc bmuxes before = 3
+Number of non-ctl's : 5
+mux_ALUControl_17_4 mux_ALUControl_17_19 mux_ALUControl_13_6 mux_ALUControl_20_8 mux_ALUControl_30_10 
+SOP DEBUG : Module= alu_decoder, Cluster= ctl_17_19, ctl= 5, Non-ctl= 5
+Selected impl_type 1 (pla_form1 (optimized)) for sop cluster ctl_17_19.
+Number of non-ctl's : 1
+mux_instr_12_15 
+SOP DEBUG : Module= instr_mem, Cluster= ctl_instr_addr_12_15, ctl= 1, Non-ctl= 1
+Selected impl_type 0 (ctl + 1-hot mux form) for sop cluster ctl_instr_addr_12_15.
+Number of non-ctl's : 3
+g9 mux_Take_Branch_20_12 mux_controls_20_12 
+SOP DEBUG : Module= main_decoder, Cluster= ctl_op_20_12, ctl= 1, Non-ctl= 3
+Selected impl_type 1 (pla_form1 (optimized)) for sop cluster ctl_op_20_12.
+Info    : Pre-processed datapath logic. [DPOPT-6]
+        : Pre-processing optimizations applied to datapath logic in 't1c_riscv_cpu':
+          sop(3) live_trim(1) 
+Info    : Optimizing datapath logic. [DPOPT-1]
+        : Optimizing datapath logic in 't1c_riscv_cpu'.
+Info    : Implementing datapath configurations. [DPOPT-3]
+        : Implementing datapath configurations for 'CDN_DP_region_3_0'
+CSAGen Prep Share:0 Re-Write:2 Speculation: 0
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_3_0_c6 in t1c_riscv_cpu':
+	  (rvcpu_dp_alu_add_14_32, rvcpu_dp_alu_add_13_32)
+
+CDN_DP_region_3_0 level = 0 loads = 0 drivers = 0
+CDN_DP_region_3_0_c0 in t1c_riscv_cpu: area: 23328347350 ,dp = 17 mux = 28 sg = slow         worst_clk_period: -4592028791091345635831302312613904329586010474521329802632533152660549919167068554108915764401736480662015170986841299182816597456001928732888205833545609297486962179578921402410044959929481790034146616013508356256918346090098145094810835658536289029241192557324363732982169600.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 0 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: 0
+ skipped
+CDN_DP_region_3_0_c1 in t1c_riscv_cpu: area: 22616978900 ,dp = 11 mux = 29 sg = fast         worst_clk_period: 0.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 139869602578432 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: -305446912
+ is current best
+CDN_DP_region_3_0_c2 in t1c_riscv_cpu: area: 22140508850 ,dp = 11 mux = 23 sg = very_slow    worst_clk_period: 0.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 139869585874944 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: -203554816
+ is current best
+CDN_DP_region_3_0_c3 in t1c_riscv_cpu: area: 22140508850 ,dp = 11 mux = 23 sg = very_fast    worst_clk_period: 0.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 139869575274496 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: -334069760
+ is current best
+CDN_DP_region_3_0_c4 in t1c_riscv_cpu: area: 22140508850 ,dp = 11 mux = 23 sg = very_fast    worst_clk_period: 0.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 139869563461632 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: -341516288
+ is current best
+CDN_DP_region_3_0_c5 in t1c_riscv_cpu: area: 22140508850 ,dp = 11 mux = 23 sg = very_fast    worst_clk_period: 0.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 139869544964096 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: -349954048
+ is current best
+CDN_DP_region_3_0_c6 in t1c_riscv_cpu: area: 22787814100 ,dp = 11 mux = 30 sg = very_fast    worst_clk_period: 0.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 139869542080512 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: -361644032
+
+Not considering config 7 due to bailout. 
+Best config: CDN_DP_region_3_0_c5 in t1c_riscv_cpu: area: 22140508850 ,dp = 11 mux = 23 sg = very_fast    worst_clk_period: 0.0000 
+    wns: 0  norm_wns:  0.0000 
+    fail_endp: 139869544964096 
+    tns:  0  tns_per_endp:  0.0000   norm_tns_per_endp:  0.0000 
+    tns_sense_max:  0.0000  tns_sense_avg:  0.0000   tns_sense_num: -349954048
+  Smallest config area : 22140508850.  Fastest config wns;  0
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>Summary table of configs (Best config is CDN_DP_region_3_0_c5)
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>                     0                  1                  2                  3                  4                  5                  6                  7            
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>           Area      23328347350        22616978900        22140508850        22140508850        22140508850        22140508850        22787814100        23313666200  
+##>            WNS         +4150.90           +4150.90           +4150.90           +4150.90           +4150.90           +4150.90           +4150.90           +4053.30  
+##>            TNS                0                  0                  0                  0                  0                  0                  0                  0  
+##>    Num Rewrite                0                  0                  0                  0                  0                  0                  0                  2  
+##>     Num Factor                0                  0                  0                  0                  0                  0                  0                  0  
+##>      Num Share                0                  0                  0                  0                  0                  0                  1                  0  
+##>   Num CmultCse                0                  0                  0                  0                  0                  0                  0                  0  
+##>   Num Downsize                0                  0                  0                  0                  0                  0                  0                  0  
+##>  Num Speculate                0                  0                  0                  0                  0                  0                  0                  0  
+##>     Runtime(s)                0                  0                  0                  0                  0                  0                  1                  0  
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>
+##>
+##>+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>Optimization Step DEBUG Table for config CDN_DP_region_3_0_c5
+##>
+##>                          Step                        Area   ( % Chg)        WNS (Change)        TNS (Change)          Runtime (s)        Comment                   
+##>+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>createMaxCarrySave              START            23328347350 (      )     4150.90 (        )             0 (        )              
+##> datapath_rewrite_one_def       START            23328347350 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>  fast_cse_elim                 START            23328347350 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23327012700 ( -0.01)     4150.90 (   +0.00)             0 (       0)           0  
+##>  fast_cse_elim                 START            23327012700 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23327012700 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            23327012700 ( -0.01)     4150.90 (   +0.00)             0 (       0)           0  
+##> speculate_in_gdef              START            23327012700 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>  pre_speculate_mux_merge       START            23327012700 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23327012700 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            23327012700 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##> csa_opto                       START            23327012700 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.21)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            23376394750 ( +0.21)     4150.90 (   +0.00)             0 (       0)           0  
+##>canonicalize_by_names           START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>datapath_rewrite_post_csa_one_  START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>datapath_csa_factoring_one_gde  START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>dpopt_share_one_def             START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>datapath_rewrite_post_share     START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>dp_combine_const_mult_with_com  START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>speculate_in_gdef               START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##> pre_speculate_mux_merge        START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>dp_operator_level_decompositio  START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>selective_flatten_dp_config     START            23376394750 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23372390800 ( -0.02)     4150.90 (   +0.00)             0 (       0)           0  
+##>createMaxCarrySave              START            23372390800 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##> datapath_rewrite_one_def       START            23372390800 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>  fast_cse_elim                 START            23372390800 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23371056150 ( -0.01)     4150.90 (   +0.00)             0 (       0)           0  
+##>  fast_cse_elim                 START            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            23371056150 ( -0.01)     4150.90 (   +0.00)             0 (       0)           0  
+##> speculate_in_gdef              START            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>  pre_speculate_mux_merge       START            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##> csa_opto                       START            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            23371056150 ( -0.01)     4150.90 (   +0.00)             0 (       0)           0  
+##>context_based_simplify          START            23371056150 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23278965300 ( -0.39)     4150.90 (   +0.00)             0 (       0)           0  
+##>group_csa_final_adder_dp        START            23278965300 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            23278965300 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>dpopt_flatten_critical_muxes_i  START            23278965300 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            22140508850 ( -4.89)     4150.90 (   +0.00)             0 (       0)           0  
+##>speculate_in_gdef               START            22140508850 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##> pre_speculate_mux_merge        START            22140508850 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            22140508850 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>                                  END            22140508850 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>create_score                    START            22140508850 ( +0.00)     4150.90 (   +0.00)             0 (       0)              
+##>                                  END            22140508850 ( +0.00)     4150.90 (   +0.00)             0 (       0)           0  
+##>+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Committed config: CDN_DP_region_3_0_c5
+Info    : Done implementing datapath configurations. [DPOPT-4]
+        : Selected 'very_fast' configuration 5 for module 'CDN_DP_region_3_0'.
+          Optimizations applied to 'very_fast' configuration:
+            rewriting(0), factoring(0), sharing(0), cmultcse(0), downsizing(0), speculation(0)
+Info    : Done optimizing datapath logic. [DPOPT-2]
+        : Done optimizing datapath logic in 't1c_riscv_cpu'.
+Number of big hc bmuxes after = 3
+Starting logic reduction [v1.0] (stage: post_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed logic reduction (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: t1c_riscv_cpu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.002s)
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 32 sequential instances.
+Starting mux speculation [v1.0] (stage: post_muxopt, startdef: t1c_riscv_cpu, recur: true)
+Starting speculation optimization
+Completed speculation optimization (accepts:0)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.451s)
+==================================
+Stage : to_generic 
+==================================
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|     Id     |  Sev   |Count |                                                                                   Message Text                                                                                     |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| CDFG-250   |Info    |    3 |Processing multi-dimensional arrays.                                                                                                                                                |
+| CDFG-372   |Info    |    5 |Bitwidth mismatch in assignment.                                                                                                                                                    |
+|            |        |      |Review and make sure the mismatch is unintentional. Genus can possibly issue bitwidth mismatch warning for explicit assignments present in RTL as-well-as for implicit assignments  |
+|            |        |      | inferred by the tool. For example, in case of enum declaration without value, the tool will implicitly assign value to the enum variables. It also issues the warning for any      |
+|            |        |      | bitwidth mismatch that appears in this implicit assignment.                                                                                                                        |
+| CDFG-472   |Warning |    2 |Unreachable statements for case item.                                                                                                                                               |
+| CDFG-738   |Info    |   15 |Common subexpression eliminated.                                                                                                                                                    |
+| CDFG-739   |Info    |   15 |Common subexpression kept.                                                                                                                                                          |
+| CDFG-769   |Info    |    3 |Identified sum-of-products logic to be optimized during syn_generic.                                                                                                                |
+| CDFG-818   |Warning |    1 |Using default parameter value for module elaboration.                                                                                                                               |
+| CDFG-893   |Info    |    6 |Optimized the MUX created for array read / write or variable shifter.                                                                                                               |
+| CDFG2G-616 |Info    |    1 |Latch inferred. Check and revisit your RTL if this is not the intended behavior.                                                                                                    |
+|            |        |      |Use the attributes 'set_attribute hdl_error_on_latch true'(LUI) or 'set_db hdl_error_on_latch true' (CUI)                                                                           |
+|            |        |      | to issue an error when a latch is inferred. Use the attributes 'set_attributes hdl_latch_keep_feedback true'(LUI) or 'set_db hdl_latch_keep_feedback true'(CUI)                    |
+|            |        |      | to infer combinational logic rather than a latch in case a variable is explicitly assigned to itself.                                                                              |
+| CDFG2G-622 |Warning | 1024 |Signal or variable has multiple drivers.                                                                                                                                            |
+|            |        |      |This may cause simulation mismatches between the original and synthesized designs.                                                                                                  |
+| CWD-19     |Info    |   40 |An implementation was inferred.                                                                                                                                                     |
+| DPOPT-1    |Info    |    1 |Optimizing datapath logic.                                                                                                                                                          |
+| DPOPT-2    |Info    |    1 |Done optimizing datapath logic.                                                                                                                                                     |
+| DPOPT-3    |Info    |    1 |Implementing datapath configurations.                                                                                                                                               |
+| DPOPT-4    |Info    |    1 |Done implementing datapath configurations.                                                                                                                                          |
+| DPOPT-6    |Info    |    1 |Pre-processed datapath logic.                                                                                                                                                       |
+| DPOPT-10   |Info    |   25 |Optimized a mux chain.                                                                                                                                                              |
+| ELAB-1     |Info    |    2 |Elaborating Design.                                                                                                                                                                 |
+| ELAB-2     |Info    |   15 |Elaborating Subdesign.                                                                                                                                                              |
+| ELAB-3     |Info    |    2 |Done Elaborating Design.                                                                                                                                                            |
+| GLO-12     |Info    | 1024 |Replacing a flip-flop with a logic constant 0.                                                                                                                                      |
+|            |        |      |To prevent this optimization, set the 'optimize_constant_0_flops' root attribute to 'false' or 'optimize_constant_0_seq' instance attribute to 'false'. You can also see the        |
+|            |        |      | complete list of deleted sequential with command 'report sequential -deleted' (on Reason 'constant0').                                                                             |
+| GLO-34     |Info    |    3 |Deleting instances not driving any primary outputs.                                                                                                                                 |
+|            |        |      |Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the     |
+|            |        |      | list of deleted hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the  |
+|            |        |      | complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance attribute to 'true'.                       |
+| GLO-40     |Info    |    2 |Combinational hierarchical blocks with identical inputs have been merged.                                                                                                           |
+|            |        |      |This optimization usually reduces design area. To prevent merging of combinational hierarchical blocks, set the 'merge_combinational_hier_instances' root attribute to 'false' or   |
+|            |        |      | the 'merge_combinational_hier_instance' instance attribute to 'false'.                                                                                                             |
+| GLO-51     |Info    |   16 |Hierarchical instance automatically ungrouped.                                                                                                                                      |
+|            |        |      |Hierarchical instances can be automatically ungrouped to allow for better area or timing optimization. To prevent this ungroup, set the root-level attribute 'auto_ungroup' to      |
+|            |        |      | 'none'. You can also prevent individual ungroup with setting the attribute 'ungroup_ok' of instances or modules to 'false'.                                                        |
+| LBR-9      |Warning |    2 |Library cell has no output pins defined.                                                                                                                                            |
+|            |        |      |Add the missing output pin(s)                                                                                                                                                       |
+|            |        |      | , then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no |
+|            |        |      | output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will |
+|            |        |      | not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message  |
+|            |        |      | LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin)                             |
+|            |        |      | of the cell, to use it for mapping. The pg_pin will not have any function defined.                                                                                                 |
+| LBR-41     |Info    |    1 |An output library pin lacks a function attribute.                                                                                                                                   |
+|            |        |      |If the remainder of this library cell's semantic checks are successful, it will be considered as a timing-model (because one of its outputs does not have a valid function.         |
+| LBR-155    |Info    |  264 |Mismatch in unateness between 'timing_sense' attribute and the function.                                                                                                            |
+|            |        |      |The 'timing_sense' attribute will be respected.                                                                                                                                     |
+| LBR-161    |Info    |    1 |Setting the maximum print count of this message to 10 if information_level is less than 9.                                                                                          |
+| LBR-162    |Info    |  124 |Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed.                                                                                                             |
+|            |        |      |Setting the 'timing_sense' to non_unate.                                                                                                                                            |
+| LBR-412    |Info    |    1 |Created nominal operating condition.                                                                                                                                                |
+|            |        |      |The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively)     |
+|            |        |      | , or by the default PVT values (1.0,1.0,1.0).                                                                                                                                      |
+| LBR-518    |Info    |    1 |Missing a function attribute in the output pin definition.                                                                                                                          |
+| PHYS-752   |Info    |    1 |Partition Based Synthesis execution skipped.                                                                                                                                        |
+| RTLOPT-30  |Info    |    1 |Accepted resource sharing opportunity.                                                                                                                                              |
+| SDC-202    |Error   |    4 |Could not interpret SDC command.                                                                                                                                                    |
+|            |        |      |The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.                |
+| SDC-204    |Error   |    1 |Invalid SDC command option combination.                                                                                                                                             |
+|            |        |      |This option is not valid for the indicated SDC command. Check the SDC command and contact Cadence customer support if you believe this option combination should be supported.      |
+| SDC-209    |Warning |    1 |One or more commands failed when these constraints were applied.                                                                                                                    |
+|            |        |      |You can examine the failed commands or save them to a file by querying the Tcl variable $::dc::sdc_failed_commands.                                                                 |
+| SDC-234    |Error   |    1 |Unknown TCL command in the SDC file.                                                                                                                                                |
+|            |        |      |The 'read_sdc' command encountered a problem while trying to evaluate a command in the SDC file.                                                                                    |
+| SYNTH-1    |Info    |    1 |Synthesizing.                                                                                                                                                                       |
+| TIM-1000   |Info    |    1 |Multimode clock gating check is disabled.                                                                                                                                           |
+| TUI-32     |Warning |    1 |This attribute will be obsolete in a next major release.                                                                                                                            |
+| TUI-61     |Error   |    2 |A required object parameter could not be found.                                                                                                                                     |
+|            |        |      |Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.                                        |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mapper: Libraries have:
+	domain _default_: 324 combo usable cells and 128 sequential usable cells
+Multi-threaded constant propagation [1|0] ...
+Multi-threaded Virtual Mapping    (8 threads per ST process, 8 of 12 CPUs usable)
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+Warning : The database contains a field that the reader does not support. [DATABASE-103]
+        : Unsupported data skipped.
+==================================
+Stage : first_condense 
+==================================
+  =================
+   Message Summary
+  =================
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|      Id      |  Sev   |Count |                                                                                  Message Text                                                                                    |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DATABASE-103 |Warning |   28 |The database contains a field that the reader does not support.                                                                                                                   |
+| GB-6         |Info    |    3 |A datapath component has been ungrouped.                                                                                                                                          |
+| GLO-51       |Info    |    2 |Hierarchical instance automatically ungrouped.                                                                                                                                    |
+|              |        |      |Hierarchical instances can be automatically ungrouped to allow for better area or timing optimization. To prevent this ungroup, set the root-level attribute 'auto_ungroup' to    |
+|              |        |      | 'none'. You can also prevent individual ungroup with setting the attribute 'ungroup_ok' of instances or modules to 'false'.                                                      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+Global mapping target info
+==========================
+Cost Group 'clk' target slack:   297 ps
+Target path end-point (Pin: rvcpu_dp_pcreg_q_reg[31]/d)
+
+
+State Retention Synthesis Status
+================================
+
+Category                        Flops  Latches   Percentage
+-----------------------------------------------------------
+Total instances                  3072       32        100.0
+Excluded from State Retention    3072       32        100.0
+    - Will not convert           3072       32        100.0
+      - Preserved                   0        0          0.0
+      - Power intent excluded    3072       32        100.0
+    - Could not convert             0        0          0.0
+      - Scan type                   0        0          0.0
+      - No suitable cell            0        0          0.0
+State Retention instances           0        0          0.0
+-----------------------------------------------------------
+
+PBS_Generic_Opt-Post - Elapsed_Time 86, CPU_Time 89.167527
+stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:15(00:01:21) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:46:32 (Feb05) |  374.5 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:44(00:02:47) |  00:01:29(00:01:26) | 100.0(100.0) |   12:47:58 (Feb05) |  770.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:15(00:01:21) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:46:32 (Feb05) |  374.5 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:44(00:02:47) |  00:01:29(00:01:26) | 100.0(100.0) |   12:47:58 (Feb05) |  770.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:44(00:02:47) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:47:58 (Feb05) |  770.9 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>G:Initial                            1         -         -     13032     98098       374
+##>G:Setup                              0         -         -         -         -         -
+##>G:Launch ST                          0         -         -         -         -         -
+##>G:Design Partition                   0         -         -         -         -         -
+##>G:Create Partition Netlists          0         -         -         -         -         -
+##>G:Init Power                         0         -         -         -         -         -
+##>G:Budgeting                          0         -         -         -         -         -
+##>G:Derenv-DB                          0         -         -         -         -         -
+##>G:Debug Outputs                      0         -         -         -         -         -
+##>G:ST loading                         0         -         -         -         -         -
+##>G:Distributed                        0         -         -         -         -         -
+##>G:Timer                              0         -         -         -         -         -
+##>G:Assembly                           0         -         -         -         -         -
+##>G:DFT                                0         -         -         -         -         -
+##>G:Const Prop                         0         -         -     26203     90526       770
+##>G:Misc                              86
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                       87
+##>========================================================================================
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 't1c_riscv_cpu' to generic gates.
+legacy_genus:/designs/t1c_riscv_cpu> report_power >./reports/power.txt
+Info    : Joules engine is used. [RPT-16]
+        : Joules engine is being used for the command report_power.
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : t1c_riscv_cpu
+Info   : ACTP-0009 [ACTPInfo] Activity Propagation Progress Report :   0%   1%   2%   3%   4%   5%   6%   7%   8%   9%  10%  11%  12%  13%  14%  15%  16%  17%  18%  19%  20%  21%  22%  23%  24%  25%  26%  27%  28%  29%  30%  31%  32%  33%  34%  35%  36%  37%  38%  39%  40%  41%  42%  43%  44%  45%  46%  47%  48%  49%  50%  51%  52%  53%  54%  55%  56%  57%  58%  59%  60%  61%  62%  63%  64%  65%  66%  67%  68%  69%  70%  71%  72%  73%  74%  75%  76%  77%  78%  79%  80%  81%  82%  83%  84%  85%  86%  87%  88%  89%  90%  91%  92%  93%  94%  95%  96%  97%  98%  99% 100%
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0009 [PwrInfo] Power Computation Progress Report :   3%   7%  11%  15%  19%  22%  26%  30%  34%  38%  41%  45%  49%  53%  57%  61%  64%  68%  72%  77%  80%  84%  88%  92%  96% 100%
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Output file: ./reports/power.txt
+legacy_genus:/designs/t1c_riscv_cpu> #gui_show
+legacy_genus:/designs/t1c_riscv_cpu> report_gates
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 21.10-p002_1
+  Generated on:           Feb 05 2025  12:48:23 pm
+  Module:                 t1c_riscv_cpu
+  Technology library:     slow_vdd1v0 1.0
+  Operating conditions:   PVT_0P9V_125C (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+                                      
+     Type      Instances  Area Area % 
+--------------------------------------
+sequential          3104 0.000    0.0 
+inverter               2 0.000    0.0 
+logic              23097 0.000    0.0 
+physical_cells         0 0.000    0.0 
+--------------------------------------
+total              26203 0.000    0.0 
+
+legacy_genus:/designs/t1c_riscv_cpu> set_attr syn_opt_effort high
+  Setting attribute of root '/': 'syn_opt_effort' = high
+legacy_genus:/designs/t1c_riscv_cpu> syn_opt
+Error   : Invalid usage of synthesis command. [SYNTH-27] [syn_opt]
+        : Command "syn_opt" should not be run on a design with unmapped gates. Run syn_map for synthesizing to mapped gates.
+        : Synthesis commands should be run on a design with suitable state. For example, 'syn_map -physical' should not be run on a design with unplaced generic gates. In this case, 'syn_generic -physical' should be run before 'syn_map -physical' or 'syn_map' should be run without '-physical' option.
+1
+legacy_genus:/designs/t1c_riscv_cpu> syn_map
+##Generic Timing Info for library domain: _default_ typical gate delay: 127.6 ps std_slew: 17.9 ps std_load: 1.0 fF
+Info    : Mapping. [SYNTH-4]
+        : Mapping 't1c_riscv_cpu' using 'high' effort.
+Mapper: Libraries have:
+	domain _default_: 324 combo usable cells and 128 sequential usable cells
+Configuring mapper costing (none)
+TNS Restructuring config: no_value at stage: map applied.
+PBS_TechMap-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:15(00:01:21) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:46:32 (Feb05) |  374.5 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:44(00:02:47) |  00:01:29(00:01:26) |  93.9( 62.3) |   12:47:58 (Feb05) |  770.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:44(00:02:47) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:47:58 (Feb05) |  770.9 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:49(00:03:39) |  00:00:05(00:00:52) |   6.1( 37.7) |   12:48:50 (Feb05) |  730.4 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:15(00:01:21) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:46:32 (Feb05) |  374.5 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:44(00:02:47) |  00:01:29(00:01:26) |  93.9( 62.3) |   12:47:58 (Feb05) |  770.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:44(00:02:47) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:47:58 (Feb05) |  770.9 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:49(00:03:39) |  00:00:05(00:00:52) |   6.1( 37.7) |   12:48:50 (Feb05) |  730.4 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:01:49(00:03:39) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:48:50 (Feb05) |  730.4 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed mapping optimization to kick in.
+Mapper: Libraries have:
+	domain _default_: 324 combo usable cells and 128 sequential usable cells
+Info    : Attempting to launch a super-threading server. [ST-120]
+        : Attempting to Launch server 1 of 8.
+        : The tool is entering super-threading mode and is launching a CPU server process.  This is enabled by the root attribute 'super_thread_servers' or 'auto_super_thread'.

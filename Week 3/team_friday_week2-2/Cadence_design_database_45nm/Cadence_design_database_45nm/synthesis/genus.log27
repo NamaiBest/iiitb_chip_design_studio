@@ -1,0 +1,45 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 21.10-p002_1, built Thu Aug 19 21:43:13 PDT 2021
+Options: -legacy_ui 
+Date:    Wed Feb 05 12:50:01 2025
+Host:    vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB) (32571008KB)
+PID:     13042
+OS:      Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+
+Checkout succeeded: Genus_Synthesis/8F7AA1E8ED420CDB8796
+	License file: 5280@172.16.201.225
+	License Server: 5280@172.16.201.225
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (7 seconds elapsed).
+
+WARNING: This version of the tool is 1265 days old.
+legacy_genus:/> set super_thread_servers 2
+2
+legacy_genus:/> top
+wrong # args: should be "toplevel pathName ?-option value ...?"
+legacy_genus:/> rm -rf INCA_libs .cadence work
+Error   : An invalid option was specified. [TUI-204] [delete_obj]
+        : An option named '-rf' could not be found.
+        : Run 'command_name -help' to check all valid options. To correct the option and rerun the command.
+  delete_obj: removes an object 
+
+Usage: delete_obj [-quiet] <object>+
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    <object>+:
+        objects to remove. The following are valid removable object types: 
+1
+legacy_genus:/> killall genus

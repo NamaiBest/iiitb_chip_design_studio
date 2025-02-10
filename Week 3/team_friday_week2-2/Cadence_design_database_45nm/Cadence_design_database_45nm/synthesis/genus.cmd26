@@ -1,0 +1,23 @@
+# Cadence Genus(TM) Synthesis Solution, Version 21.10-p002_1, built Aug 20 2021 10:13:13
+
+# Date: Wed Feb 05 12:45:07 2025
+# Host: vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB)
+# OS:   Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+
+set super_threading_mode disable
+set super_threading_mode disable
+set super_threading_mode disable
+set_attr init_lib_search_path ../lib/
+set_attr hdl_search_path ../rtl/
+set_attr library slow_vdd1v0_basicCells.lib
+read_hdl ../rtl/t1c_riscv_cpu.v
+elaborate
+set_top_module t1c_riscv_cpu
+read_sdc ../constraints/constraints_top.sdc
+set_attr syn_generic_effort high
+syn_generic
+report_power >./reports/power.txt
+report_gates
+set_attr syn_opt_effort high
+syn_opt
+syn_map

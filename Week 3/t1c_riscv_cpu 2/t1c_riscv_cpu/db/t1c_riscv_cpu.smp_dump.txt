@@ -1,0 +1,17 @@
+
+State Machine - |task5|cpu_controller:inst2|prev_state
+Name prev_state.WRITE_NODE_POINT prev_state.WRITE_EP prev_state.WRITE_SP prev_state.IDLE prev_state.WRITE_CPU_DONE 
+prev_state.IDLE 0 0 0 0 0 
+prev_state.WRITE_SP 0 0 1 1 0 
+prev_state.WRITE_EP 0 1 0 1 0 
+prev_state.WRITE_NODE_POINT 1 0 0 1 0 
+prev_state.WRITE_CPU_DONE 0 0 0 1 1 
+
+State Machine - |task5|cpu_controller:inst2|state_machine
+Name state_machine.STOP state_machine.WRITE_CPU_DONE state_machine.WRITE_NODE_POINT state_machine.WRITE_EP state_machine.WRITE_SP state_machine.IDLE 
+state_machine.IDLE 0 0 0 0 0 0 
+state_machine.WRITE_SP 0 0 0 0 1 1 
+state_machine.WRITE_EP 0 0 0 1 0 1 
+state_machine.WRITE_NODE_POINT 0 0 1 0 0 1 
+state_machine.WRITE_CPU_DONE 0 1 0 0 0 1 
+state_machine.STOP 1 0 0 0 0 1 

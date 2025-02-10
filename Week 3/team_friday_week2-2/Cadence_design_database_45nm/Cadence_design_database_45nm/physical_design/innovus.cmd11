@@ -1,0 +1,437 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Jan 30 22:48:22 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+#@(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+#@(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+#@(#)CDS: CPE v21.10-p004
+#@(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+save_global SCfinal.globals
+set init_gnd_net VSS
+set init_lef_file {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+set init_verilog ../synthesis/reports/hdl_synthesis.v
+set init_mmmc_file SCfinal.view
+set init_pwr_net VDD
+init_design
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 1 0.699992 10.0 10.0 10.0 10.0
+uiSetTool select
+getIoFlowFlag
+fit
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.998688915375 0.699533 10.0 10.07 10.0 10.07
+uiSetTool select
+getIoFlowFlag
+fit
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.75 bottom 0.75 left 0.75 right 0.75} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.75 bottom 0.75 left 0.75 right 0.75} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+saveDesign final1.enc
+clearGlobalNets
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing 0.45 -number_of_sets 2 -start_from left -start_offset 1 -stop_offset 1 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1.8 -spacing 0.45 -number_of_sets 2 -start_from left -start_offset 1 -stop_offset 1 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+saveDesign final2.enc
+zoomBox -138.50150 -10.82750 359.40350 229.89150
+zoomBox -116.94450 -9.30050 306.27450 195.31050
+zoomBox -98.73600 -7.96450 261.00050 165.95500
+zoomBox -70.13000 -5.86400 189.77950 119.79300
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 0.356 14.4535 -pin clk
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox -80.28050 -8.70500 225.49650 139.12700
+zoomBox -92.22150 -11.95000 267.51650 161.97000
+zoomBox -106.49850 -15.42400 316.72250 189.18800
+zoomBox -123.29500 -19.42100 374.61200 221.29900
+zoomBox -64.76250 2.47500 195.14900 128.13300
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 1.0355 34.3585 -pin Ext_MemWrite
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 1.0355 57.802 -pin {{Ext_WriteData[0]} {Ext_WriteData[1]} {Ext_WriteData[2]} {Ext_WriteData[3]} {Ext_WriteData[4]} {Ext_WriteData[5]} {Ext_WriteData[6]} {Ext_WriteData[7]} {Ext_WriteData[8]} {Ext_WriteData[9]} {Ext_WriteData[10]} {Ext_WriteData[11]} {Ext_WriteData[12]} {Ext_WriteData[13]} {Ext_WriteData[14]} {Ext_WriteData[15]} {Ext_WriteData[16]} {Ext_WriteData[17]} {Ext_WriteData[18]} {Ext_WriteData[19]} {Ext_WriteData[20]} {Ext_WriteData[21]} {Ext_WriteData[22]} {Ext_WriteData[23]} {Ext_WriteData[24]} {Ext_WriteData[25]} {Ext_WriteData[26]} {Ext_WriteData[27]} {Ext_WriteData[28]} {Ext_WriteData[29]} {Ext_WriteData[30]} {Ext_WriteData[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 0.5665 84.8405 -pin {{DataAdr[0]} {DataAdr[1]} {DataAdr[2]} {DataAdr[3]} {DataAdr[4]} {DataAdr[5]} {DataAdr[6]} {DataAdr[7]} {DataAdr[8]} {DataAdr[9]} {DataAdr[10]} {DataAdr[11]} {DataAdr[12]} {DataAdr[13]} {DataAdr[14]} {DataAdr[15]} {DataAdr[16]} {DataAdr[17]} {DataAdr[18]} {DataAdr[19]} {DataAdr[20]} {DataAdr[21]} {DataAdr[22]} {DataAdr[23]} {DataAdr[24]} {DataAdr[25]} {DataAdr[26]} {DataAdr[27]} {DataAdr[28]} {DataAdr[29]} {DataAdr[30]} {DataAdr[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox -66.44550 -3.15150 239.33350 144.68150
+zoomBox -68.42550 -9.77100 291.31500 164.15050
+zoomBox -70.75400 -17.55850 352.47000 187.05500
+zoomBox -77.49950 -37.30350 508.27900 245.89900
+zoomBox -81.85050 -49.86000 607.30050 283.31950
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox -5.72350 -13.17650 492.18950 227.54650
+zoomBox 69.07150 -2.05300 374.85250 145.78100
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Right -layer 1 -assign 189.5085 30.4925 -pin {{DataAdr[0]} {DataAdr[1]} {DataAdr[2]} {DataAdr[3]} {DataAdr[4]} {DataAdr[5]} {DataAdr[6]} {DataAdr[7]} {DataAdr[8]} {DataAdr[9]} {DataAdr[10]} {DataAdr[11]} {DataAdr[12]} {DataAdr[13]} {DataAdr[14]} {DataAdr[15]} {DataAdr[16]} {DataAdr[17]} {DataAdr[18]} {DataAdr[19]} {DataAdr[20]} {DataAdr[21]} {DataAdr[22]} {DataAdr[23]} {DataAdr[24]} {DataAdr[25]} {DataAdr[26]} {DataAdr[27]} {DataAdr[28]} {DataAdr[29]} {DataAdr[30]} {DataAdr[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox 25.99100 -33.97450 449.21850 170.64050
+zoomBox -3.96450 -52.70250 493.95000 188.02100
+zoomBox -39.41800 -75.10550 546.36400 208.09900
+zoomBox -31.69700 -28.38200 391.53150 176.23350
+zoomBox -28.68100 -10.13450 331.06300 163.78850
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 0.739 85.696 -pin {{Ext_DataAdr[0]} {Ext_DataAdr[1]} {Ext_DataAdr[2]} {Ext_DataAdr[3]} {Ext_DataAdr[4]} {Ext_DataAdr[5]} {Ext_DataAdr[6]} {Ext_DataAdr[7]} {Ext_DataAdr[8]} {Ext_DataAdr[9]} {Ext_DataAdr[10]} {Ext_DataAdr[11]} {Ext_DataAdr[12]} {Ext_DataAdr[13]} {Ext_DataAdr[14]} {Ext_DataAdr[15]} {Ext_DataAdr[16]} {Ext_DataAdr[17]} {Ext_DataAdr[18]} {Ext_DataAdr[19]} {Ext_DataAdr[20]} {Ext_DataAdr[21]} {Ext_DataAdr[22]} {Ext_DataAdr[23]} {Ext_DataAdr[24]} {Ext_DataAdr[25]} {Ext_DataAdr[26]} {Ext_DataAdr[27]} {Ext_DataAdr[28]} {Ext_DataAdr[29]} {Ext_DataAdr[30]} {Ext_DataAdr[31]}}
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 0.5225 135.234 -pin {{Result[0]} {Result[1]} {Result[2]} {Result[3]} {Result[4]} {Result[5]} {Result[6]} {Result[7]} {Result[8]} {Result[9]} {Result[10]} {Result[11]} {Result[12]} {Result[13]} {Result[14]} {Result[15]} {Result[16]} {Result[17]} {Result[18]} {Result[19]} {Result[20]} {Result[21]} {Result[22]} {Result[23]} {Result[24]} {Result[25]} {Result[26]} {Result[27]} {Result[28]} {Result[29]} {Result[30]} {Result[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox -30.09350 -30.71050 393.13500 173.90500
+zoomBox -31.75500 -54.91750 466.16050 185.80650
+zoomBox -33.71000 -83.39700 552.07300 199.80800
+zoomBox 1.37300 -45.35500 499.28900 195.36950
+zoomBox 31.23800 -12.79450 454.46750 191.82150
+zoomBox 56.62400 14.88200 416.36900 188.80550
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Right -layer 1 -assign 0.0 135.375 -pin {{Result[0]} {Result[1]} {Result[2]} {Result[3]} {Result[4]} {Result[5]} {Result[6]} {Result[7]} {Result[8]} {Result[9]} {Result[10]} {Result[11]} {Result[12]} {Result[13]} {Result[14]} {Result[15]} {Result[16]} {Result[17]} {Result[18]} {Result[19]} {Result[20]} {Result[21]} {Result[22]} {Result[23]} {Result[24]} {Result[25]} {Result[26]} {Result[27]} {Result[28]} {Result[29]} {Result[30]} {Result[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox 32.15400 -4.12900 455.38350 200.48700
+zoomBox 3.36600 -26.63000 501.28300 214.09500
+zoomBox -30.23900 -53.89400 555.54650 229.31200
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox -71.70050 -96.78500 617.45900 236.39850
+zoomBox -120.40550 -147.17200 690.37050 244.80850
+zoomBox -99.41700 -103.07400 589.74250 230.10950
+zoomBox -82.57150 -65.28000 503.21450 217.92600
+zoomBox -61.84900 -5.36050 361.38150 199.25600
+zoomBox -39.45800 53.16900 220.45850 178.82900
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Left -layer 1 -assign 0.553 146.6325 -pin reset
+setPinAssignMode -pinEditInBatch false
+zoomBox -66.56300 24.78750 356.66800 229.40450
+zoomBox -91.14100 -3.26650 494.64750 279.94100
+zoomBox -115.35950 -41.69000 695.42150 350.29300
+zoomBox -22.00750 6.60950 563.78200 289.81750
+zoomBox 14.45000 25.47250 512.37150 266.19950
+zoomBox -3.19800 -3.69400 582.59250 279.51450
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox 68.46650 33.15800 428.21500 207.08350
+zoomBox 101.04750 50.78750 360.96650 176.44900
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Right -layer 1 -assign 189.198 104.397 -pin MemWrite
+setPinAssignMode -pinEditInBatch false
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox 93.07650 35.39700 398.86350 183.23400
+zoomBox 87.26800 21.50850 447.01750 195.43450
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Right -layer 1 -assign 189.5895 78.186 -pin {{PC[0]} {PC[1]} {PC[2]} {PC[3]} {PC[4]} {PC[5]} {PC[6]} {PC[7]} {PC[8]} {PC[9]} {PC[10]} {PC[11]} {PC[12]} {PC[13]} {PC[14]} {PC[15]} {PC[16]} {PC[17]} {PC[18]} {PC[19]} {PC[20]} {PC[21]} {PC[22]} {PC[23]} {PC[24]} {PC[25]} {PC[26]} {PC[27]} {PC[28]} {PC[29]} {PC[30]} {PC[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox 66.15650 0.47400 489.39200 205.09300
+zoomBox 3.69400 -55.53700 589.48800 227.67300
+zoomBox -36.02750 -91.15600 653.14200 242.03250
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+zoomBox 0.39950 -72.56950 586.19350 210.64050
+zoomBox 57.48500 -41.73350 480.72150 162.88600
+zoomBox 94.42050 -15.10850 400.21000 132.72950
+zoomBox 108.84600 -4.71050 368.76700 120.95200
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Right -layer 1 -assign 189.182 53.7445 -pin {{ReadData[0]} {ReadData[1]} {ReadData[2]} {ReadData[3]} {ReadData[4]} {ReadData[5]} {ReadData[6]} {ReadData[7]} {ReadData[8]} {ReadData[9]} {ReadData[10]} {ReadData[11]} {ReadData[12]} {ReadData[13]} {ReadData[14]} {ReadData[15]} {ReadData[16]} {ReadData[17]} {ReadData[18]} {ReadData[19]} {ReadData[20]} {ReadData[21]} {ReadData[22]} {ReadData[23]} {ReadData[24]} {ReadData[25]} {ReadData[26]} {ReadData[27]} {ReadData[28]} {ReadData[29]} {ReadData[30]} {ReadData[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox 50.07350 -21.57650 473.31400 183.04500
+zoomBox -8.87000 -37.55450 576.93000 245.65850
+zoomBox -46.35450 -47.43850 642.82250 285.75350
+zoomBox -10.98800 18.34200 486.94300 259.07350
+zoomBox 3.42850 44.43600 426.67050 249.05800
+zoomBox 16.63750 66.69250 376.39300 240.62100
+zoomBox 37.88850 101.75050 297.81200 227.41400
+::uiSetTool getLocation Rda_PE::Attr:getStartCoord
+uiSetTool select
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Top -layer 1 -assign 107.285 185.2135 -pin {{WriteData[0]} {WriteData[1]} {WriteData[2]} {WriteData[3]} {WriteData[4]} {WriteData[5]} {WriteData[6]} {WriteData[7]} {WriteData[8]} {WriteData[9]} {WriteData[10]} {WriteData[11]} {WriteData[12]} {WriteData[13]} {WriteData[14]} {WriteData[15]} {WriteData[16]} {WriteData[17]} {WriteData[18]} {WriteData[19]} {WriteData[20]} {WriteData[21]} {WriteData[22]} {WriteData[23]} {WriteData[24]} {WriteData[25]} {WriteData[26]} {WriteData[27]} {WriteData[28]} {WriteData[29]} {WriteData[30]} {WriteData[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox 11.66300 52.68750 509.59450 293.41950
+zoomBox 1.88750 34.56400 587.68950 317.77800
+zoomBox -34.66450 -1.92550 654.51450 331.26750
+zoomBox -128.01250 -95.35900 825.86900 365.80800
+zoomBox -104.77400 -46.01600 584.40600 287.17750
+zoomBox -115.74450 -67.73650 695.05600 324.25600
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -side Top -layer 1 -assign 107.3 186.01 -pin {{WriteData[0]} {WriteData[1]} {WriteData[2]} {WriteData[3]} {WriteData[4]} {WriteData[5]} {WriteData[6]} {WriteData[7]} {WriteData[8]} {WriteData[9]} {WriteData[10]} {WriteData[11]} {WriteData[12]} {WriteData[13]} {WriteData[14]} {WriteData[15]} {WriteData[16]} {WriteData[17]} {WriteData[18]} {WriteData[19]} {WriteData[20]} {WriteData[21]} {WriteData[22]} {WriteData[23]} {WriteData[24]} {WriteData[25]} {WriteData[26]} {WriteData[27]} {WriteData[28]} {WriteData[29]} {WriteData[30]} {WriteData[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox -487.61100 -269.43650 832.64350 368.85850
+zoomBox -323.48300 -157.74100 630.40150 303.42750
+zoomBox -204.90050 -77.04100 484.28200 256.15350
+zoomBox -158.58900 -45.52450 427.21600 237.69100
+zoomBox -119.54100 -18.15400 378.39300 222.57900
+saveDesign finalPinned.enc
+uiSetTool obstruct
+createPlaceBlockage -box 20.88650 12.68600 35.85750 24.06400 -type hard
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 20.8 11.78 36.0 25.46 -name defScreenName].type Soft
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 20.8 11.78 36.0 25.46 -name defScreenName].density 50
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 20.8 11.78 36.0 25.46 -name defScreenName].isNoFlop 0
+zoomBox -98.97100 10.81500 324.27300 215.43800
+zoomBox -81.48650 35.55300 278.27100 209.48250
+zoomBox -99.50550 13.60200 323.73850 218.22500
+createPlaceBlockage -box 18.07650 142.12750 26.72950 150.01750 -type hard
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 18.0 141.74 26.8 150.29 -name defScreenName].type Soft
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 18.0 141.74 26.8 150.29 -name defScreenName].density 50
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 18.0 141.74 26.8 150.29 -name defScreenName].isNoFlop 0
+zoomBox -136.87300 -2.34200 361.06100 238.39100
+createPlaceBlockage -box 163.44450 78.80050 170.63050 106.94600 -type hard
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 163.4 78.47 170.8 107.54 -name defScreenName].type Soft
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 163.4 78.47 170.8 107.54 -name defScreenName].density 50
+dbSet [uiGetRecordObjByInfo -objType pBlkg -rect 163.4 78.47 170.8 107.54 -name defScreenName].isNoFlop 0
+setPlaceMode -fp false
+place_design
+zoomBox -38.43450 41.33100 267.35950 189.17150
+zoomBox 22.01850 68.15150 209.81500 158.94450
+zoomBox 59.18750 84.62300 174.51900 140.38150
+zoomBox 82.01450 94.73800 152.84250 128.98100
+zoomBox 96.03300 100.95000 139.53050 121.97950
+zoomBox 102.22350 103.69350 133.65100 118.88750
+zoomBox 82.01200 94.73700 152.84300 128.98100
+zoomBox 68.05700 88.55300 166.09350 135.95000
+zoomBox 36.45900 74.55100 196.09650 151.73000
+zoomBox -38.52150 41.32400 267.29550 189.17550
+zoomBox -98.77000 14.62500 324.50650 219.26400
+zoomBox -137.08450 -2.35350 360.88900 238.39850
+zoomBox -21.20850 42.88300 284.61100 190.73550
+zoomBox 77.84850 81.90800 237.48950 159.08850
+zoomBox 109.36150 94.83900 224.70250 150.60200
+zoomBox -27.51650 35.84900 278.30900 183.70450
+zoomBox -250.64100 -54.41150 335.22750 228.83450
+checkPlace t1c_riscv_cpu.checkPlace
+setDrawView place
+fit
+check_design
+checkDesign
+checkPlace
+report_timing
+optDesign -preCTS
+timeDesign -preCTS
+saveDesign final4.enc
+create_ccopt_clock_tree_spec
+ctd_win -side none -id ctd_window
+set_ccopt_property buffer_cells {buBX2* buAX*}
+set_ccopt_property -clock_tree clk buffer_cells {buBX2* buAX*}
+set_ccopt_property -clock_tree clk buffer_cells {buBX2* buAX*}
+ccopt_design
+ctd_win
+set_ccopt_property -clock_tree clk buffer_cells {buBX2* buAX*}
+set_ccopt_property buffer_cells {CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX8 CLKBUFX12 CLKBUFX4}
+set_ccopt_property -clock_tree clk buffer_cells {buBX2* buAX*}
+timeDesign -postCTS
+report_timing > post_cts.txt
+report_timing > post_cts.txt
+setNanoRouteMode -quiet -routeTopRoutingLayer 11
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+zoomBox -66.26750 14.17600 293.46850 188.09550
+zoomBox -23.69700 32.02200 282.08000 179.85400
+zoomBox 12.48850 47.16350 272.39950 172.82100
+zoomBox 62.62450 70.45350 250.41050 161.24100
+zoomBox 38.73200 62.66200 259.65650 169.47100
+zoomBox 6.59050 52.01850 266.50250 177.67650
+zoomBox -31.22300 39.49700 274.55600 187.33000
+zoomBox -127.62200 9.90650 295.60150 214.51950
+zoomBox -189.01500 -8.73200 308.89500 231.98950
+zoomBox -162.83250 -6.71150 260.39150 197.90200
+zoomBox -140.57700 -4.99350 219.16350 168.92800
+zoomBox -105.52100 -2.23250 154.39200 123.42600
+zoomBox -66.19950 1.14500 93.41950 78.31500
+zoomBox -72.63600 -8.56050 115.15100 82.22750
+zoomBox -89.11700 -33.41250 170.79600 92.24600
+zoomBox -114.05000 -37.68750 191.73000 110.14600
+zoomBox -143.22100 -42.55500 216.52050 131.36700
+zoomBox -157.23150 -69.01000 265.99500 135.60450
+zoomBox -173.71400 -99.95350 324.19950 140.76950
+zoomBox -262.37800 -114.90350 426.77750 218.27800
+zoomBox -195.99100 -35.60850 301.92450 205.11550
+zoomBox -167.47250 -6.28150 255.75600 198.33400
+zoomBox -140.48300 17.23400 219.26100 191.15700
+zoomBox -157.69950 -4.90750 265.52850 199.70800
+timeDesign -postRoute
+timeDesign -postRoute
+setAnalysisMode -analysisType onChipVariation
+verifyConnectivity -type all -error 1000 -warning 50
+extractRC
+rcOut -spef report/new_parasitics.spef
+saveDesign FINALCHIPsc.enc
+rcOut -spef report/new_parasitics.spef
+setAnalysisMode -analysisType onChipVariation
+extractRC
+rcOut -spef report/new_parasitics.spef
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+streamOut Friday_SC_CPU -libName DesignLib -units 2000 -mode ALL
+streamOut Friday_SC_CPU.gds -libName DesignLib -units 2000 -mode ALL
+streamOut Friday_SC_CPU.gds -libName DesignLib -units 2000 -mode ALL
+zoomBox -161.69700 -38.77100 336.21900 201.95350
+zoomBox -132.41600 -8.95000 290.81350 195.66600
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+optDesign -preCTS
+ctd_win -side none -id ctd_window
+createPlaceBlockage -box -78.20800 154.18300 -70.06400 170.72500 -type hard
+create_ccopt_clock_tree_spec
+get_ccopt_clock_trees *
+ccopt_design
+timeDesign
+timeDesign -postCTS
+optDesign -postCTS
+saveDesign FINALpostCTS.enc
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+optDesign -postRoute
+report_power
+verifyConnectivity -type all -error 1000 -warning 50
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report t1c_riscv_cpu.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_ccopt_property target_max_trans 0.1
+set_ccopt_property target_skew 0.02
+ccopt_design
+saveDesign ctcCPU.enc
+optDesign -postCTS
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+optDesign -postRoute
+report_timing > post_cts.txt
+timeDesign -postRoute
+setAnalysisMode -analysisType onChipVariation
+extractRC
+rcOut -spef report/new_parasitics.spef
+saveDesign FridayCPU.enc
+zoomBox 69.94500 67.01650 130.14700 96.12200
+zoomBox 49.85950 52.32200 147.88950 99.71600
+zoomBox -122.82050 -74.01000 300.42650 130.61450
+zoomBox -162.47900 -103.02400 335.45900 137.71100
+zoomBox -177.01000 -109.89300 408.79950 173.32450
+zoomBox -194.10550 -117.97450 495.08300 215.22300
+zoomBox -298.24800 -157.83250 512.56200 234.16450
+zoomBox -195.47300 -69.17250 390.33750 214.04550
+zoomBox -121.37650 -4.85150 301.87150 199.77350
+zoomBox -155.42100 -34.40450 342.51800 206.33100
+streamOut Friday_SC_CPU.gds -libName DesignLib -units 2000 -mode ALL
+streamOut Friday_SC_CPU.gds -libName DesignLib -units 2000 -mode ALL

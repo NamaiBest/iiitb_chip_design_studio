@@ -1,0 +1,22 @@
+# Cadence Genus(TM) Synthesis Solution, Version 23.13-s073_1, built Nov  8 2024 10:01:49
+
+# Date: Wed Feb 05 18:15:42 2025
+# Host: vlsicadclient05 (x86_64 w/Linux 3.10.0-1160.95.1.el7.x86_64) (6cores*12cpus*1physical cpu*Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz 12288KB)
+# OS:   Red Hat Enterprise Linux
+
+source ../../../genus_script2.tcl
+set lef_library "tech.lef macro.lef"
+cd
+set lef_library "tech.lef macro.lef"
+set_attr init_lib_search_path ../lib/
+set_attr hdl_search_path ../rtl/
+set_attr library slow_vdd1v0_basicCells.lib
+set lef_library "tech.lef macro.lef"
+read_hdl ../rtl/t1c_riscv_cpu.v
+elaborate
+set_top_module t1c_riscv_cpu
+define_clock -name CLK -period 10 -waveform {0 5} [find / -port clk]
+define_input_delay -clock CLK -max 2.0 [find / -port Ext_DataAdr*]
+define_input_delay -clock CLK -min 1.0 [find / -port Ext_DataAdr*]
+cd
+exit
