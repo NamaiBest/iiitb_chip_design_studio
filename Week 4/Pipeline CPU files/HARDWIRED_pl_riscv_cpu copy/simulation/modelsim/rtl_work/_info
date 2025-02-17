@@ -1,0 +1,563 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/simulation/modelsim
+vadder
+Z1 !s110 1734338436
+!i10b 1
+!s100 jXE67fZjiCj2W4l?`i:H?0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IX[go5`GKDajhYGDYXG0>R3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1730789302
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/adder.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/adder.v
+!i122 20
+L0 4 8
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1734338436.000000
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/adder.v|
+!i113 1
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components
+Z9 tCvgOpt 0
+valu
+R1
+!i10b 1
+!s100 zdCllzU0_]En_K>EXP2<P2
+R2
+IaP1ZAU?CnI5^=[Y9A27Q<1
+R3
+R0
+w1734193143
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu.v
+!i122 19
+Z10 L0 4 29
+R5
+r1
+!s85 0
+31
+Z11 !s108 1734338435.000000
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu.v|
+!i113 1
+R7
+R8
+R9
+valu_decoder
+Z12 !s110 1734338435
+!i10b 1
+!s100 jC;cQBlT:Bnf79lz371<23
+R2
+IV0J_Z6Z36f68V6dgDfh0R1
+R3
+R0
+w1729828580
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu_decoder.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu_decoder.v
+!i122 18
+L0 4 35
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/alu_decoder.v|
+!i113 1
+R7
+R8
+R9
+vbranching_unit
+Z13 !s110 1734338434
+!i10b 1
+!s100 cW[[fo_9`;kRTgNALP?7C1
+R2
+IjAG:?a35@b>IjH?I_e2QP3
+R3
+R0
+w1734151198
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/branching_unit.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/branching_unit.v
+!i122 8
+L0 4 23
+R5
+r1
+!s85 0
+31
+Z14 !s108 1734338434.000000
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/branching_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/branching_unit.v|
+!i113 1
+R7
+R8
+R9
+vcontroller
+R12
+!i10b 1
+!s100 DUbDfC0[NeU8KJdPN@<=:3
+R2
+Iio[67iC=:137O5?BLEzFm1
+R3
+R0
+w1734150901
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/controller.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/controller.v
+!i122 17
+L0 4 20
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/controller.v|
+!i113 1
+R7
+R8
+R9
+vdata_mem
+R13
+!i10b 1
+!s100 aJ?Xfhaj2fd?mVAUM^JVc1
+R2
+I<nFPh9z8Ni5lWgMgY0hjN1
+R3
+R0
+w1734193064
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/data_mem.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/data_mem.v
+!i122 6
+L0 4 60
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/data_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/data_mem.v|
+!i113 1
+R7
+Z15 !s92 -vlog01compat -work work +incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code
+R9
+vdatapath
+R12
+!i10b 1
+!s100 6KT>Ym2AS];ig>gbG;nnI3
+R2
+I1hCcDnGfQdTh:3bPEEW5_0
+R3
+R0
+w1734337952
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/datapath.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/datapath.v
+!i122 16
+L0 3 128
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/datapath.v|
+!i113 1
+R7
+R8
+R9
+vhazard_unit
+Z16 !s110 1734338433
+!i10b 1
+!s100 >ZDNFBh?F9CHTPUQf<?6f2
+R2
+IUIB@UU3MP`6Z2]Vol^OLV0
+R3
+R0
+w1734337945
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/hazard_unit.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/hazard_unit.v
+!i122 0
+L0 2 33
+R5
+r1
+!s85 0
+31
+Z17 !s108 1734338433.000000
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/hazard_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/hazard_unit.v|
+!i113 1
+R7
+R8
+R9
+vimm_extend
+R12
+!i10b 1
+!s100 KCY0HN8a_SDDT@o^3341e2
+R2
+I8nR3N5X9JSi42dkF4WI9O3
+R3
+R0
+R4
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/imm_extend.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/imm_extend.v
+!i122 15
+L0 3 21
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/imm_extend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/imm_extend.v|
+!i113 1
+R7
+R8
+R9
+vinstr_mem
+R1
+!i10b 1
+!s100 edU3X0aMQ1]cL11M;OEm01
+R2
+IVb;W13?;?mboiVa_;PAPz2
+R3
+R0
+w1731323317
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/instr_mem.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/instr_mem.v
+!i122 21
+L0 4 17
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/instr_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/instr_mem.v|
+!i113 1
+R7
+R15
+R9
+vmain_decoder
+R13
+!i10b 1
+!s100 3i;a3A6g6UO7Rz4]KEW112
+R2
+IjAdhAW<iC]TQ59]>i9VZM1
+R3
+R0
+w1731333203
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/main_decoder.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/main_decoder.v
+!i122 14
+L0 4 32
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/main_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/main_decoder.v|
+!i113 1
+R7
+R8
+R9
+vmux2
+R13
+!i10b 1
+!s100 O<Ld`3jD6QL?6PIEe_QAk1
+R2
+IPg4z^9ik7kboTz_LMaPH?3
+R3
+R0
+R4
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux2.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux2.v
+!i122 13
+Z18 L0 4 9
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux2.v|
+!i113 1
+R7
+R8
+R9
+vmux3
+R13
+!i10b 1
+!s100 fShz_RzH66YN6G@4dH?@Y3
+R2
+IN][jl_9?GMVONB@ihE_3`3
+R3
+R0
+R4
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux3.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux3.v
+!i122 12
+R18
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux3.v|
+!i113 1
+R7
+R8
+R9
+vmux4
+R13
+!i10b 1
+!s100 V4YdM>hK^I8CMb?cH8Cej3
+R2
+Ia43VliSZC>jFKY:T6]eW@3
+R3
+R0
+R4
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux4.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux4.v
+!i122 11
+R18
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/mux4.v|
+!i113 1
+R7
+R8
+R9
+vpl_reg_de
+R13
+!i10b 1
+!s100 cgb?X4I2>mhdC58z<4AHW1
+R2
+IRk?3T@1G3>KkDm@XHmR:K2
+R3
+R0
+w1734338379
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_de.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_de.v
+!i122 3
+L0 2 49
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_de.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_de.v|
+!i113 1
+R7
+R8
+R9
+vpl_reg_em
+R16
+!i10b 1
+!s100 >]jVH_ANT9i_kfl4Y[;`N1
+R2
+I6Om@WSh4mI3bfj`SfM7XI3
+R3
+R0
+w1734269017
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_em.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_em.v
+!i122 2
+L0 2 30
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_em.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_em.v|
+!i113 1
+R7
+R8
+R9
+vpl_reg_fd
+R13
+!i10b 1
+!s100 RjjJz2a8zKTDd72TjK`@O2
+R2
+IGBZ?0UJTBDX6VTmVcW7:23
+R3
+R0
+w1734260669
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_fd.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_fd.v
+!i122 7
+L0 4 22
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_fd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_fd.v|
+!i113 1
+R7
+R8
+R9
+vpl_reg_mw
+R16
+!i10b 1
+!s100 KS[mCV2H;=eZUTL@m4z[l0
+R2
+IdXXG`fa>k7H[dggVA7Z0o2
+R3
+R0
+w1734269026
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_mw.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_mw.v
+!i122 1
+L0 2 28
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_mw.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/pl_reg_mw.v|
+!i113 1
+R7
+R8
+R9
+vpl_riscv_cpu
+R13
+!i10b 1
+!s100 1^>X_9`UB`;oN?<]I1a2Z0
+R2
+I8<SnVK5Se?O^iE6hQ5RYc1
+R3
+R0
+w1731418044
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/pl_riscv_cpu.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/pl_riscv_cpu.v
+!i122 4
+L0 4 28
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/pl_riscv_cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/pl_riscv_cpu.v|
+!i113 1
+R7
+R15
+R9
+vreg_file
+R13
+!i10b 1
+!s100 hDfJeCPL76ldZ`N?EoZ[a3
+R2
+I:n;OC3fMT9e7UR:WdBeSi2
+R3
+R0
+w1731333314
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reg_file.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reg_file.v
+!i122 10
+L0 8 24
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reg_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reg_file.v|
+!i113 1
+R7
+R8
+R9
+vreset_ff
+R13
+!i10b 1
+!s100 >;b:dIN?F0PSR=d_17OQU2
+R2
+IXaS^RbjFz82X804mj>MB`2
+R3
+R0
+w1731487316
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reset_ff.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reset_ff.v
+!i122 9
+L0 4 16
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reset_ff.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/components/reset_ff.v|
+!i113 1
+R7
+R8
+R9
+vriscv_cpu
+R13
+!i10b 1
+!s100 Ia`jJ8nmhz91Rzc<=LnE83
+R2
+I3@o^dMF]`Na@SDKgj[Zzg3
+R3
+R0
+w1734266508
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/riscv_cpu.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/riscv_cpu.v
+!i122 5
+R10
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/riscv_cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/code/riscv_cpu.v|
+!i113 1
+R7
+R15
+R9
+vtb
+R1
+!i10b 1
+!s100 54`52cD4]?;zGPCA;:63i2
+R2
+IOOTQLIE`bDQUF[21oSLQ=3
+R3
+R0
+w1731243639
+8C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/.test/tb.v
+FC:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/.test/tb.v
+!i122 22
+L0 3 521
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/.test/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/.test|C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/.test/tb.v|
+!i113 1
+R7
+!s92 -vlog01compat -work work +incdir+C:/Users/3pm20/Desktop/MyCode/eyantra_fpga/eb_2336_task3c_demo/pl_riscv_cpu/.test
+R9
